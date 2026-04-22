@@ -1354,6 +1354,79 @@
     animation: wiggle 3s ease-in-out infinite;
 }
 
+/* ========================================
+   🎨 YUNA CHART SECTION - 独立图表容器
+   ======================================== */
+
+.yuna-chart-section.comic-style {
+    position: relative;
+    background: linear-gradient(135deg, #FFF8F0 0%, #FFF0F5 100%);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 10px 30px rgba(255, 182, 193, 0.2);
+}
+
+.yuna-chart-section .chart-label {
+    font-size: 12px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+    border: 1px solid;
+}
+
+.yuna-chart-section .chart-container {
+    background: #FFF;
+    border-radius: 16px;
+    padding: 15px;
+    border: 3px solid rgba(255, 182, 193, 0.4);
+    overflow: hidden;
+}
+
+.yuna-chart-section .chart-container svg {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    display: block;
+}
+
+.yuna-chart-section .chart-legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background: rgba(255, 248, 240, 0.5);
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+.yuna-chart-section .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.yuna-chart-section .legend-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+/* SVG 内部动画 */
+.yuna-chart-section svg .comic-wiggle,
+.yuna-chart-section svg .comic-bounce,
+.yuna-chart-section svg .comic-pop {
+    transform-origin: center;
+}
+
 .yuna-comic-svg .comic-bounce {
     animation: bounce 2s ease-in-out infinite;
 }
