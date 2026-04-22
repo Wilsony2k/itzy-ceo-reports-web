@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITZY CEO Agents 每日報告</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <div class="container">
+        <!-- 導航欄 -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">ITZY</div>
+                <h1>CEO Agents 每日報告</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> 首頁</a>
+                <a href="reports.html" class="nav-link"><i class="fas fa-file-alt"></i> 所有報告</a>
+                <a href="agents.html" class="nav-link"><i class="fas fa-robot"></i> CEO Agents</a>
+                <a href="progressreport/progressreport.html" class="nav-link"><i class="fas fa-tasks"></i> 進度報告</a>
+                <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> 關於</a>
+            </nav>
+            <div class="date-display" id="currentDate"></div>
+        </header>
+
+        <!-- 主內容區 -->
+        <main class="main-content">
+            <!-- 歡迎區 -->
+            <section class="welcome-section">
+                <div class="welcome-card">
+                    <h2><i class="fas fa-star"></i> ITZY CEO Agents 工作報告系統</h2>
+                    <p>本系統展示 ITZY 團隊各領域 CEO AI Agents 的每日工作報告，涵蓋土木工程、數據庫管理、網站設計、報告可視化與質量測試等專業領域。</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number" id="totalAgents">6</div>
+                            <div class="stat-label">CEO Agents</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" id="totalReports">24</div>
+                            <div class="stat-label">本週報告</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" id="activeProjects">12</div>
+                            <div class="stat-label">進行中專案</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 今日報告摘要 -->
+            <section class="today-section">
+                <h2 class="section-title"><i class="fas fa-calendar-day"></i> 今日報告摘要</h2>
+                <div class="report-cards" id="todayReports">
+                    <!-- 今日報告卡片會由JavaScript動態生成 -->
+                </div>
+            </section>
+
+            <!-- CEO Agents 簡介 -->
+            <section class="agents-section">
+                <h2 class="section-title"><i class="fas fa-robot"></i> CEO Agents 團隊</h2>
+                <div class="agent-cards" id="agentCards">
+                    <!-- CEO Agents卡片會由JavaScript動態生成 -->
+                </div>
+            </section>
+
+            <!-- 報告時間線 -->
+            <section class="timeline-section">
+                <h2 class="section-title"><i class="fas fa-chart-line"></i> 本週報告趨勢</h2>
+                <div class="timeline-chart">
+                    <canvas id="reportTimeline"></canvas>
+                </div>
+            </section>
+        </main>
+
+        <!-- 頁腳 -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">ITZY AI Agents</div>
+                <div class="footer-links">
+                    <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#"><i class="fas fa-book"></i> 文檔</a>
+                    <a href="#"><i class="fas fa-envelope"></i> 聯絡</a>
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2025 ITZY AI Agents 系統. 基於 agency-agents-zh 框架.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

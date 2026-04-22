@@ -1,0 +1,817 @@
+// CEO Agents 數據 (自動生成 - 2026-04-22 13:00:01)
+const ceoAgents = [
+    {
+        "id": "leader",
+        "name": "ITZY領導者",
+        "realName": "ITZY Leader",
+        "color": "#FF6B9D",
+        "icon": "fas fa-crown",
+        "role": "團隊總指揮，統籌各CEO AI agent工作",
+        "description": "建立規定和禁令、定期清理資料及文件、協調各agent協作",
+        "specialty": "團隊協調與管理",
+        "skills": [
+            "團隊協調",
+            "資源分配",
+            "進度管理",
+            "衝突解決",
+            "戰略規劃"
+        ],
+        "tools": [
+            "團隊協作平台",
+            "專案管理軟體",
+            "會議系統",
+            "文檔共享工具"
+        ],
+        "reportsCount": 5,
+        "lastReport": "2026-04-22"
+    },
+    {
+        "id": "yeji",
+        "name": "Yeji禮志",
+        "realName": "土木工程CEO",
+        "color": "#4ECDC4",
+        "icon": "fas fa-hard-hat",
+        "role": "土木工程SUBAGENT團隊總負責人",
+        "description": "以香港CEDD標準為核心，整合BS、GB等國際標準，建立物料測試體系",
+        "specialty": "土木工程與標準合規",
+        "skills": [
+            "結構計算",
+            "CEDD規範",
+            "BS標準",
+            "GB標準",
+            "材料測試"
+        ],
+        "tools": [
+            "SAP2000",
+            "ETABS",
+            "AutoCAD",
+            "Revit",
+            "有限元分析"
+        ],
+        "reportsCount": 6,
+        "lastReport": "2026-04-22"
+    },
+    {
+        "id": "lia",
+        "name": "Lia",
+        "realName": "工程數據庫CEO",
+        "color": "#9D65FF",
+        "icon": "fas fa-database",
+        "role": "工程數據庫總架構師",
+        "description": "基於MongoDB設計數據模型，為各agent提供高效數據服務",
+        "specialty": "數據庫架構與API設計",
+        "skills": [
+            "MongoDB",
+            "數據建模",
+            "API設計",
+            "性能優化",
+            "數據安全"
+        ],
+        "tools": [
+            "MongoDB Compass",
+            "Mongoose",
+            "Redis",
+            "Postman",
+            "Docker"
+        ],
+        "reportsCount": 5,
+        "lastReport": "2026-04-22"
+    },
+    {
+        "id": "chaeryeong",
+        "name": "Chaeryeong彩領",
+        "realName": "個人智識網站CEO",
+        "color": "#FFD166",
+        "icon": "fas fa-laptop-code",
+        "role": "個人智識網站總設計師",
+        "description": "新聞網站風格、卡片式設計、統一導航系統，適合年輕人",
+        "specialty": "網站設計與用戶體驗",
+        "skills": [
+            "UI/UX設計",
+            "響應式設計",
+            "CSS/SCSS",
+            "前端開發",
+            "用戶研究"
+        ],
+        "tools": [
+            "Figma",
+            "Adobe XD",
+            "VS Code",
+            "Chrome DevTools",
+            "Tailwind CSS"
+        ],
+        "reportsCount": 5,
+        "lastReport": "2026-04-22"
+    },
+    {
+        "id": "yuna",
+        "name": "Yuna有娜",
+        "realName": "工作報告介面APP CEO",
+        "color": "#FF6B8B",
+        "icon": "fas fa-chart-bar",
+        "role": "工作報告可視化總設計師",
+        "description": "AI動畫/漫畫形式報告，新聞女郎風格，動態展示工作進度",
+        "specialty": "數據可視化與報告生成",
+        "skills": [
+            "數據可視化",
+            "圖表設計",
+            "動畫製作",
+            "報告生成",
+            "故事敘述"
+        ],
+        "tools": [
+            "D3.js",
+            "Chart.js",
+            "After Effects",
+            "Python Matplotlib",
+            "Figma"
+        ],
+        "reportsCount": 5,
+        "lastReport": "2026-04-22"
+    },
+    {
+        "id": "ryujin",
+        "name": "Ryujin",
+        "realName": "專業測試員CEO",
+        "color": "#06D6A0",
+        "icon": "fas fa-vial",
+        "role": "質量保證總指揮",
+        "description": "領導SUBAGENT團隊全面測試各CEO AI agent的輸出",
+        "specialty": "質量測試與自動化",
+        "skills": [
+            "自動化測試",
+            "單元測試",
+            "集成測試",
+            "性能測試",
+            "安全測試"
+        ],
+        "tools": [
+            "Selenium",
+            "Jest",
+            "PyTest",
+            "JMeter",
+            "OWASP ZAP"
+        ],
+        "reportsCount": 5,
+        "lastReport": "2026-04-22"
+    }
+];
+
+// 每日報告數據
+const dailyReports = [
+    {
+        "id": 1,
+        "agentId": "yeji",
+        "date": "2026-04-18",
+        "title": "香港北區道路升級專案設計審查",
+        "summary": "完成了北區A路段升級方案的結構計算驗證，確認符合CEDD最新規範。發現並修正了3處排水設計不符合點。",
+        "tags": [
+            "結構計算",
+            "CEDD規範",
+            "排水設計",
+            "審查完成"
+        ],
+        "status": "completed",
+        "priority": "high",
+        "details": "詳細審查了道路升級專案的結構計算書，重點驗證了混凝土強度計算、荷載分佈分析以及排水系統設計。所有計算均符合CEDD 2024年最新技術通告要求。",
+        "metrics": {
+            "hoursWorked": 6.5,
+            "tasksCompleted": 3,
+            "filesReviewed": 12,
+            "issuesFound": 3
+        }
+    },
+    {
+        "id": 2,
+        "agentId": "lia",
+        "date": "2026-04-18",
+        "title": "工程數據庫性能優化",
+        "summary": "優化了MongoDB查詢索引，將常用查詢響應時間從2.3秒降低到0.8秒。新增了專案文檔版本控制功能。",
+        "tags": [
+            "MongoDB",
+            "性能優化",
+            "索引",
+            "版本控制"
+        ],
+        "status": "in_progress",
+        "priority": "high",
+        "details": "分析了數據庫查詢日誌，識別出10個最頻繁的慢查詢。為這些查詢創建了複合索引，並優化了聚合管道。同時實現了文檔版本控制系統，支持自動版本備份和回滾。",
+        "metrics": {
+            "hoursWorked": 8,
+            "tasksCompleted": 2,
+            "queriesOptimized": 10,
+            "performanceGain": "65%"
+        }
+    },
+    {
+        "id": 3,
+        "agentId": "chaeryeong",
+        "date": "2026-04-18",
+        "title": "個人智識網站首頁改版",
+        "summary": "完成了網站首頁的卡片式設計改版，優化了移動端響應式佈局。新增了暗黑模式切換功能。",
+        "tags": [
+            "網站設計",
+            "響應式",
+            "卡片式",
+            "暗黑模式"
+        ],
+        "status": "completed",
+        "priority": "medium",
+        "details": "重新設計了首頁佈局，採用卡片式設計展示不同知識領域。實現了完整的響應式設計，在手機、平板、桌面設備上都有良好體驗。添加了暗黑模式切換，支持用戶偏好設置。",
+        "metrics": {
+            "hoursWorked": 5,
+            "tasksCompleted": 4,
+            "pagesDesigned": 1,
+            "componentsCreated": 8
+        }
+    },
+    {
+        "id": 4,
+        "agentId": "yuna",
+        "date": "2026-04-18",
+        "title": "季度專案進度可視化報告",
+        "summary": "生成了Q1專案進度可視化報告，使用動畫形式展示各專案里程碑達成情況。報告已發送給所有相關方。",
+        "tags": [
+            "可視化",
+            "季度報告",
+            "動畫",
+            "里程碑"
+        ],
+        "status": "completed",
+        "priority": "high",
+        "details": "創建了交互式季度進度報告，包含時間線動畫、里程碑達成率和風險預警。報告採用新聞女郎風格，以動畫漫畫形式呈現關鍵數據，增強了報告的吸引力和可理解性。",
+        "metrics": {
+            "hoursWorked": 7,
+            "tasksCompleted": 1,
+            "chartsCreated": 6,
+            "animationsCreated": 3
+        }
+    },
+    {
+        "id": 5,
+        "agentId": "ryujin",
+        "date": "2026-04-18",
+        "title": "網站功能全面測試",
+        "summary": "對改版後的個人智識網站進行了全面功能測試，發現並報告了12個問題，其中3個為高優先級。",
+        "tags": [
+            "功能測試",
+            "質量保證",
+            "問題報告",
+            "高優先級"
+        ],
+        "status": "in_progress",
+        "priority": "high",
+        "details": "執行了300+個測試用例，涵蓋功能、性能、安全性和兼容性測試。使用自動化測試腳本覆蓋了80%的測試用例，手動測試了關鍵用戶流程。發現的問題已分類並分配優先級。",
+        "metrics": {
+            "hoursWorked": 6,
+            "tasksCompleted": 2,
+            "testCasesRun": 300,
+            "bugsFound": 12
+        }
+    },
+    {
+        "id": 6,
+        "agentId": "leader",
+        "date": "2026-04-18",
+        "title": "團隊協調與資源分配會議",
+        "summary": "主持了每週團隊協調會議，審查了各專案進度，調整了2個專案的資源分配方案。",
+        "tags": [
+            "團隊協調",
+            "資源分配",
+            "進度審查",
+            "會議"
+        ],
+        "status": "completed",
+        "priority": "high",
+        "details": "召開了為期2小時的團隊協調會議，所有CEO agents匯報了本週工作進展。根據專案優先級調整了資源分配，決定了下週重點工作方向。更新了團隊協作規範文檔。",
+        "metrics": {
+            "hoursWorked": 2,
+            "tasksCompleted": 3,
+            "decisionsMade": 5,
+            "projectsReviewed": 6
+        }
+    },
+    {
+        "id": 7,
+        "agentId": "yeji",
+        "date": "2026-04-18",
+        "title": "基礎設計方案評估",
+        "summary": "評估了基礎設計方案，提出了優化建議。",
+        "tags": [
+            "基礎設計",
+            "地質分析",
+            "工程評估"
+        ],
+        "status": "in_progress",
+        "priority": "low",
+        "details": "詳細報告內容：評估了基礎設計方案，提出了優化建議。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 5.0,
+            "tasksCompleted": 3,
+            "filesReviewed": 12
+        }
+    },
+    {
+        "id": 8,
+        "agentId": "leader",
+        "date": "2026-04-19",
+        "title": "團隊協調與資源分配會議",
+        "summary": "主持了團隊協調會議，審查專案進度並調整資源分配。",
+        "tags": [
+            "團隊協調",
+            "資源分配",
+            "進度審查",
+            "會議"
+        ],
+        "status": "in_progress",
+        "priority": "high",
+        "details": "詳細報告內容：主持了團隊協調會議，審查專案進度並調整資源分配。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 4.0,
+            "tasksCompleted": 2
+        }
+    },
+    {
+        "id": 9,
+        "agentId": "yeji",
+        "date": "2026-04-19",
+        "title": "基礎設計方案評估",
+        "summary": "評估了基礎設計方案，提出了優化建議。",
+        "tags": [
+            "基礎設計",
+            "地質分析",
+            "工程評估"
+        ],
+        "status": "completed",
+        "priority": "high",
+        "details": "詳細報告內容：評估了基礎設計方案，提出了優化建議。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 3.5,
+            "tasksCompleted": 3,
+            "filesReviewed": 5
+        }
+    },
+    {
+        "id": 10,
+        "agentId": "lia",
+        "date": "2026-04-19",
+        "title": "API 接口開發",
+        "summary": "開發了新的 API 接口，優化了數據交互流程。",
+        "tags": [
+            "API",
+            "REST",
+            "接口設計"
+        ],
+        "status": "completed",
+        "priority": "medium",
+        "details": "詳細報告內容：開發了新的 API 接口，優化了數據交互流程。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 7.9,
+            "tasksCompleted": 3,
+            "queriesOptimized": 8
+        }
+    },
+    {
+        "id": 11,
+        "agentId": "chaeryeong",
+        "date": "2026-04-19",
+        "title": "移動端適配優化",
+        "summary": "優化了移動端顯示效果，改善了觸控體驗。",
+        "tags": [
+            "移動端",
+            "響應式",
+            "適配"
+        ],
+        "status": "in_progress",
+        "priority": "high",
+        "details": "詳細報告內容：優化了移動端顯示效果，改善了觸控體驗。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 6.3,
+            "tasksCompleted": 2
+        }
+    },
+    {
+        "id": 12,
+        "agentId": "yuna",
+        "date": "2026-04-19",
+        "title": "動畫演示製作",
+        "summary": "製作了動畫演示，生動展示了專案進展。",
+        "tags": [
+            "動畫",
+            "演示",
+            "多媒體"
+        ],
+        "status": "in_progress",
+        "priority": "medium",
+        "details": "詳細報告內容：製作了動畫演示，生動展示了專案進展。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 4.3,
+            "tasksCompleted": 2
+        }
+    },
+    {
+        "id": 13,
+        "agentId": "ryujin",
+        "date": "2026-04-19",
+        "title": "性能測試與優化",
+        "summary": "執行了性能測試，提出了優化建議。",
+        "tags": [
+            "性能測試",
+            "負載測試",
+            "優化"
+        ],
+        "status": "completed",
+        "priority": "medium",
+        "details": "詳細報告內容：執行了性能測試，提出了優化建議。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 4.8,
+            "tasksCompleted": 5,
+            "testCasesRun": 265,
+            "bugsFound": 8
+        }
+    },
+    {
+        "id": 14,
+        "agentId": "leader",
+        "date": "2026-04-20",
+        "title": "團隊協調與資源分配會議",
+        "summary": "主持了團隊協調會議，審查專案進度並調整資源分配。",
+        "tags": [
+            "團隊協調",
+            "資源分配",
+            "進度審查",
+            "會議"
+        ],
+        "status": "in_progress",
+        "priority": "low",
+        "details": "詳細報告內容：主持了團隊協調會議，審查專案進度並調整資源分配。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 6.3,
+            "tasksCompleted": 1
+        }
+    },
+    {
+        "id": 15,
+        "agentId": "yeji",
+        "date": "2026-04-20",
+        "title": "基礎設計方案評估",
+        "summary": "評估了基礎設計方案，提出了優化建議。",
+        "tags": [
+            "基礎設計",
+            "地質分析",
+            "工程評估"
+        ],
+        "status": "completed",
+        "priority": "high",
+        "details": "詳細報告內容：評估了基礎設計方案，提出了優化建議。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 7.5,
+            "tasksCompleted": 3,
+            "filesReviewed": 15
+        }
+    },
+    {
+        "id": 16,
+        "agentId": "lia",
+        "date": "2026-04-20",
+        "title": "數據安全審計",
+        "summary": "執行了數據安全審計，加強了權限控制。",
+        "tags": [
+            "數據安全",
+            "審計",
+            "權限管理"
+        ],
+        "status": "completed",
+        "priority": "high",
+        "details": "詳細報告內容：執行了數據安全審計，加強了權限控制。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 5.1,
+            "tasksCompleted": 5,
+            "queriesOptimized": 9
+        }
+    },
+    {
+        "id": 17,
+        "agentId": "chaeryeong",
+        "date": "2026-04-20",
+        "title": "前端組件開發",
+        "summary": "開發了可重用的前端組件，提高了開發效率。",
+        "tags": [
+            "前端",
+            "組件",
+            "CSS"
+        ],
+        "status": "in_progress",
+        "priority": "low",
+        "details": "詳細報告內容：開發了可重用的前端組件，提高了開發效率。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 7.5,
+            "tasksCompleted": 4
+        }
+    },
+    {
+        "id": 18,
+        "agentId": "yuna",
+        "date": "2026-04-20",
+        "title": "數據可視化報告",
+        "summary": "生成了數據可視化報告，展示了關鍵指標。",
+        "tags": [
+            "可視化",
+            "報告",
+            "圖表"
+        ],
+        "status": "completed",
+        "priority": "low",
+        "details": "詳細報告內容：生成了數據可視化報告，展示了關鍵指標。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 5.6,
+            "tasksCompleted": 5
+        }
+    },
+    {
+        "id": 19,
+        "agentId": "ryujin",
+        "date": "2026-04-20",
+        "title": "功能測試報告",
+        "summary": "執行了功能測試，發現並報告了問題。",
+        "tags": [
+            "功能測試",
+            "質量保證",
+            "測試報告"
+        ],
+        "status": "in_progress",
+        "priority": "low",
+        "details": "詳細報告內容：執行了功能測試，發現並報告了問題。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 7.5,
+            "tasksCompleted": 5,
+            "testCasesRun": 91,
+            "bugsFound": 9
+        }
+    },
+    {
+        "id": 20,
+        "agentId": "leader",
+        "date": "2026-04-21",
+        "title": "團隊協調與資源分配會議",
+        "summary": "主持了團隊協調會議，審查專案進度並調整資源分配。",
+        "tags": [
+            "團隊協調",
+            "資源分配",
+            "進度審查",
+            "會議"
+        ],
+        "status": "in_progress",
+        "priority": "medium",
+        "details": "詳細報告內容：主持了團隊協調會議，審查專案進度並調整資源分配。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 7.0,
+            "tasksCompleted": 1
+        }
+    },
+    {
+        "id": 21,
+        "agentId": "yeji",
+        "date": "2026-04-21",
+        "title": "基礎設計方案評估",
+        "summary": "評估了基礎設計方案，提出了優化建議。",
+        "tags": [
+            "基礎設計",
+            "地質分析",
+            "工程評估"
+        ],
+        "status": "completed",
+        "priority": "low",
+        "details": "詳細報告內容：評估了基礎設計方案，提出了優化建議。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 4.9,
+            "tasksCompleted": 4,
+            "filesReviewed": 8
+        }
+    },
+    {
+        "id": 22,
+        "agentId": "lia",
+        "date": "2026-04-21",
+        "title": "API 接口開發",
+        "summary": "開發了新的 API 接口，優化了數據交互流程。",
+        "tags": [
+            "API",
+            "REST",
+            "接口設計"
+        ],
+        "status": "completed",
+        "priority": "medium",
+        "details": "詳細報告內容：開發了新的 API 接口，優化了數據交互流程。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 6.7,
+            "tasksCompleted": 1,
+            "queriesOptimized": 9
+        }
+    },
+    {
+        "id": 23,
+        "agentId": "chaeryeong",
+        "date": "2026-04-21",
+        "title": "前端組件開發",
+        "summary": "開發了可重用的前端組件，提高了開發效率。",
+        "tags": [
+            "前端",
+            "組件",
+            "CSS"
+        ],
+        "status": "in_progress",
+        "priority": "medium",
+        "details": "詳細報告內容：開發了可重用的前端組件，提高了開發效率。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 5.6,
+            "tasksCompleted": 5
+        }
+    },
+    {
+        "id": 24,
+        "agentId": "yuna",
+        "date": "2026-04-21",
+        "title": "儀表板設計",
+        "summary": "設計了交互式儀表板，提升了數據展示效果。",
+        "tags": [
+            "儀表板",
+            "圖表",
+            "交互"
+        ],
+        "status": "in_progress",
+        "priority": "low",
+        "details": "詳細報告內容：設計了交互式儀表板，提升了數據展示效果。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 5.4,
+            "tasksCompleted": 3
+        }
+    },
+    {
+        "id": 25,
+        "agentId": "ryujin",
+        "date": "2026-04-21",
+        "title": "自動化測試腳本開發",
+        "summary": "開發了自動化測試腳本，提高了測試效率。",
+        "tags": [
+            "自動化",
+            "測試腳本",
+            "CI/CD"
+        ],
+        "status": "completed",
+        "priority": "medium",
+        "details": "詳細報告內容：開發了自動化測試腳本，提高了測試效率。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 4.8,
+            "tasksCompleted": 1,
+            "testCasesRun": 218,
+            "bugsFound": 8
+        }
+    },
+    {
+        "id": 26,
+        "agentId": "leader",
+        "date": "2026-04-22",
+        "title": "跨部門協作審查",
+        "summary": "審查了跨部門協作流程，優化了溝通機制。",
+        "tags": [
+            "跨部門",
+            "協作",
+            "流程優化"
+        ],
+        "status": "completed",
+        "priority": "high",
+        "details": "詳細報告內容：審查了跨部門協作流程，優化了溝通機制。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 6.6,
+            "tasksCompleted": 1
+        }
+    },
+    {
+        "id": 27,
+        "agentId": "yeji",
+        "date": "2026-04-22",
+        "title": "基礎設計方案評估",
+        "summary": "評估了基礎設計方案，提出了優化建議。",
+        "tags": [
+            "基礎設計",
+            "地質分析",
+            "工程評估"
+        ],
+        "status": "completed",
+        "priority": "medium",
+        "details": "詳細報告內容：評估了基礎設計方案，提出了優化建議。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 4.6,
+            "tasksCompleted": 4,
+            "filesReviewed": 14
+        }
+    },
+    {
+        "id": 28,
+        "agentId": "lia",
+        "date": "2026-04-22",
+        "title": "數據安全審計",
+        "summary": "執行了數據安全審計，加強了權限控制。",
+        "tags": [
+            "數據安全",
+            "審計",
+            "權限管理"
+        ],
+        "status": "in_progress",
+        "priority": "medium",
+        "details": "詳細報告內容：執行了數據安全審計，加強了權限控制。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 6.6,
+            "tasksCompleted": 1,
+            "queriesOptimized": 4
+        }
+    },
+    {
+        "id": 29,
+        "agentId": "chaeryeong",
+        "date": "2026-04-22",
+        "title": "網站 UI/UX 改版",
+        "summary": "優化了網站用戶界面，提升了用戶體驗。",
+        "tags": [
+            "網站設計",
+            "響應式",
+            "用戶體驗"
+        ],
+        "status": "completed",
+        "priority": "high",
+        "details": "詳細報告內容：優化了網站用戶界面，提升了用戶體驗。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 3.0,
+            "tasksCompleted": 5
+        }
+    },
+    {
+        "id": 30,
+        "agentId": "yuna",
+        "date": "2026-04-22",
+        "title": "儀表板設計",
+        "summary": "設計了交互式儀表板，提升了數據展示效果。",
+        "tags": [
+            "儀表板",
+            "圖表",
+            "交互"
+        ],
+        "status": "completed",
+        "priority": "medium",
+        "details": "詳細報告內容：設計了交互式儀表板，提升了數據展示效果。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 2.1,
+            "tasksCompleted": 1
+        }
+    },
+    {
+        "id": 31,
+        "agentId": "ryujin",
+        "date": "2026-04-22",
+        "title": "性能測試與優化",
+        "summary": "執行了性能測試，提出了優化建議。",
+        "tags": [
+            "性能測試",
+            "負載測試",
+            "優化"
+        ],
+        "status": "completed",
+        "priority": "high",
+        "details": "詳細報告內容：執行了性能測試，提出了優化建議。。此報告由系統自動生成。",
+        "metrics": {
+            "hoursWorked": 7.9,
+            "tasksCompleted": 5,
+            "testCasesRun": 232,
+            "bugsFound": 1
+        }
+    }
+];
+
+// 標籤顏色映射
+const tagColors = {
+    "結構計算": "#4ECDC4",
+    "CEDD規範": "#4ECDC4",
+    "排水設計": "#4ECDC4",
+    "審查完成": "#06D6A0",
+    "MongoDB": "#9D65FF",
+    "性能優化": "#9D65FF",
+    "索引": "#9D65FF",
+    "版本控制": "#9D65FF",
+    "網站設計": "#FFD166",
+    "響應式": "#FFD166",
+    "卡片式": "#FFD166",
+    "暗黑模式": "#FFD166",
+    "可視化": "#FF6B8B",
+    "季度報告": "#FF6B8B",
+    "動畫": "#FF6B8B",
+    "里程碑": "#FF6B8B",
+    "功能測試": "#06D6A0",
+    "質量保證": "#06D6A0",
+    "問題報告": "#06D6A0",
+    "高優先級": "#FF6B9D",
+    "團隊協調": "#FF6B9D",
+    "資源分配": "#FF6B9D",
+    "進度審查": "#FF6B9D",
+    "會議": "#FF6B9D"
+};

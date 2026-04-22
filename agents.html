@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CEO Agents - ITZY AI Agents</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/agents.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <div class="container">
+        <!-- 導航欄 -->
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">ITZY</div>
+                <h1>CEO Agents 每日報告</h1>
+            </div>
+            <nav class="nav">
+                <a href="index.html" class="nav-link"><i class="fas fa-home"></i> 首頁</a>
+                <a href="reports.html" class="nav-link"><i class="fas fa-file-alt"></i> 所有報告</a>
+                <a href="agents.html" class="nav-link active"><i class="fas fa-robot"></i> CEO Agents</a>
+                <a href="progressreport/progressreport.html" class="nav-link"><i class="fas fa-tasks"></i> 進度報告</a>
+                <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> 關於</a>
+            </nav>
+            <div class="date-display" id="currentDate"></div>
+        </header>
+
+        <!-- 主內容區 -->
+        <main class="main-content">
+            <!-- 團隊介紹 -->
+            <section class="team-intro">
+                <h2 class="section-title"><i class="fas fa-users"></i> ITZY CEO Agents 團隊</h2>
+                <div class="team-description">
+                    <p>ITZY CEO Agents 是一個基於現實世界流行文化團體 ITZY 設計的專業 AI 智能體系統。每個 Agent 都代表團隊中的一個成員，並專注於特定的專業領域，形成完整的技術協作生態。</p>
+                    <p>系統基於 <strong>agency-agents-zh</strong> 框架構建，遵循標準化的角色定義、工作流程和視覺識別系統。</p>
+                </div>
+            </section>
+
+            <!-- Agents 詳細介紹 -->
+            <section class="agents-details">
+                <h2 class="section-title"><i class="fas fa-id-card"></i> Agents 詳細規格</h2>
+                <div class="agents-tabs" id="agentsTabs">
+                    <!-- Tab按鈕將由JavaScript動態生成 -->
+                </div>
+                <div class="agent-detail-content" id="agentDetailContent">
+                    <!-- Agent詳細內容將由JavaScript動態生成 -->
+                </div>
+            </section>
+
+            <!-- 團隊協作圖 -->
+            <section class="team-collaboration">
+                <h2 class="section-title"><i class="fas fa-project-diagram"></i> 團隊協作結構</h2>
+                <div class="collaboration-chart">
+                    <div class="chart-container">
+                        <div class="chart-node leader-node" id="leaderNode">
+                            <div class="node-icon">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div class="node-label">ITZY領導者</div>
+                            <div class="node-role">團隊總指揮</div>
+                        </div>
+                        
+                        <div class="chart-branch" id="chartBranch">
+                            <!-- 分支線條將由JavaScript動態生成 -->
+                        </div>
+                        
+                        <div class="chart-nodes-row" id="ceoNodesRow">
+                            <!-- CEO節點將由JavaScript動態生成 -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 性能統計 -->
+            <section class="performance-stats">
+                <h2 class="section-title"><i class="fas fa-chart-bar"></i> Agents 性能統計</h2>
+                <div class="performance-charts">
+                    <div class="chart-wrapper">
+                        <canvas id="reportsByAgentChart"></canvas>
+                    </div>
+                    <div class="chart-wrapper">
+                        <canvas id="completionRateChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 技能矩陣 -->
+            <section class="skills-matrix">
+                <h2 class="section-title"><i class="fas fa-th"></i> 專業技能矩陣</h2>
+                <div class="matrix-container">
+                    <table class="skills-matrix-table" id="skillsMatrixTable">
+                        <!-- 技能矩陣將由JavaScript動態生成 -->
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <!-- 頁腳 -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-logo">ITZY AI Agents</div>
+                <div class="footer-links">
+                    <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="#"><i class="fas fa-book"></i> 文檔</a>
+                    <a href="#"><i class="fas fa-envelope"></i> 聯絡</a>
+                </div>
+                <div class="footer-copyright">
+                    &copy; 2025 ITZY AI Agents 系統. 基於 agency-agents-zh 框架.
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/agents.js"></script>
+</body>
+</html>

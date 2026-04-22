@@ -1,0 +1,225 @@
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+/root/ceo-reports-web/scripts/report_manager.py:156: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  data["metadata"]["lastUpdated"] = datetime.utcnow().isoformat() + "Z"
+🌅 生成今日報告...
+
+✅ 已為 ITZY領導者 生成報告:
+   標題: 團隊協調與資源分配會議
+   日期: 2026-04-19
+   狀態: in_progress
+✅ 已為 Yeji禮志 生成報告:
+   標題: 基礎設計方案評估
+   日期: 2026-04-19
+   狀態: completed
+✅ 已為 Lia 生成報告:
+   標題: API 接口開發
+   日期: 2026-04-19
+   狀態: completed
+✅ 已為 Chaeryeong彩領 生成報告:
+   標題: 移動端適配優化
+   日期: 2026-04-19
+   狀態: in_progress
+✅ 已為 Yuna有娜 生成報告:
+   標題: 動畫演示製作
+   日期: 2026-04-19
+   狀態: in_progress
+✅ 已為 Ryujin 生成報告:
+   標題: 性能測試與優化
+   日期: 2026-04-19
+   狀態: completed
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+
+✅ 所有報告已生成並同步到網站
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已導出 Markdown: /root/ceo-reports-web/exports/reports_20260420.md
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+/root/ceo-reports-web/scripts/report_manager.py:156: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  data["metadata"]["lastUpdated"] = datetime.utcnow().isoformat() + "Z"
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+🌅 生成今日報告...
+
+✅ 已為 ITZY領導者 生成報告:
+   標題: 團隊協調與資源分配會議
+   日期: 2026-04-20
+   狀態: in_progress
+✅ 已為 Yeji禮志 生成報告:
+   標題: 基礎設計方案評估
+   日期: 2026-04-20
+   狀態: completed
+✅ 已為 Lia 生成報告:
+   標題: 數據安全審計
+   日期: 2026-04-20
+   狀態: completed
+✅ 已為 Chaeryeong彩領 生成報告:
+   標題: 前端組件開發
+   日期: 2026-04-20
+   狀態: in_progress
+✅ 已為 Yuna有娜 生成報告:
+   標題: 數據可視化報告
+   日期: 2026-04-20
+   狀態: completed
+✅ 已為 Ryujin 生成報告:
+   標題: 功能測試報告
+   日期: 2026-04-20
+   狀態: in_progress
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+
+✅ 所有報告已生成並同步到網站
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+/root/ceo-reports-web/scripts/report_manager.py:156: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  data["metadata"]["lastUpdated"] = datetime.utcnow().isoformat() + "Z"
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+🌅 生成今日報告...
+
+✅ 已為 ITZY領導者 生成報告:
+   標題: 團隊協調與資源分配會議
+   日期: 2026-04-21
+   狀態: in_progress
+✅ 已為 Yeji禮志 生成報告:
+   標題: 基礎設計方案評估
+   日期: 2026-04-21
+   狀態: completed
+✅ 已為 Lia 生成報告:
+   標題: API 接口開發
+   日期: 2026-04-21
+   狀態: completed
+✅ 已為 Chaeryeong彩領 生成報告:
+   標題: 前端組件開發
+   日期: 2026-04-21
+   狀態: in_progress
+✅ 已為 Yuna有娜 生成報告:
+   標題: 儀表板設計
+   日期: 2026-04-21
+   狀態: in_progress
+✅ 已為 Ryujin 生成報告:
+   標題: 自動化測試腳本開發
+   日期: 2026-04-21
+   狀態: completed
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+
+✅ 所有報告已生成並同步到網站
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+/root/ceo-reports-web/scripts/report_manager.py:156: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  data["metadata"]["lastUpdated"] = datetime.utcnow().isoformat() + "Z"
+🌅 生成今日報告...
+
+✅ 已為 ITZY領導者 生成報告:
+   標題: 跨部門協作審查
+   日期: 2026-04-22
+   狀態: completed
+✅ 已為 Yeji禮志 生成報告:
+   標題: 基礎設計方案評估
+   日期: 2026-04-22
+   狀態: completed
+✅ 已為 Lia 生成報告:
+   標題: 數據安全審計
+   日期: 2026-04-22
+   狀態: in_progress
+✅ 已為 Chaeryeong彩領 生成報告:
+   標題: 網站 UI/UX 改版
+   日期: 2026-04-22
+   狀態: completed
+✅ 已為 Yuna有娜 生成報告:
+   標題: 儀表板設計
+   日期: 2026-04-22
+   狀態: completed
+✅ 已為 Ryujin 生成報告:
+   標題: 性能測試與優化
+   日期: 2026-04-22
+   狀態: completed
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+
+✅ 所有報告已生成並同步到網站
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js
+✅ 已同步數據到: /root/ceo-reports-web/js/data.js

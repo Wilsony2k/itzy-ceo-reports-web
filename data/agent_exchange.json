@@ -1,0 +1,370 @@
+{
+  "schema_version": "1.0",
+  "description": "ITZY CEO Agents 数据交换中心 - 统一的 agent 间数据流转接口",
+  "last_updated": "2026-04-22T13:09:56.310263",
+  "exchange_rules": {
+    "routing": {
+      "yeji": {
+        "outputs_to": [
+          "lia",
+          "yuna"
+        ],
+        "requires_test": true,
+        "test_agent": "ryujin"
+      },
+      "lia": {
+        "outputs_to": [
+          "chaeryeong",
+          "yeji",
+          "yuna"
+        ],
+        "requires_test": false,
+        "provides_api": true
+      },
+      "chaeryeong": {
+        "outputs_to": [
+          "yuna"
+        ],
+        "requires_test": true,
+        "test_agent": "ryujin"
+      },
+      "yuna": {
+        "outputs_to": [
+          "leader"
+        ],
+        "requires_test": true,
+        "test_agent": "ryujin"
+      },
+      "ryujin": {
+        "outputs_to": [
+          "leader",
+          "producer"
+        ],
+        "test_results_broadcast": true
+      },
+      "leader": {
+        "outputs_to": [
+          "external"
+        ],
+        "final_reports": true
+      }
+    },
+    "auto_decision": {
+      "pass": {
+        "action": "auto_approve",
+        "notify": [
+          "producer",
+          "consumers"
+        ],
+        "leader_required": false
+      },
+      "minor_fail": {
+        "action": "auto_return",
+        "notify": [
+          "producer"
+        ],
+        "leader_required": false
+      },
+      "critical_fail": {
+        "action": "block_publish",
+        "notify": [
+          "leader",
+          "producer"
+        ],
+        "leader_required": true
+      }
+    }
+  },
+  "pending_outputs": [
+    {
+      "id": "output-yeji-001",
+      "producer": "yeji",
+      "type": "engineering_data",
+      "created_at": "2026-04-22T10:02:21.177591",
+      "status": "new",
+      "test_status": "blocked",
+      "requires_test": true,
+      "description": "结构分析报告 - 混凝土强度测试",
+      "priority": "P0",
+      "test_id": "test-20260422104721-output-yeji-001",
+      "tested_at": "2026-04-22T10:47:21.272543"
+    },
+    {
+      "id": "output-lia-001",
+      "producer": "lia",
+      "type": "api_endpoint",
+      "created_at": "2026-04-22T10:47:21.177604",
+      "status": "new",
+      "test_status": "running",
+      "requires_test": true,
+      "description": "数据库 API 端点 - 项目数据查询",
+      "priority": "P1",
+      "test_id": "test-20260422104721-output-lia-001"
+    },
+    {
+      "id": "output-chaeryeong-001",
+      "producer": "chaeryeong",
+      "type": "web_ui",
+      "created_at": "2026-04-22T10:47:21.177606",
+      "status": "new",
+      "test_status": "running",
+      "requires_test": true,
+      "description": "网站页面 - 进度报告仪表盘",
+      "priority": "P1",
+      "test_id": "test-20260422104721-output-chaeryeong-001"
+    }
+  ],
+  "active_queues": {
+    "critical": [
+      {
+        "id": "critical-001",
+        "assigned_agent": "yeji",
+        "created_at": "2026-04-22T10:27:21.177608",
+        "description": "紧急结构安全审查",
+        "priority": "P0"
+      }
+    ],
+    "high": [],
+    "normal": [],
+    "background": []
+  },
+  "resource_allocation": {
+    "current": {
+      "yeji": 70,
+      "lia": 20,
+      "chaeryeong": 15,
+      "yuna": 10,
+      "ryujin": 5
+    },
+    "baseline": {
+      "yeji": 20,
+      "lia": 20,
+      "chaeryeong": 15,
+      "yuna": 15,
+      "ryujin": 10
+    },
+    "available_total": 100
+  },
+  "notifications": {
+    "pending": [
+      {
+        "type": "bottleneck_alert",
+        "target": "yeji",
+        "message": "瓶颈检测：您的产出已等待 45.0 分钟，已为您增加资源分配。",
+        "priority": "HIGH",
+        "id": "notif-20260422104721",
+        "created_at": "2026-04-22T10:47:21.220690",
+        "status": "pending"
+      },
+      {
+        "type": "resource_adjustment",
+        "target": "yeji",
+        "message": "资源分配已调整：75% → 70%",
+        "priority": "HIGH",
+        "id": "notif-20260422104721",
+        "created_at": "2026-04-22T10:47:21.220737",
+        "status": "pending"
+      },
+      {
+        "type": "test_blocked_intervention",
+        "target": "yeji",
+        "message": "您的产出 output-yeji-old-001 测试失败：None。请立即修复。",
+        "priority": "CRITICAL",
+        "id": "notif-20260422104721",
+        "created_at": "2026-04-22T10:47:21.220779",
+        "status": "pending"
+      },
+      {
+        "type": "leader_intervention_required",
+        "target": "leader",
+        "message": "需要介入的测试失败：yeji - output-yeji-old-001",
+        "priority": "CRITICAL",
+        "id": "notif-20260422104721",
+        "created_at": "2026-04-22T10:47:21.220783",
+        "status": "pending"
+      },
+      {
+        "type": "test_failed",
+        "target": "leader",
+        "message": "测试失败需介入：yeji - output-yeji-001 (得分: 53)",
+        "priority": "CRITICAL",
+        "test_result": {
+          "test_id": "test-20260422104721-output-yeji-001",
+          "output_id": "output-yeji-001",
+          "producer": "yeji",
+          "status": "FAIL",
+          "score": 53,
+          "issues": [
+            "代码覆盖率低于标准 (45% < 80%)",
+            "发现 3 个高危安全漏洞",
+            "性能测试失败：响应时间超过阈值"
+          ],
+          "decision": "block_publish",
+          "leader_required": true,
+          "test_type": "automation-tester",
+          "tested_at": "2026-04-22T10:47:21.272535",
+          "blocked_at": "2026-04-22T10:47:21.272538",
+          "critical": true
+        },
+        "id": "notif-20260422104721-3066",
+        "created_at": "2026-04-22T10:47:21.272572",
+        "from_agent": "ryujin",
+        "status": "pending"
+      },
+      {
+        "type": "test_blocked",
+        "target": "yeji",
+        "message": "测试失败，发布已被阻断。问题：代码覆盖率低于标准 (45% < 80%), 发现 3 个高危安全漏洞, 性能测试失败：响应时间超过阈值",
+        "priority": "CRITICAL",
+        "test_result": {
+          "test_id": "test-20260422104721-output-yeji-001",
+          "output_id": "output-yeji-001",
+          "producer": "yeji",
+          "status": "FAIL",
+          "score": 53,
+          "issues": [
+            "代码覆盖率低于标准 (45% < 80%)",
+            "发现 3 个高危安全漏洞",
+            "性能测试失败：响应时间超过阈值"
+          ],
+          "decision": "block_publish",
+          "leader_required": true,
+          "test_type": "automation-tester",
+          "tested_at": "2026-04-22T10:47:21.272535",
+          "blocked_at": "2026-04-22T10:47:21.272538",
+          "critical": true
+        },
+        "id": "notif-20260422104721-9032",
+        "created_at": "2026-04-22T10:47:21.272589",
+        "from_agent": "ryujin",
+        "status": "pending"
+      },
+      {
+        "type": "test_warning",
+        "target": "lia",
+        "message": "测试警告 (得分: 71)，需要修复：代码覆盖率略低 (72% < 80%), 1 个中等风险警告",
+        "priority": "MEDIUM",
+        "test_result": {
+          "test_id": "test-20260422104721-output-lia-001",
+          "output_id": "output-lia-001",
+          "producer": "lia",
+          "status": "WARN",
+          "score": 71,
+          "issues": [
+            "代码覆盖率略低 (72% < 80%)",
+            "1 个中等风险警告"
+          ],
+          "decision": "auto_return",
+          "leader_required": false,
+          "test_type": "security-auditor",
+          "tested_at": "2026-04-22T10:47:21.272794",
+          "returned_at": "2026-04-22T10:47:21.272796"
+        },
+        "id": "notif-20260422104721-1425",
+        "created_at": "2026-04-22T10:47:21.272813",
+        "from_agent": "ryujin",
+        "status": "pending"
+      },
+      {
+        "type": "test_warning",
+        "target": "chaeryeong",
+        "message": "测试警告 (得分: 66)，需要修复：代码覆盖率略低 (72% < 80%), 1 个中等风险警告",
+        "priority": "MEDIUM",
+        "test_result": {
+          "test_id": "test-20260422104721-output-chaeryeong-001",
+          "output_id": "output-chaeryeong-001",
+          "producer": "chaeryeong",
+          "status": "WARN",
+          "score": 66,
+          "issues": [
+            "代码覆盖率略低 (72% < 80%)",
+            "1 个中等风险警告"
+          ],
+          "decision": "auto_return",
+          "leader_required": false,
+          "test_type": "automation-tester",
+          "tested_at": "2026-04-22T10:47:21.272937",
+          "returned_at": "2026-04-22T10:47:21.272940"
+        },
+        "id": "notif-20260422104721-5842",
+        "created_at": "2026-04-22T10:47:21.272954",
+        "from_agent": "ryujin",
+        "status": "pending"
+      }
+    ],
+    "delivered": []
+  },
+  "test_results": {
+    "pending_reviews": [
+      {
+        "test_id": "test-20260422104721-output-lia-001",
+        "output_id": "output-lia-001",
+        "producer": "lia",
+        "status": "WARN",
+        "score": 71,
+        "issues": [
+          "代码覆盖率略低 (72% < 80%)",
+          "1 个中等风险警告"
+        ],
+        "decision": "auto_return",
+        "leader_required": false,
+        "test_type": "security-auditor",
+        "tested_at": "2026-04-22T10:47:21.272794",
+        "returned_at": "2026-04-22T10:47:21.272796"
+      },
+      {
+        "test_id": "test-20260422104721-output-chaeryeong-001",
+        "output_id": "output-chaeryeong-001",
+        "producer": "chaeryeong",
+        "status": "WARN",
+        "score": 66,
+        "issues": [
+          "代码覆盖率略低 (72% < 80%)",
+          "1 个中等风险警告"
+        ],
+        "decision": "auto_return",
+        "leader_required": false,
+        "test_type": "automation-tester",
+        "tested_at": "2026-04-22T10:47:21.272937",
+        "returned_at": "2026-04-22T10:47:21.272940"
+      }
+    ],
+    "auto_approved": [],
+    "blocked": [
+      {
+        "output_id": "output-yeji-old-001",
+        "producer": "yeji",
+        "test_id": "test-old-001",
+        "status": "FAIL",
+        "score": 45,
+        "issues": [
+          "结构安全系数不足",
+          "材料强度低于标准"
+        ],
+        "critical": true,
+        "retry_count": 2,
+        "tested_at": "2026-04-22T09:47:21.177611"
+      },
+      {
+        "test_id": "test-20260422104721-output-yeji-001",
+        "output_id": "output-yeji-001",
+        "producer": "yeji",
+        "status": "FAIL",
+        "score": 53,
+        "issues": [
+          "代码覆盖率低于标准 (45% < 80%)",
+          "发现 3 个高危安全漏洞",
+          "性能测试失败：响应时间超过阈值"
+        ],
+        "decision": "block_publish",
+        "leader_required": true,
+        "test_type": "automation-tester",
+        "tested_at": "2026-04-22T10:47:21.272535",
+        "blocked_at": "2026-04-22T10:47:21.272538",
+        "critical": true
+      }
+    ]
+  },
+  "last_loaded": "2026-04-22T10:47:21.220398",
+  "qa_last_scan": "2026-04-22T13:09:56.310263"
+}

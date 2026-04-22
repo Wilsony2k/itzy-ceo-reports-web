@@ -1,0 +1,11 @@
+# ITZY CEO Reports 自動化配置
+# ===================================
+
+# 每天早上 9:00 為所有 CEO Agents 生成報告
+0 9 * * * /root/ceo-reports-web/scripts/ceo-reports.sh daily >> /root/ceo-reports-web/logs/cron.log 2>&1
+
+# 每小時同步數據到網站
+0 * * * * /root/ceo-reports-web/scripts/ceo-reports.sh sync >> /root/ceo-reports-web/logs/cron.log 2>&1
+
+# 每週一早上 8:00 導出週報告 (Markdown 格式)
+0 8 * * 1 /root/ceo-reports-web/scripts/ceo-reports.sh export markdown >> /root/ceo-reports-web/logs/cron.log 2>&1

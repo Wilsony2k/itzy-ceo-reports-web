@@ -1,0 +1,367 @@
+/* 報告頁面專用樣式 */
+
+/* 過濾器區域 */
+.filters-section {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-bottom: 30px;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-end;
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-family: 'Noto Sans TC', 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #333;
+    background: white;
+    transition: border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.filter-select:focus {
+    outline: none;
+    border-color: #FF6B9D;
+}
+
+.filter-btn {
+    padding: 12px 25px;
+    background: linear-gradient(45deg, #FF6B9D, #FF6B8B);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Noto Sans TC', 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.filter-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 157, 0.3);
+}
+
+.filter-btn.reset-btn {
+    background: linear-gradient(45deg, #6c757d, #495057);
+}
+
+.filter-btn.reset-btn:hover {
+    box-shadow: 0 5px 15px rgba(108, 117, 125, 0.3);
+}
+
+/* 報告統計卡片 */
+.reports-stats {
+    margin-bottom: 30px;
+}
+
+.stats-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.stat-card-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+}
+
+.stat-card-content {
+    flex: 1;
+}
+
+.stat-card-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.stat-card-label {
+    color: #666;
+    font-size: 14px;
+}
+
+/* 報告表格 */
+.all-reports-section {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.reports-table-container {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.reports-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 800px;
+}
+
+.reports-table th {
+    background: linear-gradient(45deg, #f8f9fa, #e9ecef);
+    padding: 15px;
+    text-align: left;
+    color: #2c3e50;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(255, 107, 157, 0.2);
+    position: sticky;
+    top: 0;
+}
+
+.reports-table td {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.reports-table tbody tr {
+    transition: background-color 0.3s ease;
+}
+
+.reports-table tbody tr:hover {
+    background-color: rgba(255, 107, 157, 0.05);
+}
+
+.report-agent-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.report-agent-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 16px;
+}
+
+.report-agent-name {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.report-title-cell {
+    max-width: 300px;
+    font-weight: 500;
+    color: #333;
+}
+
+.report-status-cell .status-badge {
+    display: inline-block;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.status-badge.completed {
+    background: rgba(6, 214, 160, 0.1);
+    color: #06D6A0;
+}
+
+.status-badge.in_progress {
+    background: rgba(255, 107, 157, 0.1);
+    color: #FF6B9D;
+}
+
+.report-tags-cell {
+    max-width: 200px;
+}
+
+.report-tags-cell .tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 11px;
+    margin: 2px;
+    font-weight: 500;
+}
+
+.report-actions-cell {
+    min-width: 120px;
+}
+
+.action-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Noto Sans TC', 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.action-btn.view {
+    background: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+.action-btn.view:hover {
+    background: rgba(59, 130, 246, 0.2);
+}
+
+.action-btn.download {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+}
+
+.action-btn.download:hover {
+    background: rgba(16, 185, 129, 0.2);
+}
+
+/* 分頁 */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.pagination-btn {
+    padding: 10px 20px;
+    background: white;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-family: 'Noto Sans TC', 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-btn:hover {
+    border-color: #FF6B9D;
+    color: #FF6B9D;
+}
+
+.pagination-btn.active {
+    background: linear-gradient(45deg, #FF6B9D, #FF6B8B);
+    color: white;
+    border-color: #FF6B9D;
+}
+
+.pagination-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* 空狀態 */
+.empty-state {
+    text-align: center;
+    padding: 50px;
+    color: #666;
+}
+
+.empty-state-icon {
+    font-size: 48px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.empty-state-text {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* 響應式設計 */
+@media (max-width: 1024px) {
+    .filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .filter-group {
+        min-width: 100%;
+    }
+    
+    .stats-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .reports-table th,
+    .reports-table td {
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .action-btn {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+    }
+    
+    .pagination-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
