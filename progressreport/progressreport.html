@@ -8,12 +8,10 @@
     <link rel="stylesheet" href="css/progress.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- YUNA Visualization Engine - Pure SVG -->
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
 </head>
 <body>
     <div class="container">
-        <!-- 导航栏 -->
         <header class="header">
             <div class="logo">
                 <div class="logo-icon">ITZY</div>
@@ -29,9 +27,7 @@
             <div class="date-display" id="currentDate"></div>
         </header>
 
-        <!-- 主内容区 -->
         <main class="main-content">
-            <!-- 项目概览 -->
             <section class="project-overview">
                 <div class="overview-header">
                     <h2><i class="fas fa-project-diagram"></i> ITZY CEO Agents 改进方案部署进度</h2>
@@ -53,1083 +49,1079 @@
                 </div>
             </section>
 
-            <!-- 🎨 漫画风格协调架构流程图 -->
-     1|<!-- 🎨 YUNA COMIC STYLE: ITZY CEO Agents 协调架构 -->
-     2|            <section class="yuna-flowchart-section comic-style">
-     3|                <div class="chart-label comic-label" style="background: linear-gradient(135deg, rgba(255,182,193,0.3), rgba(173,216,230,0.2)); border-color: rgba(255,182,193,0.5); color: #FF6B9D;">
-     4|                    <i class="fas fa-palette"></i>
-     5|                    <span>YUNA COMIC VISUALIZATION</span>
-     6|                </div>
-     7|                <h3><i class="fas fa-users"></i> ITZY CEO Agents 协调架构 - 活泼漫画风格</h3>
-     8|                
-     9|                <div class="yuna-comic-container">
-    10|                    <!-- Yuna Comic SVG Flowchart -->
-    11|                    <svg class="yuna-comic-svg" viewBox="0 0 1000 550" xmlns="http://www.w3.org/2000/svg">
-    12|                        <!-- 漫画风格定义 -->
-    13|                        <defs>
-    14|                            <!-- 手绘效果滤镜 -->
-    15|                            <filter id="comicSketch" x="-5%" y="-5%" width="110%" height="110%">
-    16|                                <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="2" result="noise"/>
-    17|                                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
-    18|                            </filter>
-    19|                            
-    20|                            <!-- 柔和阴影 -->
-    21|                            <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
-    22|                                <feDropShadow dx="3" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
-    23|                            </filter>
-    24|                            
-    25|                            <!-- 便利贴渐变 -->
-    26|                            <linearGradient id="stickyYellow" x1="0%" y1="0%" x2="100%" y2="100%">
-    27|                                <stop offset="0%" style="stop-color:#FFF9C4"/>
-    28|                                <stop offset="100%" style="stop-color:#FFE082"/>
-    29|                            </linearGradient>
-    30|                            
-    31|                            <linearGradient id="stickyPink" x1="0%" y1="0%" x2="100%" y2="100%">
-    32|                                <stop offset="0%" style="stop-color:#FCE4EC"/>
-    33|                                <stop offset="100%" style="stop-color:#F8BBD9"/>
-    34|                            </linearGradient>
-    35|                            
-    36|                            <linearGradient id="stickyGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-    37|                                <stop offset="0%" style="stop-color:#E8F5E9"/>
-    38|                                <stop offset="100%" style="stop-color:#C8E6C9"/>
-    39|                            </linearGradient>
-    40|                            
-    41|                            <linearGradient id="stickyBlue" x1="0%" y1="0%" x2="100%" y2="100%">
-    42|                                <stop offset="0%" style="stop-color:#E3F2FD"/>
-    43|                                <stop offset="100%" style="stop-color:#BBDEFB"/>
-    44|                            </linearGradient>
-    45|                            
-    46|                            <linearGradient id="stickyPurple" x1="0%" y1="0%" x2="100%" y2="100%">
-    47|                                <stop offset="0%" style="stop-color:#F3E5F5"/>
-    48|                                <stop offset="100%" style="stop-color:#E1BEE7"/>
-    49|                            </linearGradient>
-    50|                            
-    51|                            <linearGradient id="stickyOrange" x1="0%" y1="0%" x2="100%" y2="100%">
-    52|                                <stop offset="0%" style="stop-color:#FFF3E0"/>
-    53|                                <stop offset="100%" style="stop-color:#FFE0B2"/>
-    54|                            </linearGradient>
-    55|                            
-    56|                            <!-- 漫画线条动画 -->
-    57|                            <style>
-    58|                                @keyframes wiggle { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-2deg); } 75% { transform: rotate(2deg); } }
-    59|                                @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
-    60|                                @keyframes pop { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
-    61|                                .comic-wiggle { animation: wiggle 3s ease-in-out infinite; }
-    62|                                .comic-bounce { animation: bounce 2s ease-in-out infinite; }
-    63|                                .comic-pop { animation: pop 2s ease-in-out infinite; }
-    64|                            </style>
-    65|                        </defs>
-    66|                        
-    67|                        <!-- 温暖的米白背景 -->
-    68|                        <rect width="100%" height="100%" fill="#FFF8F0"/>
-    69|                        
-    70|                        <!-- 装饰性圆点背景 -->
-    71|                        <g class="decorative-dots" opacity="0.3">
-    72|                            <circle cx="50" cy="50" r="8" fill="#FFB6C1"/>
-    73|                            <circle cx="150" cy="80" r="6" fill="#87CEEB"/>
-    74|                            <circle cx="950" cy="60" r="10" fill="#98FB98"/>
-    75|                            <circle cx="900" cy="500" r="7" fill="#DDA0DD"/>
-    76|                            <circle cx="100" cy="480" r="5" fill="#F0E68C"/>
-    77|                        </g>
-    78|                        
-    79|                        <!-- 白板框架 -->
-    80|                        <g class="whiteboard-frame">
-    81|                            <rect x="80" y="30" width="840" height="490" rx="15" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="3" filter="url(#softShadow)"/>
-    82|                            <!-- 白板顶部装饰条 -->
-    83|                            <rect x="80" y="30" width="840" height="25" rx="15" fill="#FF6B9D" opacity="0.8"/>
-    84|                            <text x="500" y="50" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">✨ ITZY CEO Agents Team Workspace ✨</text>
-    85|                        </g>
-    86|                        
-    87|                        <!-- ===== 手绘连接线 ===== -->
-    88|                        <g class="comic-flow-lines" stroke-width="3" fill="none" opacity="0.7">
-    89|                            <!-- Yeji → Lia (波浪线) -->
-    90|                            <path d="M 230 200 Q 280 180 320 220 Q 360 260 400 240" stroke="#4ECDC4" stroke-dasharray="8,4" class="comic-wiggle">
-    91|                                <title>数据输出</title>
-    92|                            </path>
-    93|                            <!-- 小箭头 -->
-    94|                            <polygon points="395,235 405,240 395,245" fill="#4ECDC4"/>
-    95|                            
-    96|                            <!-- Lia → Chaeryeong -->
-    97|                            <path d="M 480 240 Q 520 220 560 200" stroke="#9D65FF" stroke-dasharray="8,4">
-    98|                                <title>API服务</title>
-    99|                            </path>
-   100|                            <polygon points="555,195 565,200 555,205" fill="#9D65FF"/>
-   101|                            
-   102|                            <!-- Yeji → Yuna -->
-   103|                            <path d="M 230 260 Q 300 350 380 380" stroke="#4ECDC4" stroke-dasharray="6,3"/>
-   104|                            <polygon points="375,375 385,380 380,385" fill="#4ECDC4"/>
-   105|                            
-   106|                            <!-- Chaeryeong → Yuna -->
-   107|                            <path d="M 560 260 Q 500 350 450 380" stroke="#FFD166" stroke-dasharray="6,3"/>
-   108|                            <polygon points="445,375 455,380 450,385" fill="#FFD166"/>
-   109|                            
-   110|                            <!-- Yuna → Leader (汇报线) -->
-   111|                            <path d="M 450 420 Q 550 380 680 220" stroke="#FF6B8B" stroke-width="4" stroke-dasharray="10,5" class="comic-bounce">
-   112|                                <title>可视化汇报</title>
-   113|                            </path>
-   114|                            <polygon points="675,215 685,220 680,225" fill="#FF6B8B"/>
-   115|                            
-   116|                            <!-- Ryujin QA → Leader -->
-   117|                            <path d="M 800 220 L 740 220" stroke="#06D6A0" stroke-width="4" class="comic-pop"/>
-   118|                            <polygon points="745,215 735,220 745,225" fill="#06D6A0"/>
-   119|                            
-   120|                            <!-- QA → 各Agent (虚线测试流) -->
-   121|                            <path d="M 800 180 Q 600 100 230 160" stroke="#06D6A0" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
-   122|                            <path d="M 800 260 Q 600 280 480 260" stroke="#FFD166" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
-   123|                            <path d="M 800 300 Q 600 320 560 260" stroke="#06D6A0" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
-   124|                        </g>
-   125|                        
-   126|                        <!-- ===== LEADER - 中央便利贴（大） ===== -->
-   127|                        <g class="leader-comic-card comic-pop" transform="translate(680, 140)">
-   128|                            <!-- 主便利贴 -->
-   129|                            <rect x="-70" y="-60" width="140" height="120" rx="5" fill="url(#stickyPink)" filter="url(#softShadow)"/>
-   130|                            <!-- 折角效果 -->
-   131|                            <polygon points="70,-60 70,-45 55,-60" fill="#F8BBD9" opacity="0.8"/>
-   132|                            
-   133|                            <!-- 漫画人物头像 -->
-   134|                            <circle cy="-20" r="25" fill="#FFB6C1" stroke="#FF6B9D" stroke-width="2"/>
-   135|                            <!-- 简化面部 -->
-   136|                            <circle cx="-8" cy="-24" r="3" fill="#333"/>
-   137|                            <circle cx="8" cy="-24" r="3" fill="#333"/>
-   138|                            <path d="M -10 -12 Q 0 -8 10 -12" stroke="#333" stroke-width="2" fill="none"/>
-   139|                            <!-- 头发 -->
-   140|                            <ellipse cy="-42" rx="22" ry="8" fill="#FF6B9D"/>
-   141|                            
-   142|                            <!-- 标签 -->
-   143|                            <text y="20" text-anchor="middle" fill="#FF6B9D" font-size="16" font-weight="bold">👑 LEADER</text>
-   144|                            <text y="38" text-anchor="middle" fill="#666" font-size="10">协调中枢</text>
-   145|                            
-   146|                            <!-- 小图标 -->
-   147|                            <g transform="translate(-45, 50)">
-   148|                                <rect width="90" height="20" rx="3" fill="#FFE082"/>
-   149|                                <text x="45" y="14" text-anchor="middle" fill="#666" font-size="9">⚡ 协调引擎</text>
-   150|                            </g>
-   151|                            
-   152|                            <!-- 对话气泡 -->
-   153|                            <g transform="translate(60, -80)">
-   154|                                <ellipse rx="35" ry="20" fill="#FFF" stroke="#FF6B9D" stroke-width="2"/>
-   155|                                <polygon points="-5,20 5,30 15,20" fill="#FFF" stroke="#FF6B9D" stroke-width="2"/>
-   156|                                <text y="3" text-anchor="middle" fill="#FF6B9D" font-size="9">资源分配OK!</text>
-   157|                            </g>
-   158|                        </g>
-   159|                        
-   160|                        <!-- ===== YEJI - 土木工程 ===== -->
-   161|                        <g class="yeji-comic-card" transform="translate(180, 200)">
-   162|                            <!-- 便利贴 -->
-   163|                            <rect x="-55" y="-45" width="110" height="90" rx="4" fill="url(#stickyGreen)" filter="url(#softShadow)"/>
-   164|                            <polygon points="55,-45 55,-30 40,-45" fill="#C8E6C9" opacity="0.8"/>
-   165|                            
-   166|                            <!-- 人物头像 -->
-   167|                            <circle cy="-15" r="20" fill="#B2DFDB" stroke="#4ECDC4" stroke-width="2"/>
-   168|                            <circle cx="-6" cy="-18" r="2.5" fill="#333"/>
-   169|                            <circle cx="6" cy="-18" r="2.5" fill="#333"/>
-   170|                            <path d="M -8 -8 Q 0 -5 8 -8" stroke="#333" stroke-width="1.5" fill="none"/>
-   171|                            <!-- 工程帽 -->
-   172|                            <rect x="-18" y="-38" width="36" height="10" rx="2" fill="#4ECDC4"/>
-   173|                            
-   174|                            <!-- 标签 -->
-   175|                            <text y="18" text-anchor="middle" fill="#4ECDC4" font-size="14" font-weight="bold">🧢 YEJI</text>
-   176|                            <text y="32" text-anchor="middle" fill="#666" font-size="9">土木工程</text>
-   177|                            
-   178|                            <!-- SUBAGENT 小便利贴 -->
-   179|                            <g transform="translate(-40, 40)">
-   180|                                <rect width="80" height="15" rx="2" fill="#E8F5E9"/>
-   181|                                <text x="40" y="10" text-anchor="middle" fill="#4ECDC4" font-size="8">结构·材料·规范</text>
-   182|                            </g>
-   183|                        </g>
-   184|                        
-   185|                        <!-- ===== LIA - 数据中枢 ===== -->
-   186|                        <g class="lia-comic-card" transform="translate(420, 220)">
-   187|                            <!-- 便利贴 -->
-   188|                            <rect x="-50" y="-40" width="100" height="80" rx="4" fill="url(#stickyPurple)" filter="url(#softShadow)"/>
-   189|                            <polygon points="50,-40 50,-25 35,-40" fill="#E1BEE7" opacity="0.8"/>
-   190|                            
-   191|                            <!-- 人物头像 -->
-   192|                            <circle cy="-12" r="18" fill="#E1BEE7" stroke="#9D65FF" stroke-width="2"/>
-   193|                            <circle cx="-5" cy="-15" r="2" fill="#333"/>
-   194|                            <circle cx="5" cy="-15" r="2" fill="#333"/>
-   195|                            <path d="M -6 -6 Q 0 -3 6 -6" stroke="#333" stroke-width="1.5" fill="none"/>
-   196|                            <!-- 眼镜 -->
-   197|                            <rect x="-12" y="-20" width="10" height="6" rx="1" fill="none" stroke="#9D65FF" stroke-width="1"/>
-   198|                            <rect x="2" y="-20" width="10" height="6" rx="1" fill="none" stroke="#9D65FF" stroke-width="1"/>
-   199|                            <line x1="-2" y1="-17" x2="2" y2="-17" stroke="#9D65FF" stroke-width="1"/>
-   200|                            
-   201|                            <!-- 标签 -->
-   202|                            <text y="15" text-anchor="middle" fill="#9D65FF" font-size="13" font-weight="bold">💜 LIA</text>
-   203|                            <text y="28" text-anchor="middle" fill="#666" font-size="9">数据中枢</text>
-   204|                            
-   205|                            <!-- 数据小图标 -->
-   206|                            <g transform="translate(-35, 35)">
-   207|                                <rect width="70" height="14" rx="2" fill="#F3E5F5"/>
-   208|                                <text x="35" y="10" text-anchor="middle" fill="#9D65FF" font-size="8">📊 API·架构</text>
-   209|                            </g>
-   210|                        </g>
-   211|                        
-   212|                        <!-- ===== CHAERYEONG - 网站系统 ===== -->
-   213|                        <g class="chaeryeong-comic-card" transform="translate(570, 200)">
-   214|                            <!-- 便利贴 -->
-   215|                            <rect x="-55" y="-45" width="110" height="90" rx="4" fill="url(#stickyYellow)" filter="url(#softShadow)"/>
-   216|                            <polygon points="55,-45 55,-30 40,-45" fill="#FFE082" opacity="0.8"/>
-   217|                            
-   218|                            <!-- 人物头像 -->
-   219|                            <circle cy="-15" r="20" fill="#FFF9C4" stroke="#FFD166" stroke-width="2"/>
-   220|                            <circle cx="-6" cy="-18" r="2.5" fill="#333"/>
-   221|                            <circle cx="6" cy="-18" r="2.5" fill="#333"/>
-   222|                            <path d="M -8 -8 Q 0 -5 8 -8" stroke="#333" stroke-width="1.5" fill="none"/>
-   223|                            <!-- 发带 -->
-   224|                            <rect x="-22" y="-32" width="44" height="5" rx="2" fill="#FFD166"/>
-   225|                            
-   226|                            <!-- 标签 -->
-   227|                            <text y="18" text-anchor="middle" fill="#FFD166" font-size="13" font-weight="bold">💛 CHAERYEONG</text>
-   228|                            <text y="32" text-anchor="middle" fill="#666" font-size="9">网站系统</text>
-   229|                            
-   230|                            <!-- SUBAGENT -->
-   231|                            <g transform="translate(-40, 40)">
-   232|                                <rect width="80" height="15" rx="2" fill="#FFF3E0"/>
-   233|                                <text x="40" y="10" text-anchor="middle" fill="#FFD166" font-size="8">前端·UI·UX</text>
-   234|                            </g>
-   235|                        </g>
-   236|                        
-   237|                        <!-- ===== YUNA - 可视化引擎 ===== -->
-   238|                        <g class="yuna-comic-card comic-bounce" transform="translate(420, 400)">
-   239|                            <!-- 便利贴（菱形风格） -->
-   240|                            <polygon points="0,-45 55,0 0,45 -55,0" fill="url(#stickyPink)" filter="url(#softShadow)"/>
-   241|                            
-   242|                            <!-- 人物头像 -->
-   243|                            <circle cy="-10" r="18" fill="#FCE4EC" stroke="#FF6B8B" stroke-width="2"/>
-   244|                            <circle cx="-5" cy="-13" r="2" fill="#333"/>
-   245|                            <circle cx="5" cy="-13" r="2" fill="#333"/>
-   246|                            <!-- 星星眼 -->
-   247|                            <text x="-5" y="-12" fill="#FF6B8B" font-size="4">✦</text>
-   248|                            <text x="5" y="-12" fill="#FF6B8B" font-size="4">✦</text>
-   249|                            <path d="M -5 0 Q 0 3 5 0" stroke="#333" stroke-width="1.5" fill="none"/>
-   250|                            <!-- 画笔 -->
-   251|                            <rect x="18" y="-5" width="15" height="3" rx="1" fill="#FF6B8B"/>
-   252|                            <polygon points="33,-5 38,-3.5 33,-2" fill="#333"/>
-   253|                            
-   254|                            <!-- 标签 -->
-   255|                            <text y="22" text-anchor="middle" fill="#FF6B8B" font-size="12" font-weight="bold">💗 YUNA</text>
-   256|                            <text y="35" text-anchor="middle" fill="#666" font-size="8">可视化引擎</text>
-   257|                            
-   258|                            <!-- 设计标签 -->
-   259|                            <g transform="translate(-30, 42)">
-   260|                                <rect width="60" height="12" rx="2" fill="#FCE4EC"/>
-   261|                                <text x="30" y="9" text-anchor="middle" fill="#FF6B8B" font-size="7">🎨 图表·动画</text>
-   262|                            </g>
-   263|                            
-   264|                            <!-- 小画板 -->
-   265|                            <g transform="translate(-60, -20)">
-   266|                                <rect width="25" height="20" rx="2" fill="#FFF" stroke="#FF6B8B" stroke-width="1"/>
-   267|                                <circle cx="12" cy="10" r="5" fill="#FFE082"/>
-   268|                            </g>
-   269|                        </g>
-   270|                        
-   271|                        <!-- ===== RYUJIN - 质量测试 ===== -->
-   272|                        <g class="ryujin-comic-card" transform="translate(820, 220)">
-   273|                            <!-- 便利贴 -->
-   274|                            <rect x="-45" y="-70" width="90" height="140" rx="4" fill="url(#stickyGreen)" filter="url(#softShadow)"/>
-   275|                            <polygon points="45,-70 45,-55 30,-70" fill="#C8E6C9" opacity="0.8"/>
-   276|                            
-   277|                            <!-- 人物头像 -->
-   278|                            <circle cy="-45" r="22" fill="#C8E6C9" stroke="#06D6A0" stroke-width="2"/>
-   279|                            <circle cx="-7" cy="-48" r="3" fill="#333"/>
-   280|                            <circle cx="7" cy="-48" r="3" fill="#333"/>
-   281|                            <!-- 冷酷表情 -->
-   282|                            <line x1="-8" y1="-38" x2="8" y2="-38" stroke="#333" stroke-width="2"/>
-   283|                            <!-- 测试帽 -->
-   284|                            <rect x="-18" y="-70" width="36" height="8" rx="2" fill="#06D6A0"/>
-   285|                            <text x="0" y="-64" text-anchor="middle" fill="#fff" font-size="5">QA</text>
-   286|                            
-   287|                            <!-- 标签 -->
-   288|                            <text y="-15" text-anchor="middle" fill="#06D6A0" font-size="12" font-weight="bold">💚 RYUJIN</text>
-   289|                            <text y="0" text-anchor="middle" fill="#666" font-size="9">质量测试</text>
-   290|                            
-   291|                            <!-- QA引擎标签 -->
-   292|                            <g transform="translate(-35, 10)">
-   293|                                <rect width="70" height="14" rx="2" fill="#E8F5E9"/>
-   294|                                <text x="35" y="10" text-anchor="middle" fill="#06D6A0" font-size="7">⚡ qa_engine.py</text>
-   295|                            </g>
-   296|                            
-   297|                            <!-- SUBAGENT 列表 -->
-   298|                            <g transform="translate(-35, 30)">
-   299|                                <rect width="70" height="35" rx="2" fill="#FFF" opacity="0.7"/>
-   300|                                <text x="35" y="10" text-anchor="middle" fill="#06D6A0" font-size="7">自动化测试</text>
-   301|                                <text x="35" y="20" text-anchor="middle" fill="#06D6A0" font-size="7">安全审计</text>
-   302|                                <text x="35" y="30" text-anchor="middle" fill="#06D6A0" font-size="7">性能分析</text>
-   303|                            </g>
-   304|                            
-   305|                            <!-- 状态徽章 -->
-   306|                            <g transform="translate(-25, 68)">
-   307|                                <rect width="50" height="16" rx="8" fill="#06D6A0"/>
-   308|                                <text x="25" y="12" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">PASS ✓</text>
-   309|                            </g>
-   310|                            
-   311|                            <!-- 对话气泡 -->
-   312|                            <g transform="translate(40, -50)">
-   313|                                <ellipse rx="30" ry="15" fill="#FFF" stroke="#06D6A0" stroke-width="1.5"/>
-   314|                                <polygon points="-3,15 3,25 10,15" fill="#FFF" stroke="#06D6A0" stroke-width="1.5"/>
-   315|                                <text y="3" text-anchor="middle" fill="#06D6A0" font-size="8">测试完成!</text>
-   316|                            </g>
-   317|                        </g>
-   318|                        
-   319|                        <!-- 流程小标签（便利贴风格） -->
-   320|                        <g class="flow-mini-labels">
-   321|                            <g transform="translate(280, 170)">
-   322|                                <rect width="50" height="18" rx="3" fill="url(#stickyYellow)"/>
-   323|                                <text x="25" y="12" text-anchor="middle" fill="#666" font-size="8">数据输出</text>
-   324|                            </g>
-   325|                            <g transform="translate(520, 200)">
-   326|                                <rect width="45" height="18" rx="3" fill="url(#stickyPurple)"/>
-   327|                                <text x="22" y="12" text-anchor="middle" fill="#666" font-size="8">API服务</text>
-   328|                            </g>
-   329|                            <g transform="translate(300, 340)">
-   330|                                <rect width="45" height="18" rx="3" fill="url(#stickyGreen)"/>
-   331|                                <text x="22" y="12" text-anchor="middle" fill="#666" font-size="8">分析结果</text>
-   332|                            </g>
-   333|                            <g transform="translate(480, 340)">
-   334|                                <rect width="45" height="18" rx="3" fill="url(#stickyOrange)"/>
-   335|                                <text x="22" y="12" text-anchor="middle" fill="#666" font-size="8">UI组件</text>
-   336|                            </g>
-   337|                            <g transform="translate(550, 350)">
-   338|                                <rect width="50" height="18" rx="3" fill="url(#stickyPink)"/>
-   339|                                <text x="25" y="12" text-anchor="middle" fill="#666" font-size="8">可视化</text>
-   340|                            </g>
-   341|                            <g transform="translate(770, 280)">
-   342|                                <rect width="60" height="18" rx="3" fill="url(#stickyGreen)"/>
-   343|                                <text x="30" y="12" text-anchor="middle" fill="#06D6A0" font-size="7" font-weight="bold">QA测试</text>
-   344|                            </g>
-   345|                        </g>
-   346|                        
-   347|                        <!-- 状态小圆点（活泼风格） -->
-   348|                        <g class="comic-status-dots">
-   349|                            <circle cx="180" cy="260" r="6" fill="#06D6A0" class="comic-bounce"/>
-   350|                            <circle cx="420" cy="280" r="5" fill="#FFD166"/>
-   351|                            <circle cx="570" cy="260" r="5" fill="#FFD166"/>
-   352|                            <circle cx="420" cy="450" r="6" fill="#FF6B8B" class="comic-bounce"/>
-   353|                            <circle cx="820" cy="370" r="6" fill="#06D6A0" class="comic-pop"/>
-   354|                            <circle cx="680" cy="270" r="8" fill="#FF6B9D" class="comic-pop"/>
-   355|                        </g>
-   356|                        
-   357|                        <!-- Yuna 漫画签名 -->
-   358|                        <g class="yuna-comic-signature" transform="translate(920, 520)">
-   359|                            <text fill="#FF6B8B" font-size="11" font-style="italic" opacity="0.7">✨ YUNA Comic Style</text>
-   360|                            <text y="12" fill="#06D6A0" font-size="8" opacity="0.5">Designed with 💗</text>
-   361|                        </g>
-   362|                        
-   363|                        <!-- 装饰性箭头和星星 -->
-   364|                        <g class="decorative-elements" opacity="0.6">
-   365|                            <text x="100" cy="100" fill="#FF6B9D" font-size="16">✿</text>
-   366|                            <text x="900" y="100" fill="#FFD166" font-size="14">★</text>
-   367|                            <text x="150" y="480" fill="#06D6A0" font-size="12">✓</text>
-   368|                            <text x="850" y="480" fill="#9D65FF" font-size="14">◆</text>
-   369|                        </g>
-   370|                    </svg>
-   371|                </div>
-   372|                
-   373|                <!-- 漫画风格图例 -->
-   374|                <div class="yuna-legend comic-legend">
-   375|                    <div class="legend-item comic-item">
-   376|                        <span class="legend-node comic-node" style="background: linear-gradient(135deg, #FCE4EC, #F8BBD9); border: 2px solid #FF6B9D;"></span>
-   377|                        <span>👑 Leader 协调中枢</span>
-   378|                    </div>
-   379|                    <div class="legend-item comic-item">
-   380|                        <span class="legend-node comic-node" style="background: linear-gradient(135deg, #E8F5E9, #C8E6C9); border: 2px solid #4ECDC4;"></span>
-   381|                        <span>🧢 Yeji 土木工程</span>
-   382|                    </div>
-   383|                    <div class="legend-item comic-item">
-   384|                        <span class="legend-node comic-node" style="background: linear-gradient(135deg, #F3E5F5, #E1BEE7); border: 2px solid #9D65FF;"></span>
-   385|                        <span>💜 Lia 数据中枢</span>
-   386|                    </div>
-   387|                    <div class="legend-item comic-item">
-   388|                        <span class="legend-node comic-node" style="background: linear-gradient(135deg, #FFF9C4, #FFE082); border: 2px solid #FFD166;"></span>
-   389|                        <span>💛 Chaeryeong 网站系统</span>
-   390|                    </div>
-   391|                    <div class="legend-item comic-item">
-   392|                        <span class="legend-node comic-node" style="background: linear-gradient(135deg, #FCE4EC, #F8BBD9); border: 2px solid #FF6B8B;"></span>
-   393|                        <span>💗 Yuna 可视化引擎</span>
-   394|                    </div>
-   395|                    <div class="legend-item comic-item">
-   396|                        <span class="legend-node comic-node" style="background: linear-gradient(135deg, #E8F5E9, #C8E6C9); border: 2px solid #06D6A0;"></span>
-   397|                        <span>💚 Ryujin 质量测试</span>
-   398|                    </div>
-   399|                    <div class="legend-item comic-item flow-type">
-   400|                        <span class="legend-line comic-line" style="background: linear-gradient(90deg, #4ECDC4, #9D65FF, #FF6B8B);"></span>
-   401|                        <span>🌊 数据流动</span>
-   402|                    </div>
-   403|                    <div class="legend-item comic-item flow-type">
-   404|                        <span class="legend-line comic-line" style="background: repeating-linear-gradient(90deg, #06D6A0 0px, #06D6A0 5px, transparent 5px, transparent 10px);"></span>
-   405|                        <span>🔬 QA 测试流</span>
-   406|                    </div>
-   407|                </div>
-   408|            </section>
+<!-- 🎨 YUNA COMIC STYLE: ITZY CEO Agents 协调架构 -->
+            <section class="yuna-flowchart-section comic-style">
+                <div class="chart-label comic-label" style="background: linear-gradient(135deg, rgba(255,182,193,0.3), rgba(173,216,230,0.2)); border-color: rgba(255,182,193,0.5); color: #FF6B9D;">
+                    <i class="fas fa-palette"></i>
+                    <span>YUNA COMIC VISUALIZATION</span>
+                </div>
+                <h3><i class="fas fa-users"></i> ITZY CEO Agents 协调架构 - 活泼漫画风格</h3>
+                
+                <div class="yuna-comic-container">
+                    <!-- Yuna Comic SVG Flowchart -->
+                    <svg class="yuna-comic-svg" viewBox="0 0 1000 550" xmlns="http://www.w3.org/2000/svg">
+                        <!-- 漫画风格定义 -->
+                        <defs>
+                            <!-- 手绘效果滤镜 -->
+                            <filter id="comicSketch" x="-5%" y="-5%" width="110%" height="110%">
+                                <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="2" result="noise"/>
+                                <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
+                            </filter>
+                            
+                            <!-- 柔和阴影 -->
+                            <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feDropShadow dx="3" dy="3" stdDeviation="3" flood-color="#000" flood-opacity="0.15"/>
+                            </filter>
+                            
+                            <!-- 便利贴渐变 -->
+                            <linearGradient id="stickyYellow" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FFF9C4"/>
+                                <stop offset="100%" style="stop-color:#FFE082"/>
+                            </linearGradient>
+                            
+                            <linearGradient id="stickyPink" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FCE4EC"/>
+                                <stop offset="100%" style="stop-color:#F8BBD9"/>
+                            </linearGradient>
+                            
+                            <linearGradient id="stickyGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#E8F5E9"/>
+                                <stop offset="100%" style="stop-color:#C8E6C9"/>
+                            </linearGradient>
+                            
+                            <linearGradient id="stickyBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#E3F2FD"/>
+                                <stop offset="100%" style="stop-color:#BBDEFB"/>
+                            </linearGradient>
+                            
+                            <linearGradient id="stickyPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#F3E5F5"/>
+                                <stop offset="100%" style="stop-color:#E1BEE7"/>
+                            </linearGradient>
+                            
+                            <linearGradient id="stickyOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FFF3E0"/>
+                                <stop offset="100%" style="stop-color:#FFE0B2"/>
+                            </linearGradient>
+                            
+                            <!-- 漫画线条动画 -->
+                            <style>
+                                @keyframes wiggle { 0%, 100% { transform: rotate(0deg); } 25% { transform: rotate(-2deg); } 75% { transform: rotate(2deg); } }
+                                @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+                                @keyframes pop { 0% { transform: scale(1); } 50% { transform: scale(1.05); } 100% { transform: scale(1); } }
+                                .comic-wiggle { animation: wiggle 3s ease-in-out infinite; }
+                                .comic-bounce { animation: bounce 2s ease-in-out infinite; }
+                                .comic-pop { animation: pop 2s ease-in-out infinite; }
+                            </style>
+                        </defs>
+                        
+                        <!-- 温暖的米白背景 -->
+                        <rect width="100%" height="100%" fill="#FFF8F0"/>
+                        
+                        <!-- 装饰性圆点背景 -->
+                        <g class="decorative-dots" opacity="0.3">
+                            <circle cx="50" cy="50" r="8" fill="#FFB6C1"/>
+                            <circle cx="150" cy="80" r="6" fill="#87CEEB"/>
+                            <circle cx="950" cy="60" r="10" fill="#98FB98"/>
+                            <circle cx="900" cy="500" r="7" fill="#DDA0DD"/>
+                            <circle cx="100" cy="480" r="5" fill="#F0E68C"/>
+                        </g>
+                        
+                        <!-- 白板框架 -->
+                        <g class="whiteboard-frame">
+                            <rect x="80" y="30" width="840" height="490" rx="15" fill="#FAFAFA" stroke="#E0E0E0" stroke-width="3" filter="url(#softShadow)"/>
+                            <!-- 白板顶部装饰条 -->
+                            <rect x="80" y="30" width="840" height="25" rx="15" fill="#FF6B9D" opacity="0.8"/>
+                            <text x="500" y="50" text-anchor="middle" fill="#fff" font-size="14" font-weight="bold">✨ ITZY CEO Agents Team Workspace ✨</text>
+                        </g>
+                        
+                        <!-- ===== 手绘连接线 ===== -->
+                        <g class="comic-flow-lines" stroke-width="3" fill="none" opacity="0.7">
+                            <!-- Yeji → Lia (波浪线) -->
+                            <path d="M 230 200 Q 280 180 320 220 Q 360 260 400 240" stroke="#4ECDC4" stroke-dasharray="8,4" class="comic-wiggle">
+                                <title>数据输出</title>
+                            </path>
+                            <!-- 小箭头 -->
+                            <polygon points="395,235 405,240 395,245" fill="#4ECDC4"/>
+                            
+                            <!-- Lia → Chaeryeong -->
+                            <path d="M 480 240 Q 520 220 560 200" stroke="#9D65FF" stroke-dasharray="8,4">
+                                <title>API服务</title>
+                            </path>
+                            <polygon points="555,195 565,200 555,205" fill="#9D65FF"/>
+                            
+                            <!-- Yeji → Yuna -->
+                            <path d="M 230 260 Q 300 350 380 380" stroke="#4ECDC4" stroke-dasharray="6,3"/>
+                            <polygon points="375,375 385,380 380,385" fill="#4ECDC4"/>
+                            
+                            <!-- Chaeryeong → Yuna -->
+                            <path d="M 560 260 Q 500 350 450 380" stroke="#FFD166" stroke-dasharray="6,3"/>
+                            <polygon points="445,375 455,380 450,385" fill="#FFD166"/>
+                            
+                            <!-- Yuna → Leader (汇报线) -->
+                            <path d="M 450 420 Q 550 380 680 220" stroke="#FF6B8B" stroke-width="4" stroke-dasharray="10,5" class="comic-bounce">
+                                <title>可视化汇报</title>
+                            </path>
+                            <polygon points="675,215 685,220 680,225" fill="#FF6B8B"/>
+                            
+                            <!-- Ryujin QA → Leader -->
+                            <path d="M 800 220 L 740 220" stroke="#06D6A0" stroke-width="4" class="comic-pop"/>
+                            <polygon points="745,215 735,220 745,225" fill="#06D6A0"/>
+                            
+                            <!-- QA → 各Agent (虚线测试流) -->
+                            <path d="M 800 180 Q 600 100 230 160" stroke="#06D6A0" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+                            <path d="M 800 260 Q 600 280 480 260" stroke="#FFD166" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+                            <path d="M 800 300 Q 600 320 560 260" stroke="#06D6A0" stroke-width="2" stroke-dasharray="5,5" opacity="0.5"/>
+                        </g>
+                        
+                        <!-- ===== LEADER - 中央便利贴（大） ===== -->
+                        <g class="leader-comic-card comic-pop" transform="translate(680, 140)">
+                            <!-- 主便利贴 -->
+                            <rect x="-70" y="-60" width="140" height="120" rx="5" fill="url(#stickyPink)" filter="url(#softShadow)"/>
+                            <!-- 折角效果 -->
+                            <polygon points="70,-60 70,-45 55,-60" fill="#F8BBD9" opacity="0.8"/>
+                            
+                            <!-- 漫画人物头像 -->
+                            <circle cy="-20" r="25" fill="#FFB6C1" stroke="#FF6B9D" stroke-width="2"/>
+                            <!-- 简化面部 -->
+                            <circle cx="-8" cy="-24" r="3" fill="#333"/>
+                            <circle cx="8" cy="-24" r="3" fill="#333"/>
+                            <path d="M -10 -12 Q 0 -8 10 -12" stroke="#333" stroke-width="2" fill="none"/>
+                            <!-- 头发 -->
+                            <ellipse cy="-42" rx="22" ry="8" fill="#FF6B9D"/>
+                            
+                            <!-- 标签 -->
+                            <text y="20" text-anchor="middle" fill="#FF6B9D" font-size="16" font-weight="bold">👑 LEADER</text>
+                            <text y="38" text-anchor="middle" fill="#666" font-size="10">协调中枢</text>
+                            
+                            <!-- 小图标 -->
+                            <g transform="translate(-45, 50)">
+                                <rect width="90" height="20" rx="3" fill="#FFE082"/>
+                                <text x="45" y="14" text-anchor="middle" fill="#666" font-size="9">⚡ 协调引擎</text>
+                            </g>
+                            
+                            <!-- 对话气泡 -->
+                            <g transform="translate(60, -80)">
+                                <ellipse rx="35" ry="20" fill="#FFF" stroke="#FF6B9D" stroke-width="2"/>
+                                <polygon points="-5,20 5,30 15,20" fill="#FFF" stroke="#FF6B9D" stroke-width="2"/>
+                                <text y="3" text-anchor="middle" fill="#FF6B9D" font-size="9">资源分配OK!</text>
+                            </g>
+                        </g>
+                        
+                        <!-- ===== YEJI - 土木工程 ===== -->
+                        <g class="yeji-comic-card" transform="translate(180, 200)">
+                            <!-- 便利贴 -->
+                            <rect x="-55" y="-45" width="110" height="90" rx="4" fill="url(#stickyGreen)" filter="url(#softShadow)"/>
+                            <polygon points="55,-45 55,-30 40,-45" fill="#C8E6C9" opacity="0.8"/>
+                            
+                            <!-- 人物头像 -->
+                            <circle cy="-15" r="20" fill="#B2DFDB" stroke="#4ECDC4" stroke-width="2"/>
+                            <circle cx="-6" cy="-18" r="2.5" fill="#333"/>
+                            <circle cx="6" cy="-18" r="2.5" fill="#333"/>
+                            <path d="M -8 -8 Q 0 -5 8 -8" stroke="#333" stroke-width="1.5" fill="none"/>
+                            <!-- 工程帽 -->
+                            <rect x="-18" y="-38" width="36" height="10" rx="2" fill="#4ECDC4"/>
+                            
+                            <!-- 标签 -->
+                            <text y="18" text-anchor="middle" fill="#4ECDC4" font-size="14" font-weight="bold">🧢 YEJI</text>
+                            <text y="32" text-anchor="middle" fill="#666" font-size="9">土木工程</text>
+                            
+                            <!-- SUBAGENT 小便利贴 -->
+                            <g transform="translate(-40, 40)">
+                                <rect width="80" height="15" rx="2" fill="#E8F5E9"/>
+                                <text x="40" y="10" text-anchor="middle" fill="#4ECDC4" font-size="8">结构·材料·规范</text>
+                            </g>
+                        </g>
+                        
+                        <!-- ===== LIA - 数据中枢 ===== -->
+                        <g class="lia-comic-card" transform="translate(420, 220)">
+                            <!-- 便利贴 -->
+                            <rect x="-50" y="-40" width="100" height="80" rx="4" fill="url(#stickyPurple)" filter="url(#softShadow)"/>
+                            <polygon points="50,-40 50,-25 35,-40" fill="#E1BEE7" opacity="0.8"/>
+                            
+                            <!-- 人物头像 -->
+                            <circle cy="-12" r="18" fill="#E1BEE7" stroke="#9D65FF" stroke-width="2"/>
+                            <circle cx="-5" cy="-15" r="2" fill="#333"/>
+                            <circle cx="5" cy="-15" r="2" fill="#333"/>
+                            <path d="M -6 -6 Q 0 -3 6 -6" stroke="#333" stroke-width="1.5" fill="none"/>
+                            <!-- 眼镜 -->
+                            <rect x="-12" y="-20" width="10" height="6" rx="1" fill="none" stroke="#9D65FF" stroke-width="1"/>
+                            <rect x="2" y="-20" width="10" height="6" rx="1" fill="none" stroke="#9D65FF" stroke-width="1"/>
+                            <line x1="-2" y1="-17" x2="2" y2="-17" stroke="#9D65FF" stroke-width="1"/>
+                            
+                            <!-- 标签 -->
+                            <text y="15" text-anchor="middle" fill="#9D65FF" font-size="13" font-weight="bold">💜 LIA</text>
+                            <text y="28" text-anchor="middle" fill="#666" font-size="9">数据中枢</text>
+                            
+                            <!-- 数据小图标 -->
+                            <g transform="translate(-35, 35)">
+                                <rect width="70" height="14" rx="2" fill="#F3E5F5"/>
+                                <text x="35" y="10" text-anchor="middle" fill="#9D65FF" font-size="8">📊 API·架构</text>
+                            </g>
+                        </g>
+                        
+                        <!-- ===== CHAERYEONG - 网站系统 ===== -->
+                        <g class="chaeryeong-comic-card" transform="translate(570, 200)">
+                            <!-- 便利贴 -->
+                            <rect x="-55" y="-45" width="110" height="90" rx="4" fill="url(#stickyYellow)" filter="url(#softShadow)"/>
+                            <polygon points="55,-45 55,-30 40,-45" fill="#FFE082" opacity="0.8"/>
+                            
+                            <!-- 人物头像 -->
+                            <circle cy="-15" r="20" fill="#FFF9C4" stroke="#FFD166" stroke-width="2"/>
+                            <circle cx="-6" cy="-18" r="2.5" fill="#333"/>
+                            <circle cx="6" cy="-18" r="2.5" fill="#333"/>
+                            <path d="M -8 -8 Q 0 -5 8 -8" stroke="#333" stroke-width="1.5" fill="none"/>
+                            <!-- 发带 -->
+                            <rect x="-22" y="-32" width="44" height="5" rx="2" fill="#FFD166"/>
+                            
+                            <!-- 标签 -->
+                            <text y="18" text-anchor="middle" fill="#FFD166" font-size="13" font-weight="bold">💛 CHAERYEONG</text>
+                            <text y="32" text-anchor="middle" fill="#666" font-size="9">网站系统</text>
+                            
+                            <!-- SUBAGENT -->
+                            <g transform="translate(-40, 40)">
+                                <rect width="80" height="15" rx="2" fill="#FFF3E0"/>
+                                <text x="40" y="10" text-anchor="middle" fill="#FFD166" font-size="8">前端·UI·UX</text>
+                            </g>
+                        </g>
+                        
+                        <!-- ===== YUNA - 可视化引擎 ===== -->
+                        <g class="yuna-comic-card comic-bounce" transform="translate(420, 400)">
+                            <!-- 便利贴（菱形风格） -->
+                            <polygon points="0,-45 55,0 0,45 -55,0" fill="url(#stickyPink)" filter="url(#softShadow)"/>
+                            
+                            <!-- 人物头像 -->
+                            <circle cy="-10" r="18" fill="#FCE4EC" stroke="#FF6B8B" stroke-width="2"/>
+                            <circle cx="-5" cy="-13" r="2" fill="#333"/>
+                            <circle cx="5" cy="-13" r="2" fill="#333"/>
+                            <!-- 星星眼 -->
+                            <text x="-5" y="-12" fill="#FF6B8B" font-size="4">✦</text>
+                            <text x="5" y="-12" fill="#FF6B8B" font-size="4">✦</text>
+                            <path d="M -5 0 Q 0 3 5 0" stroke="#333" stroke-width="1.5" fill="none"/>
+                            <!-- 画笔 -->
+                            <rect x="18" y="-5" width="15" height="3" rx="1" fill="#FF6B8B"/>
+                            <polygon points="33,-5 38,-3.5 33,-2" fill="#333"/>
+                            
+                            <!-- 标签 -->
+                            <text y="22" text-anchor="middle" fill="#FF6B8B" font-size="12" font-weight="bold">💗 YUNA</text>
+                            <text y="35" text-anchor="middle" fill="#666" font-size="8">可视化引擎</text>
+                            
+                            <!-- 设计标签 -->
+                            <g transform="translate(-30, 42)">
+                                <rect width="60" height="12" rx="2" fill="#FCE4EC"/>
+                                <text x="30" y="9" text-anchor="middle" fill="#FF6B8B" font-size="7">🎨 图表·动画</text>
+                            </g>
+                            
+                            <!-- 小画板 -->
+                            <g transform="translate(-60, -20)">
+                                <rect width="25" height="20" rx="2" fill="#FFF" stroke="#FF6B8B" stroke-width="1"/>
+                                <circle cx="12" cy="10" r="5" fill="#FFE082"/>
+                            </g>
+                        </g>
+                        
+                        <!-- ===== RYUJIN - 质量测试 ===== -->
+                        <g class="ryujin-comic-card" transform="translate(820, 220)">
+                            <!-- 便利贴 -->
+                            <rect x="-45" y="-70" width="90" height="140" rx="4" fill="url(#stickyGreen)" filter="url(#softShadow)"/>
+                            <polygon points="45,-70 45,-55 30,-70" fill="#C8E6C9" opacity="0.8"/>
+                            
+                            <!-- 人物头像 -->
+                            <circle cy="-45" r="22" fill="#C8E6C9" stroke="#06D6A0" stroke-width="2"/>
+                            <circle cx="-7" cy="-48" r="3" fill="#333"/>
+                            <circle cx="7" cy="-48" r="3" fill="#333"/>
+                            <!-- 冷酷表情 -->
+                            <line x1="-8" y1="-38" x2="8" y2="-38" stroke="#333" stroke-width="2"/>
+                            <!-- 测试帽 -->
+                            <rect x="-18" y="-70" width="36" height="8" rx="2" fill="#06D6A0"/>
+                            <text x="0" y="-64" text-anchor="middle" fill="#fff" font-size="5">QA</text>
+                            
+                            <!-- 标签 -->
+                            <text y="-15" text-anchor="middle" fill="#06D6A0" font-size="12" font-weight="bold">💚 RYUJIN</text>
+                            <text y="0" text-anchor="middle" fill="#666" font-size="9">质量测试</text>
+                            
+                            <!-- QA引擎标签 -->
+                            <g transform="translate(-35, 10)">
+                                <rect width="70" height="14" rx="2" fill="#E8F5E9"/>
+                                <text x="35" y="10" text-anchor="middle" fill="#06D6A0" font-size="7">⚡ qa_engine.py</text>
+                            </g>
+                            
+                            <!-- SUBAGENT 列表 -->
+                            <g transform="translate(-35, 30)">
+                                <rect width="70" height="35" rx="2" fill="#FFF" opacity="0.7"/>
+                                <text x="35" y="10" text-anchor="middle" fill="#06D6A0" font-size="7">自动化测试</text>
+                                <text x="35" y="20" text-anchor="middle" fill="#06D6A0" font-size="7">安全审计</text>
+                                <text x="35" y="30" text-anchor="middle" fill="#06D6A0" font-size="7">性能分析</text>
+                            </g>
+                            
+                            <!-- 状态徽章 -->
+                            <g transform="translate(-25, 68)">
+                                <rect width="50" height="16" rx="8" fill="#06D6A0"/>
+                                <text x="25" y="12" text-anchor="middle" fill="#fff" font-size="8" font-weight="bold">PASS ✓</text>
+                            </g>
+                            
+                            <!-- 对话气泡 -->
+                            <g transform="translate(40, -50)">
+                                <ellipse rx="30" ry="15" fill="#FFF" stroke="#06D6A0" stroke-width="1.5"/>
+                                <polygon points="-3,15 3,25 10,15" fill="#FFF" stroke="#06D6A0" stroke-width="1.5"/>
+                                <text y="3" text-anchor="middle" fill="#06D6A0" font-size="8">测试完成!</text>
+                            </g>
+                        </g>
+                        
+                        <!-- 流程小标签（便利贴风格） -->
+                        <g class="flow-mini-labels">
+                            <g transform="translate(280, 170)">
+                                <rect width="50" height="18" rx="3" fill="url(#stickyYellow)"/>
+                                <text x="25" y="12" text-anchor="middle" fill="#666" font-size="8">数据输出</text>
+                            </g>
+                            <g transform="translate(520, 200)">
+                                <rect width="45" height="18" rx="3" fill="url(#stickyPurple)"/>
+                                <text x="22" y="12" text-anchor="middle" fill="#666" font-size="8">API服务</text>
+                            </g>
+                            <g transform="translate(300, 340)">
+                                <rect width="45" height="18" rx="3" fill="url(#stickyGreen)"/>
+                                <text x="22" y="12" text-anchor="middle" fill="#666" font-size="8">分析结果</text>
+                            </g>
+                            <g transform="translate(480, 340)">
+                                <rect width="45" height="18" rx="3" fill="url(#stickyOrange)"/>
+                                <text x="22" y="12" text-anchor="middle" fill="#666" font-size="8">UI组件</text>
+                            </g>
+                            <g transform="translate(550, 350)">
+                                <rect width="50" height="18" rx="3" fill="url(#stickyPink)"/>
+                                <text x="25" y="12" text-anchor="middle" fill="#666" font-size="8">可视化</text>
+                            </g>
+                            <g transform="translate(770, 280)">
+                                <rect width="60" height="18" rx="3" fill="url(#stickyGreen)"/>
+                                <text x="30" y="12" text-anchor="middle" fill="#06D6A0" font-size="7" font-weight="bold">QA测试</text>
+                            </g>
+                        </g>
+                        
+                        <!-- 状态小圆点（活泼风格） -->
+                        <g class="comic-status-dots">
+                            <circle cx="180" cy="260" r="6" fill="#06D6A0" class="comic-bounce"/>
+                            <circle cx="420" cy="280" r="5" fill="#FFD166"/>
+                            <circle cx="570" cy="260" r="5" fill="#FFD166"/>
+                            <circle cx="420" cy="450" r="6" fill="#FF6B8B" class="comic-bounce"/>
+                            <circle cx="820" cy="370" r="6" fill="#06D6A0" class="comic-pop"/>
+                            <circle cx="680" cy="270" r="8" fill="#FF6B9D" class="comic-pop"/>
+                        </g>
+                        
+                        <!-- Yuna 漫画签名 -->
+                        <g class="yuna-comic-signature" transform="translate(920, 520)">
+                            <text fill="#FF6B8B" font-size="11" font-style="italic" opacity="0.7">✨ YUNA Comic Style</text>
+                            <text y="12" fill="#06D6A0" font-size="8" opacity="0.5">Designed with 💗</text>
+                        </g>
+                        
+                        <!-- 装饰性箭头和星星 -->
+                        <g class="decorative-elements" opacity="0.6">
+                            <text x="100" cy="100" fill="#FF6B9D" font-size="16">✿</text>
+                            <text x="900" y="100" fill="#FFD166" font-size="14">★</text>
+                            <text x="150" y="480" fill="#06D6A0" font-size="12">✓</text>
+                            <text x="850" y="480" fill="#9D65FF" font-size="14">◆</text>
+                        </g>
+                    </svg>
+                </div>
+                
+                <!-- 漫画风格图例 -->
+                <div class="yuna-legend comic-legend">
+                    <div class="legend-item comic-item">
+                        <span class="legend-node comic-node" style="background: linear-gradient(135deg, #FCE4EC, #F8BBD9); border: 2px solid #FF6B9D;"></span>
+                        <span>👑 Leader 协调中枢</span>
+                    </div>
+                    <div class="legend-item comic-item">
+                        <span class="legend-node comic-node" style="background: linear-gradient(135deg, #E8F5E9, #C8E6C9); border: 2px solid #4ECDC4;"></span>
+                        <span>🧢 Yeji 土木工程</span>
+                    </div>
+                    <div class="legend-item comic-item">
+                        <span class="legend-node comic-node" style="background: linear-gradient(135deg, #F3E5F5, #E1BEE7); border: 2px solid #9D65FF;"></span>
+                        <span>💜 Lia 数据中枢</span>
+                    </div>
+                    <div class="legend-item comic-item">
+                        <span class="legend-node comic-node" style="background: linear-gradient(135deg, #FFF9C4, #FFE082); border: 2px solid #FFD166;"></span>
+                        <span>💛 Chaeryeong 网站系统</span>
+                    </div>
+                    <div class="legend-item comic-item">
+                        <span class="legend-node comic-node" style="background: linear-gradient(135deg, #FCE4EC, #F8BBD9); border: 2px solid #FF6B8B;"></span>
+                        <span>💗 Yuna 可视化引擎</span>
+                    </div>
+                    <div class="legend-item comic-item">
+                        <span class="legend-node comic-node" style="background: linear-gradient(135deg, #E8F5E9, #C8E6C9); border: 2px solid #06D6A0;"></span>
+                        <span>💚 Ryujin 质量测试</span>
+                    </div>
+                    <div class="legend-item comic-item flow-type">
+                        <span class="legend-line comic-line" style="background: linear-gradient(90deg, #4ECDC4, #9D65FF, #FF6B8B);"></span>
+                        <span>🌊 数据流动</span>
+                    </div>
+                    <div class="legend-item comic-item flow-type">
+                        <span class="legend-line comic-line" style="background: repeating-linear-gradient(90deg, #06D6A0 0px, #06D6A0 5px, transparent 5px, transparent 10px);"></span>
+                        <span>🔬 QA 测试流</span>
+                    </div>
+                </div>
+            </section>
 
-            <!-- 🎨 Yuna 未来风格 Gantt 图 -->
-     1|<!-- 🎨 YUNA FUTURE STYLE: 项目进度 Gantt 图 -->
-     2|<section class="yuna-gantt-section">
-     3|    <div class="chart-label future-label" style="background: linear-gradient(135deg, rgba(0,255,242,0.15), rgba(157,101,255,0.1)); border-color: #00fff2; color: #00fff2;">
-     4|        <i class="fas fa-chart-gantt"></i>
-     5|        <span>YUNA FUTURE VISUALIZATION</span>
-     6|    </div>
-     7|    <h3><i class="fas fa-timeline"></i> 项目进度 Gantt 图 - 未来霓虹风格</h3>
-     8|    
-     9|    <div class="yuna-gantt-container">
-    10|        <svg class="yuna-gantt-svg" viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
-    11|            <!-- 霓虹渐变定义 -->
-    12|            <defs>
-    13|                <!-- 霓虹发光滤镜 -->
-    14|                <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
-    15|                    <feGaussianBlur stdDeviation="3" result="blur"/>
-    16|                    <feFlood flood-color="#00fff2" flood-opacity="0.5"/>
-    17|                    <feComposite in2="blur" operator="in"/>
-    18|                    <feMerge>
-    19|                        <feMergeNode/>
-    20|                        <feMergeNode in="SourceGraphic"/>
-    21|                    </feMerge>
-    22|                </filter>
-    23|                
-    24|                <filter id="neonGlowPink" x="-50%" y="-50%" width="200%" height="200%">
-    25|                    <feGaussianBlur stdDeviation="4" result="blur"/>
-    26|                    <feFlood flood-color="#FF6B9D" flood-opacity="0.6"/>
-    27|                    <feComposite in2="blur" operator="in"/>
-    28|                    <feMerge>
-    29|                        <feMergeNode/>
-    30|                        <feMergeNode in="SourceGraphic"/>
-    31|                    </feMerge>
-    32|                </filter>
-    33|                
-    34|                <filter id="neonGlowGreen" x="-50%" y="-50%" width="200%" height="200%">
-    35|                    <feGaussianBlur stdDeviation="3" result="blur"/>
-    36|                    <feFlood flood-color="#06D6A0" flood-opacity="0.5"/>
-    37|                    <feComposite in2="blur" operator="in"/>
-    38|                    <feMerge>
-    39|                        <feMergeNode/>
-    40|                        <feMergeNode in="SourceGraphic"/>
-    41|                    </feMerge>
-    42|                </filter>
-    43|                
-    44|                <!-- 进度条渐变 -->
-    45|                <linearGradient id="progressGradientGreen" x1="0%" y1="0%" x2="100%" y2="0%">
-    46|                    <stop offset="0%" style="stop-color:#06D6A0"/>
-    47|                    <stop offset="50%" style="stop-color:#00fff2"/>
-    48|                    <stop offset="100%" style="stop-color:#06D6A0"/>
-    49|                </linearGradient>
-    50|                
-    51|                <linearGradient id="progressGradientPink" x1="0%" y1="0%" x2="100%" y2="0%">
-    52|                    <stop offset="0%" style="stop-color:#FF6B9D"/>
-    53|                    <stop offset="50%" style="stop-color:#FF9EC4"/>
-    54|                    <stop offset="100%" style="stop-color:#FF6B9D"/>
-    55|                </linearGradient>
-    56|                
-    57|                <linearGradient id="progressGradientPurple" x1="0%" y1="0%" x2="100%" y2="0%">
-    58|                    <stop offset="0%" style="stop-color:#9D65FF"/>
-    59|                    <stop offset="50%" style="stop-color:#C9A0FF"/>
-    60|                    <stop offset="100%" style="stop-color:#9D65FF"/>
-    61|                </linearGradient>
-    62|                
-    63|                <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-    64|                    <stop offset="0%" style="stop-color:#0a0a1a"/>
-    65|                    <stop offset="100%" style="stop-color:#1a1a2e"/>
-    66|                </linearGradient>
-    67|                
-    68|                <!-- 网格图案 -->
-    69|                <pattern id="gridPattern" width="50" height="30" patternUnits="userSpaceOnUse">
-    70|                    <path d="M 50 0 L 0 0 0 30" fill="none" stroke="#00fff2" stroke-width="0.3" opacity="0.2"/>
-    71|                </pattern>
-    72|                
-    73|                <!-- 动画 -->
-    74|                <style>
-    75|                    @keyframes pulseGlow { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
-    76|                    @keyframes slideProgress { 0% { stroke-dashoffset: 200; } 100% { stroke-dashoffset: 0; } }
-    77|                    @keyframes milestonePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
-    78|                    .pulse-glow { animation: pulseGlow 2s ease-in-out infinite; }
-    79|                    .milestone-marker { animation: milestonePulse 1.5s ease-in-out infinite; }
-    80|                </style>
-    81|            </defs>
-    82|            
-    83|            <!-- 深色背景 -->
-    84|            <rect width="900" height="400" fill="url(#backgroundGradient)"/>
-    85|            <rect width="900" height="400" fill="url(#gridPattern)"/>
-    86|            
-    87|            <!-- 标题区 -->
-    88|            <g class="gantt-header" transform="translate(0, 30)">
-    89|                <text x="450" y="20" text-anchor="middle" fill="#00fff2" font-size="18" font-weight="bold" filter="url(#neonGlow)">
-    90|                    ⚡ ITZY CEO Agents 改进方案 Gantt Chart ⚡
-    91|                </text>
-    92|                <text x="450" y="40" text-anchor="middle" fill="#888" font-size="11">
-    93|                    2026-04-22 → 2026-05-13 | 总进度: 60%
-    94|                </text>
-    95|            </g>
-    96|            
-    97|            <!-- 时间轴 -->
-    98|            <g class="timeline-axis" transform="translate(150, 70)">
-    99|                <!-- 时间刻度 -->
-   100|                <line x1="0" y1="0" x2="700" y2="0" stroke="#00fff2" stroke-width="2" opacity="0.5"/>
-   101|                
-   102|                <!-- 周次标记 -->
-   103|                <g class="week-markers">
-   104|                    <text x="0" y="-15" fill="#00fff2" font-size="10" text-anchor="middle">Week 1</text>
-   105|                    <line x1="0" y1="-5" x2="0" y2="5" stroke="#00fff2" stroke-width="1"/>
-   106|                    
-   107|                    <text x="233" y="-15" fill="#FF6B9D" font-size="10" text-anchor="middle">Week 2</text>
-   108|                    <line x1="233" y1="-5" x2="233" y2="5" stroke="#FF6B9D" stroke-width="1"/>
-   109|                    
-   110|                    <text x="466" y="-15" fill="#9D65FF" font-size="10" text-anchor="middle">Week 3</text>
-   111|                    <line x1="466" y1="-5" x2="466" y2="5" stroke="#9D65FF" stroke-width="1"/>
-   112|                    
-   113|                    <text x="700" y="-15" fill="#06D6A0" font-size="10" text-anchor="middle">Done</text>
-   114|                    <line x1="700" y1="-5" x2="700" y2="5" stroke="#06D6A0" stroke-width="1"/>
-   115|                </g>
-   116|                
-   117|                <!-- 日期标签 -->
-   118|                <g class="date-labels" fill="#666" font-size="8">
-   119|                    <text x="0" y="15" text-anchor="middle">04-22</text>
-   120|                    <text x="117" y="15" text-anchor="middle">04-29</text>
-   121|                    <text x="350" y="15" text-anchor="middle">05-06</text>
-   122|                    <text x="583" y="15" text-anchor="middle">05-13</text>
-   123|                </g>
-   124|            </g>
-   125|            
-   126|            <!-- ===== PHASE 1: SUBAGENT 配置 (100%) ===== -->
-   127|            <g class="phase1-gantt" transform="translate(150, 110)">
-   128|                <!-- Phase 标签 -->
-   129|                <g transform="translate(-140, 0)">
-   130|                    <rect x="0" y="-12" width="130" height="24" rx="4" fill="#06D6A0" opacity="0.2" stroke="#06D6A0" stroke-width="1"/>
-   131|                    <text x="65" y="3" text-anchor="middle" fill="#06D6A0" font-size="12" font-weight="bold">Phase 1</text>
-   132|                    <text x="65" y="15" text-anchor="middle" fill="#888" font-size="8">SUBAGENT</text>
-   133|                </g>
-   134|                
-   135|                <!-- 进度条背景 -->
-   136|                <rect x="0" y="-8" width="233" height="16" rx="8" fill="#1a1a2e" stroke="#06D6A0" stroke-width="1" opacity="0.3"/>
-   137|                
-   138|                <!-- 进度条填充 (100%) -->
-   139|                <rect x="0" y="-8" width="233" height="16" rx="8" fill="url(#progressGradientGreen)" filter="url(#neonGlowGreen)" class="pulse-glow"/>
-   140|                
-   141|                <!-- 进度百分比 -->
-   142|                <text x="250" y="3" fill="#06D6A0" font-size="10" font-weight="bold">100%</text>
-   143|                
-   144|                <!-- 任务条 -->
-   145|                <g class="task-bars" transform="translate(0, 25)">
-   146|                    <!-- T-001 ~ T-006 -->
-   147|                    <rect x="0" y="-5" width="40" height="10" rx="3" fill="#06D6A0" opacity="0.7"/>
-   148|                    <rect x="40" y="-5" width="40" height="10" rx="3" fill="#06D6A0" opacity="0.7"/>
-   149|                    <rect x="80" y="-5" width="20" height="10" rx="3" fill="#06D6A0" opacity="0.7"/>
-   150|                    <rect x="100" y="-5" width="20" height="10" rx="3" fill="#06D6A0" opacity="0.7"/>
-   151|                    <rect x="120" y="-5" width="20" height="10" rx="3" fill="#06D6A0" opacity="0.7"/>
-   152|                    <rect x="140" y="-5" width="93" height="10" rx="3" fill="#06D6A0" opacity="0.7"/>
-   153|                </g>
-   154|            </g>
-   155|            
-   156|            <!-- ===== PHASE 2: 协调引擎 (50%) ===== -->
-   157|            <g class="phase2-gantt" transform="translate(150, 180)">
-   158|                <!-- Phase 标签 -->
-   159|                <g transform="translate(-140, 0)">
-   160|                    <rect x="0" y="-12" width="130" height="24" rx="4" fill="#FF6B9D" opacity="0.2" stroke="#FF6B9D" stroke-width="1"/>
-   161|                    <text x="65" y="3" text-anchor="middle" fill="#FF6B9D" font-size="12" font-weight="bold">Phase 2</text>
-   162|                    <text x="65" y="15" text-anchor="middle" fill="#888" font-size="8">协调引擎</text>
-   163|                </g>
-   164|                
-   165|                <!-- 进度条背景 -->
-   166|                <rect x="0" y="-8" width="233" height="16" rx="8" fill="#1a1a2e" stroke="#FF6B9D" stroke-width="1" opacity="0.3"/>
-   167|                
-   168|                <!-- 进度条填充 (50%) -->
-   169|                <rect x="0" y="-8" width="117" height="16" rx="8" fill="url(#progressGradientPink)" filter="url(#neonGlowPink)"/>
-   170|                
-   171|                <!-- 进度百分比 -->
-   172|                <text x="250" y="3" fill="#FF6B9D" font-size="10" font-weight="bold">50%</text>
-   173|                
-   174|                <!-- 进行中标记 -->
-   175|                <g transform="translate(120, 0)">
-   176|                    <circle r="6" fill="#FF6B9D" class="milestone-marker"/>
-   177|                    <text x="0" y="20" text-anchor="middle" fill="#FF6B9D" font-size="8">NOW</text>
-   178|                </g>
-   179|                
-   180|                <!-- 任务条 -->
-   181|                <g class="task-bars" transform="translate(0, 25)">
-   182|                    <!-- T-007 (完成) -->
-   183|                    <rect x="0" y="-5" width="40" height="10" rx="3" fill="#06D6A0" opacity="0.8"/>
-   184|                    <!-- T-008 (完成) -->
-   185|                    <rect x="40" y="-5" width="40" height="10" rx="3" fill="#06D6A0" opacity="0.8"/>
-   186|                    <!-- T-009 (完成) -->
-   187|                    <rect x="80" y="-5" width="20" height="10" rx="3" fill="#06D6A0" opacity="0.8"/>
-   188|                    <!-- T-010 (进行中) -->
-   189|                    <rect x="100" y="-5" width="133" height="10" rx="3" fill="#FF6B9D" opacity="0.6" stroke="#FF6B9D" stroke-width="1"/>
-   190|                </g>
-   191|            </g>
-   192|            
-   193|            <!-- ===== PHASE 3: 数据管道 (0%) ===== -->
-   194|            <g class="phase3-gantt" transform="translate(150, 250)">
-   195|                <!-- Phase 标签 -->
-   196|                <g transform="translate(-140, 0)">
-   197|                    <rect x="0" y="-12" width="130" height="24" rx="4" fill="#9D65FF" opacity="0.2" stroke="#9D65FF" stroke-width="1"/>
-   198|                    <text x="65" y="3" text-anchor="middle" fill="#9D65FF" font-size="12" font-weight="bold">Phase 3</text>
-   199|                    <text x="65" y="15" text-anchor="middle" fill="#888" font-size="8">数据管道</text>
-   200|                </g>
-   201|                
-   202|                <!-- 进度条背景 -->
-   203|                <rect x="233" y="-8" width="233" height="16" rx="8" fill="#1a1a2e" stroke="#9D65FF" stroke-width="1" opacity="0.3"/>
-   204|                
-   205|                <!-- 进度百分比 -->
-   206|                <text x="480" y="3" fill="#9D65FF" font-size="10" font-weight="bold">0%</text>
-   207|                
-   208|                <!-- 任务条 -->
-   209|                <g class="task-bars" transform="translate(233, 25)">
-   210|                    <!-- T-011 ~ T-014 (待执行) -->
-   211|                    <rect x="0" y="-5" width="58" height="10" rx="3" fill="#9D65FF" opacity="0.3" stroke="#9D65FF" stroke-width="0.5"/>
-   212|                    <rect x="58" y="-5" width="58" height="10" rx="3" fill="#9D65FF" opacity="0.3" stroke="#9D65FF" stroke-width="0.5"/>
-   213|                    <rect x="116" y="-5" width="58" height="10" rx="3" fill="#9D65FF" opacity="0.3" stroke="#9D65FF" stroke-width="0.5"/>
-   214|                    <rect x="175" y="-5" width="58" height="10" rx="3" fill="#9D65FF" opacity="0.3" stroke="#9D65FF" stroke-width="0.5"/>
-   215|                </g>
-   216|            </g>
-   217|            
-   218|            <!-- 里程碑标记 -->
-   219|            <g class="milestones" transform="translate(150, 320)">
-   220|                <!-- Milestone 1 -->
-   221|                <g transform="translate(233, 0)">
-   222|                    <polygon points="0,-8 8,0 0,8 -8,0" fill="#06D6A0" filter="url(#neonGlowGreen)" class="milestone-marker"/>
-   223|                    <text x="0" y="18" text-anchor="middle" fill="#06D6A0" font-size="8">M1</text>
-   224|                </g>
-   225|                
-   226|                <!-- Milestone 2 -->
-   227|                <g transform="translate(466, 0)">
-   228|                    <polygon points="0,-8 8,0 0,8 -8,0" fill="#FF6B9D" filter="url(#neonGlowPink)" class="milestone-marker"/>
-   229|                    <text x="0" y="18" text-anchor="middle" fill="#FF6B9D" font-size="8">M2</text>
-   230|                </g>
-   231|                
-   232|                <!-- Milestone 3 (最终) -->
-   233|                <g transform="translate(700, 0)">
-   234|                    <polygon points="0,-10 12,0 0,10 -12,0" fill="#00fff2" filter="url(#neonGlow)" class="milestone-marker"/>
-   235|                    <text x="0" y="18" text-anchor="middle" fill="#00fff2" font-size="8">FINAL</text>
-   236|                </g>
-   237|            </g>
-   238|            
-   239|            <!-- 进度环装饰 -->
-   240|            <g class="progress-rings" transform="translate(800, 100)">
-   241|                <!-- 外环 -->
-   242|                <circle r="40" fill="none" stroke="#00fff2" stroke-width="2" opacity="0.3"/>
-   243|                <circle r="40" fill="none" stroke="#00fff2" stroke-width="3" stroke-dasharray="240 160" filter="url(#neonGlow)" class="pulse-glow"/>
-   244|                
-   245|                <!-- 内环 -->
-   246|                <circle r="30" fill="none" stroke="#FF6B9D" stroke-width="1.5" opacity="0.4"/>
-   247|                
-   248|                <!-- 进度数字 -->
-   249|                <text x="0" y="-5" text-anchor="middle" fill="#00fff2" font-size="16" font-weight="bold">60%</text>
-   250|                <text x="0" y="12" text-anchor="middle" fill="#888" font-size="8">DONE</text>
-   251|            </g>
-   252|            
-   253|            <!-- Yuna 签名 -->
-   254|            <g class="yuna-signature" transform="translate(850, 380)">
-   255|                <text fill="#FF6B8B" font-size="10" font-style="italic" opacity="0.6">✨ Designed by YUNA</text>
-   256|            </g>
-   257|            
-   258|            <!-- 状态指示器 -->
-   259|            <g class="status-indicators" transform="translate(30, 350)">
-   260|                <g transform="translate(0, 0)">
-   261|                    <rect width="60" height="18" rx="9" fill="#06D6A0" opacity="0.2"/>
-   262|                    <circle cx="10" cy="9" r="4" fill="#06D6A0"/>
-   263|                    <text x="35" y="13" text-anchor="middle" fill="#06D6A0" font-size="8">DONE: 8</text>
-   264|                </g>
-   265|                <g transform="translate(70, 0)">
-   266|                    <rect width="80" height="18" rx="9" fill="#FF6B9D" opacity="0.2"/>
-   267|                    <circle cx="10" cy="9" r="4" fill="#FF6B9D"/>
-   268|                    <text x="45" y="13" text-anchor="middle" fill="#FF6B9D" font-size="8">IN PROGRESS: 1</text>
-   269|                </g>
-   270|                <g transform="translate(160, 0)">
-   271|                    <rect width="80" height="18" rx="9" fill="#9D65FF" opacity="0.2"/>
-   272|                    <circle cx="10" cy="9" r="4" fill="#9D65FF"/>
-   273|                    <text x="45" y="13" text-anchor="middle" fill="#9D65FF" font-size="8">PENDING: 5</text>
-   274|                </g>
-   275|            </g>
-   276|        </svg>
-   277|    </div>
-   278|    
-   279|    <!-- 图例 -->
-   280|    <div class="yuna-legend future-legend">
-   281|        <div class="legend-item future-item">
-   282|            <span class="legend-bar" style="background: linear-gradient(90deg, #06D6A0, #00fff2);"></span>
-   283|            <span>✅ Phase 1 完成 (100%)</span>
-   284|        </div>
-   285|        <div class="legend-item future-item">
-   286|            <span class="legend-bar" style="background: linear-gradient(90deg, #FF6B9D, #FF9EC4);"></span>
-   287|            <span>🔄 Phase 2 进行中 (50%)</span>
-   288|        </div>
-   289|        <div class="legend-item future-item">
-   290|            <span class="legend-bar" style="background: linear-gradient(90deg, #9D65FF, #C9A0FF); opacity: 0.5;"></span>
-   291|            <span>⏳ Phase 3 待执行 (0%)</span>
-   292|        </div>
-   293|        <div class="legend-item future-item">
-   294|            <span class="legend-milestone" style="background: #00fff2; filter: drop-shadow(0 0 3px #00fff2);"></span>
-   295|            <span>⚡ Milestone 节点</span>
-   296|        </div>
-   297|    </div>
-   298|</section>
+<!-- 🎨 YUNA FUTURE STYLE: 项目进度 Gantt 图 -->
+<section class="yuna-gantt-section">
+    <div class="chart-label future-label" style="background: linear-gradient(135deg, rgba(0,255,242,0.15), rgba(157,101,255,0.1)); border-color: #00fff2; color: #00fff2;">
+        <i class="fas fa-chart-gantt"></i>
+        <span>YUNA FUTURE VISUALIZATION</span>
+    </div>
+    <h3><i class="fas fa-timeline"></i> 项目进度 Gantt 图 - 未来霓虹风格</h3>
+    
+    <div class="yuna-gantt-container">
+        <svg class="yuna-gantt-svg" viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+            <!-- 霓虹渐变定义 -->
+            <defs>
+                <!-- 霓虹发光滤镜 -->
+                <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="3" result="blur"/>
+                    <feFlood flood-color="#00fff2" flood-opacity="0.5"/>
+                    <feComposite in2="blur" operator="in"/>
+                    <feMerge>
+                        <feMergeNode/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+                
+                <filter id="neonGlowPink" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="4" result="blur"/>
+                    <feFlood flood-color="#FF6B9D" flood-opacity="0.6"/>
+                    <feComposite in2="blur" operator="in"/>
+                    <feMerge>
+                        <feMergeNode/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+                
+                <filter id="neonGlowGreen" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="3" result="blur"/>
+                    <feFlood flood-color="#06D6A0" flood-opacity="0.5"/>
+                    <feComposite in2="blur" operator="in"/>
+                    <feMerge>
+                        <feMergeNode/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+                
+                <!-- 进度条渐变 -->
+                <linearGradient id="progressGradientGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#06D6A0"/>
+                    <stop offset="50%" style="stop-color:#00fff2"/>
+                    <stop offset="100%" style="stop-color:#06D6A0"/>
+                </linearGradient>
+                
+                <linearGradient id="progressGradientPink" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#FF6B9D"/>
+                    <stop offset="50%" style="stop-color:#FF9EC4"/>
+                    <stop offset="100%" style="stop-color:#FF6B9D"/>
+                </linearGradient>
+                
+                <linearGradient id="progressGradientPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#9D65FF"/>
+                    <stop offset="50%" style="stop-color:#C9A0FF"/>
+                    <stop offset="100%" style="stop-color:#9D65FF"/>
+                </linearGradient>
+                
+                <linearGradient id="backgroundGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#0a0a1a"/>
+                    <stop offset="100%" style="stop-color:#1a1a2e"/>
+                </linearGradient>
+                
+                <!-- 网格图案 -->
+                <pattern id="gridPattern" width="50" height="30" patternUnits="userSpaceOnUse">
+                    <path d="M 50 0 L 0 0 0 30" fill="none" stroke="#00fff2" stroke-width="0.3" opacity="0.2"/>
+                </pattern>
+                
+                <!-- 动画 -->
+                <style>
+                    @keyframes pulseGlow { 0%, 100% { opacity: 0.6; } 50% { opacity: 1; } }
+                    @keyframes slideProgress { 0% { stroke-dashoffset: 200; } 100% { stroke-dashoffset: 0; } }
+                    @keyframes milestonePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.2); } }
+                    .pulse-glow { animation: pulseGlow 2s ease-in-out infinite; }
+                    .milestone-marker { animation: milestonePulse 1.5s ease-in-out infinite; }
+                </style>
+            </defs>
+            
+            <!-- 深色背景 -->
+            <rect width="900" height="400" fill="url(#backgroundGradient)"/>
+            <rect width="900" height="400" fill="url(#gridPattern)"/>
+            
+            <!-- 标题区 -->
+            <g class="gantt-header" transform="translate(0, 30)">
+                <text x="450" y="20" text-anchor="middle" fill="#00fff2" font-size="18" font-weight="bold" filter="url(#neonGlow)">
+                    ⚡ ITZY CEO Agents 改进方案 Gantt Chart ⚡
+                </text>
+                <text x="450" y="40" text-anchor="middle" fill="#888" font-size="11">
+                    2026-04-22 → 2026-05-13 | 总进度: 60%
+                </text>
+            </g>
+            
+            <!-- 时间轴 -->
+            <g class="timeline-axis" transform="translate(150, 70)">
+                <!-- 时间刻度 -->
+                <line x1="0" y1="0" x2="700" y2="0" stroke="#00fff2" stroke-width="2" opacity="0.5"/>
+                
+                <!-- 周次标记 -->
+                <g class="week-markers">
+                    <text x="0" y="-15" fill="#00fff2" font-size="10" text-anchor="middle">Week 1</text>
+                    <line x1="0" y1="-5" x2="0" y2="5" stroke="#00fff2" stroke-width="1"/>
+                    
+                    <text x="233" y="-15" fill="#FF6B9D" font-size="10" text-anchor="middle">Week 2</text>
+                    <line x1="233" y1="-5" x2="233" y2="5" stroke="#FF6B9D" stroke-width="1"/>
+                    
+                    <text x="466" y="-15" fill="#9D65FF" font-size="10" text-anchor="middle">Week 3</text>
+                    <line x1="466" y1="-5" x2="466" y2="5" stroke="#9D65FF" stroke-width="1"/>
+                    
+                    <text x="700" y="-15" fill="#06D6A0" font-size="10" text-anchor="middle">Done</text>
+                    <line x1="700" y1="-5" x2="700" y2="5" stroke="#06D6A0" stroke-width="1"/>
+                </g>
+                
+                <!-- 日期标签 -->
+                <g class="date-labels" fill="#666" font-size="8">
+                    <text x="0" y="15" text-anchor="middle">04-22</text>
+                    <text x="117" y="15" text-anchor="middle">04-29</text>
+                    <text x="350" y="15" text-anchor="middle">05-06</text>
+                    <text x="583" y="15" text-anchor="middle">05-13</text>
+                </g>
+            </g>
+            
+            <!-- ===== PHASE 1: SUBAGENT 配置 (100%) ===== -->
+            <g class="phase1-gantt" transform="translate(150, 110)">
+                <!-- Phase 标签 -->
+                <g transform="translate(-140, 0)">
+                    <rect x="0" y="-12" width="130" height="24" rx="4" fill="#06D6A0" opacity="0.2" stroke="#06D6A0" stroke-width="1"/>
+                    <text x="65" y="3" text-anchor="middle" fill="#06D6A0" font-size="12" font-weight="bold">Phase 1</text>
+                    <text x="65" y="15" text-anchor="middle" fill="#888" font-size="8">SUBAGENT</text>
+                </g>
+                
+                <!-- 进度条背景 -->
+                <rect x="0" y="-8" width="233" height="16" rx="8" fill="#1a1a2e" stroke="#06D6A0" stroke-width="1" opacity="0.3"/>
+                
+                <!-- 进度条填充 (100%) -->
+                <rect x="0" y="-8" width="233" height="16" rx="8" fill="url(#progressGradientGreen)" filter="url(#neonGlowGreen)" class="pulse-glow"/>
+                
+                <!-- 进度百分比 -->
+                <text x="250" y="3" fill="#06D6A0" font-size="10" font-weight="bold">100%</text>
+                
+                <!-- 任务条 -->
+                <g class="task-bars" transform="translate(0, 25)">
+                    <!-- T-001 ~ T-006 -->
+                    <rect x="0" y="-5" width="40" height="10" rx="3" fill="#06D6A0" opacity="0.7"/>
+                    <rect x="40" y="-5" width="40" height="10" rx="3" fill="#06D6A0" opacity="0.7"/>
+                    <rect x="80" y="-5" width="20" height="10" rx="3" fill="#06D6A0" opacity="0.7"/>
+                    <rect x="100" y="-5" width="20" height="10" rx="3" fill="#06D6A0" opacity="0.7"/>
+                    <rect x="120" y="-5" width="20" height="10" rx="3" fill="#06D6A0" opacity="0.7"/>
+                    <rect x="140" y="-5" width="93" height="10" rx="3" fill="#06D6A0" opacity="0.7"/>
+                </g>
+            </g>
+            
+            <!-- ===== PHASE 2: 协调引擎 (50%) ===== -->
+            <g class="phase2-gantt" transform="translate(150, 180)">
+                <!-- Phase 标签 -->
+                <g transform="translate(-140, 0)">
+                    <rect x="0" y="-12" width="130" height="24" rx="4" fill="#FF6B9D" opacity="0.2" stroke="#FF6B9D" stroke-width="1"/>
+                    <text x="65" y="3" text-anchor="middle" fill="#FF6B9D" font-size="12" font-weight="bold">Phase 2</text>
+                    <text x="65" y="15" text-anchor="middle" fill="#888" font-size="8">协调引擎</text>
+                </g>
+                
+                <!-- 进度条背景 -->
+                <rect x="0" y="-8" width="233" height="16" rx="8" fill="#1a1a2e" stroke="#FF6B9D" stroke-width="1" opacity="0.3"/>
+                
+                <!-- 进度条填充 (50%) -->
+                <rect x="0" y="-8" width="117" height="16" rx="8" fill="url(#progressGradientPink)" filter="url(#neonGlowPink)"/>
+                
+                <!-- 进度百分比 -->
+                <text x="250" y="3" fill="#FF6B9D" font-size="10" font-weight="bold">50%</text>
+                
+                <!-- 进行中标记 -->
+                <g transform="translate(120, 0)">
+                    <circle r="6" fill="#FF6B9D" class="milestone-marker"/>
+                    <text x="0" y="20" text-anchor="middle" fill="#FF6B9D" font-size="8">NOW</text>
+                </g>
+                
+                <!-- 任务条 -->
+                <g class="task-bars" transform="translate(0, 25)">
+                    <!-- T-007 (完成) -->
+                    <rect x="0" y="-5" width="40" height="10" rx="3" fill="#06D6A0" opacity="0.8"/>
+                    <!-- T-008 (完成) -->
+                    <rect x="40" y="-5" width="40" height="10" rx="3" fill="#06D6A0" opacity="0.8"/>
+                    <!-- T-009 (完成) -->
+                    <rect x="80" y="-5" width="20" height="10" rx="3" fill="#06D6A0" opacity="0.8"/>
+                    <!-- T-010 (进行中) -->
+                    <rect x="100" y="-5" width="133" height="10" rx="3" fill="#FF6B9D" opacity="0.6" stroke="#FF6B9D" stroke-width="1"/>
+                </g>
+            </g>
+            
+            <!-- ===== PHASE 3: 数据管道 (0%) ===== -->
+            <g class="phase3-gantt" transform="translate(150, 250)">
+                <!-- Phase 标签 -->
+                <g transform="translate(-140, 0)">
+                    <rect x="0" y="-12" width="130" height="24" rx="4" fill="#9D65FF" opacity="0.2" stroke="#9D65FF" stroke-width="1"/>
+                    <text x="65" y="3" text-anchor="middle" fill="#9D65FF" font-size="12" font-weight="bold">Phase 3</text>
+                    <text x="65" y="15" text-anchor="middle" fill="#888" font-size="8">数据管道</text>
+                </g>
+                
+                <!-- 进度条背景 -->
+                <rect x="233" y="-8" width="233" height="16" rx="8" fill="#1a1a2e" stroke="#9D65FF" stroke-width="1" opacity="0.3"/>
+                
+                <!-- 进度百分比 -->
+                <text x="480" y="3" fill="#9D65FF" font-size="10" font-weight="bold">0%</text>
+                
+                <!-- 任务条 -->
+                <g class="task-bars" transform="translate(233, 25)">
+                    <!-- T-011 ~ T-014 (待执行) -->
+                    <rect x="0" y="-5" width="58" height="10" rx="3" fill="#9D65FF" opacity="0.3" stroke="#9D65FF" stroke-width="0.5"/>
+                    <rect x="58" y="-5" width="58" height="10" rx="3" fill="#9D65FF" opacity="0.3" stroke="#9D65FF" stroke-width="0.5"/>
+                    <rect x="116" y="-5" width="58" height="10" rx="3" fill="#9D65FF" opacity="0.3" stroke="#9D65FF" stroke-width="0.5"/>
+                    <rect x="175" y="-5" width="58" height="10" rx="3" fill="#9D65FF" opacity="0.3" stroke="#9D65FF" stroke-width="0.5"/>
+                </g>
+            </g>
+            
+            <!-- 里程碑标记 -->
+            <g class="milestones" transform="translate(150, 320)">
+                <!-- Milestone 1 -->
+                <g transform="translate(233, 0)">
+                    <polygon points="0,-8 8,0 0,8 -8,0" fill="#06D6A0" filter="url(#neonGlowGreen)" class="milestone-marker"/>
+                    <text x="0" y="18" text-anchor="middle" fill="#06D6A0" font-size="8">M1</text>
+                </g>
+                
+                <!-- Milestone 2 -->
+                <g transform="translate(466, 0)">
+                    <polygon points="0,-8 8,0 0,8 -8,0" fill="#FF6B9D" filter="url(#neonGlowPink)" class="milestone-marker"/>
+                    <text x="0" y="18" text-anchor="middle" fill="#FF6B9D" font-size="8">M2</text>
+                </g>
+                
+                <!-- Milestone 3 (最终) -->
+                <g transform="translate(700, 0)">
+                    <polygon points="0,-10 12,0 0,10 -12,0" fill="#00fff2" filter="url(#neonGlow)" class="milestone-marker"/>
+                    <text x="0" y="18" text-anchor="middle" fill="#00fff2" font-size="8">FINAL</text>
+                </g>
+            </g>
+            
+            <!-- 进度环装饰 -->
+            <g class="progress-rings" transform="translate(800, 100)">
+                <!-- 外环 -->
+                <circle r="40" fill="none" stroke="#00fff2" stroke-width="2" opacity="0.3"/>
+                <circle r="40" fill="none" stroke="#00fff2" stroke-width="3" stroke-dasharray="240 160" filter="url(#neonGlow)" class="pulse-glow"/>
+                
+                <!-- 内环 -->
+                <circle r="30" fill="none" stroke="#FF6B9D" stroke-width="1.5" opacity="0.4"/>
+                
+                <!-- 进度数字 -->
+                <text x="0" y="-5" text-anchor="middle" fill="#00fff2" font-size="16" font-weight="bold">60%</text>
+                <text x="0" y="12" text-anchor="middle" fill="#888" font-size="8">DONE</text>
+            </g>
+            
+            <!-- Yuna 签名 -->
+            <g class="yuna-signature" transform="translate(850, 380)">
+                <text fill="#FF6B8B" font-size="10" font-style="italic" opacity="0.6">✨ Designed by YUNA</text>
+            </g>
+            
+            <!-- 状态指示器 -->
+            <g class="status-indicators" transform="translate(30, 350)">
+                <g transform="translate(0, 0)">
+                    <rect width="60" height="18" rx="9" fill="#06D6A0" opacity="0.2"/>
+                    <circle cx="10" cy="9" r="4" fill="#06D6A0"/>
+                    <text x="35" y="13" text-anchor="middle" fill="#06D6A0" font-size="8">DONE: 8</text>
+                </g>
+                <g transform="translate(70, 0)">
+                    <rect width="80" height="18" rx="9" fill="#FF6B9D" opacity="0.2"/>
+                    <circle cx="10" cy="9" r="4" fill="#FF6B9D"/>
+                    <text x="45" y="13" text-anchor="middle" fill="#FF6B9D" font-size="8">IN PROGRESS: 1</text>
+                </g>
+                <g transform="translate(160, 0)">
+                    <rect width="80" height="18" rx="9" fill="#9D65FF" opacity="0.2"/>
+                    <circle cx="10" cy="9" r="4" fill="#9D65FF"/>
+                    <text x="45" y="13" text-anchor="middle" fill="#9D65FF" font-size="8">PENDING: 5</text>
+                </g>
+            </g>
+        </svg>
+    </div>
+    
+    <!-- 图例 -->
+    <div class="yuna-legend future-legend">
+        <div class="legend-item future-item">
+            <span class="legend-bar" style="background: linear-gradient(90deg, #06D6A0, #00fff2);"></span>
+            <span>✅ Phase 1 完成 (100%)</span>
+        </div>
+        <div class="legend-item future-item">
+            <span class="legend-bar" style="background: linear-gradient(90deg, #FF6B9D, #FF9EC4);"></span>
+            <span>🔄 Phase 2 进行中 (50%)</span>
+        </div>
+        <div class="legend-item future-item">
+            <span class="legend-bar" style="background: linear-gradient(90deg, #9D65FF, #C9A0FF); opacity: 0.5;"></span>
+            <span>⏳ Phase 3 待执行 (0%)</span>
+        </div>
+        <div class="legend-item future-item">
+            <span class="legend-milestone" style="background: #00fff2; filter: drop-shadow(0 0 3px #00fff2);"></span>
+            <span>⚡ Milestone 节点</span>
+        </div>
+    </div>
+</section>
 
-            <!-- 🎨 Yuna 未来风格部署流程图 -->
-     1|<!-- 🎨 YUNA FUTURE STYLE: k2-web 部署流程图 -->
-     2|<section class="yuna-deployment-section">
-     3|    <div class="chart-label future-label" style="background: linear-gradient(135deg, rgba(255,107,157,0.15), rgba(255,209,102,0.1)); border-color: #FFD166; color: #FFD166;">
-     4|        <i class="fas fa-sitemap"></i>
-     5|        <span>YUNA DEPLOYMENT FLOW</span>
-     6|    </div>
-     7|    <h3><i class="fas fa-project-diagram"></i> k2-web 部署流程图 - 未来科技风格</h3>
-     8|    
-     9|    <div class="yuna-deployment-container">
-    10|        <svg class="yuna-deployment-svg" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
-    11|            <!-- 霓虹渐变定义 -->
-    12|            <defs>
-    13|                <!-- 霓虹发光滤镜 -->
-    14|                <filter id="deployNeonCyan" x="-50%" y="-50%" width="200%" height="200%">
-    15|                    <feGaussianBlur stdDeviation="2" result="blur"/>
-    16|                    <feFlood flood-color="#00fff2" flood-opacity="0.5"/>
-    17|                    <feComposite in2="blur" operator="in"/>
-    18|                    <feMerge>
-    19|                        <feMergeNode/>
-    20|                        <feMergeNode in="SourceGraphic"/>
-    21|                    </feMerge>
-    22|                </filter>
-    23|                
-    24|                <filter id="deployNeonYellow" x="-50%" y="-50%" width="200%" height="200%">
-    25|                    <feGaussianBlur stdDeviation="2" result="blur"/>
-    26|                    <feFlood flood-color="#FFD166" flood-opacity="0.5"/>
-    27|                    <feComposite in2="blur" operator="in"/>
-    28|                    <feMerge>
-    29|                        <feMergeNode/>
-    30|                        <feMergeNode in="SourceGraphic"/>
-    31|                    </feMerge>
-    32|                </filter>
-    33|                
-    34|                <filter id="deployNeonPink" x="-50%" y="-50%" width="200%" height="200%">
-    35|                    <feGaussianBlur stdDeviation="3" result="blur"/>
-    36|                    <feFlood flood-color="#FF6B9D" flood-opacity="0.6"/>
-    37|                    <feComposite in2="blur" operator="in"/>
-    38|                    <feMerge>
-    39|                        <feMergeNode/>
-    40|                        <feMergeNode in="SourceGraphic"/>
-    41|                    </feMerge>
-    42|                </filter>
-    43|                
-    44|                <filter id="deployNeonPurple" x="-50%" y="-50%" width="200%" height="200%">
-    45|                    <feGaussianBlur stdDeviation="2" result="blur"/>
-    46|                    <feFlood flood-color="#9D65FF" flood-opacity="0.5"/>
-    47|                    <feComposite in2="blur" operator="in"/>
-    48|                    <feMerge>
-    49|                        <feMergeNode/>
-    50|                        <feMergeNode in="SourceGraphic"/>
-    51|                    </feMerge>
-    52|                </filter>
-    53|                
-    54|                <!-- 区域渐变 -->
-    55|                <linearGradient id="completedZoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-    56|                    <stop offset="0%" style="stop-color:#06D6A0" stop-opacity="0.1"/>
-    57|                    <stop offset="100%" style="stop-color:#06D6A0" stop-opacity="0.05"/>
-    58|                </linearGradient>
-    59|                
-    60|                <linearGradient id="progressZoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-    61|                    <stop offset="0%" style="stop-color:#FF6B9D" stop-opacity="0.1"/>
-    62|                    <stop offset="100%" style="stop-color:#FF6B9D" stop-opacity="0.05"/>
-    63|                </linearGradient>
-    64|                
-    65|                <linearGradient id="pendingZoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-    66|                    <stop offset="0%" style="stop-color:#9D65FF" stop-opacity="0.1"/>
-    67|                    <stop offset="100%" style="stop-color:#9D65FF" stop-opacity="0.05"/>
-    68|                </linearGradient>
-    69|                
-    70|                <!-- 连接线渐变 -->
-    71|                <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-    72|                    <stop offset="0%" style="stop-color:#06D6A0"/>
-    73|                    <stop offset="50%" style="stop-color:#FF6B9D"/>
-    74|                    <stop offset="100%" style="stop-color:#9D65FF"/>
-    75|                </linearGradient>
-    76|                
-    77|                <!-- 背景渐变 -->
-    78|                <linearGradient id="deployBgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-    79|                    <stop offset="0%" style="stop-color:#0a0a1a"/>
-    80|                    <stop offset="100%" style="stop-color:#1a1a2e"/>
-    81|                </linearGradient>
-    82|                
-    83|                <!-- 网格图案 -->
-    84|                <pattern id="deployGridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
-    85|                    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00fff2" stroke-width="0.2" opacity="0.15"/>
-    86|                </pattern>
-    87|                
-    88|                <!-- 动画 -->
-    89|                <style>
-    90|                    @keyframes flowPulse { 0% { stroke-dashoffset: 20; } 100% { stroke-dashoffset: 0; } }
-    91|                    @keyframes cardFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
-    92|                    @keyframes statusPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
-    93|                    .flow-line { animation: flowPulse 1s linear infinite; }
-    94|                    .card-float { animation: cardFloat 2s ease-in-out infinite; }
-    95|                    .status-pulse { animation: statusPulse 1.5s ease-in-out infinite; }
-    96|                </style>
-    97|            </defs>
-    98|            
-    99|            <!-- 深色背景 -->
-   100|            <rect width="900" height="500" fill="url(#deployBgGrad)"/>
-   101|            <rect width="900" height="500" fill="url(#deployGridPattern)"/>
-   102|            
-   103|            <!-- 标题 -->
-   104|            <g class="deployment-header" transform="translate(450, 30)">
-   105|                <text x="0" y="0" text-anchor="middle" fill="#00fff2" font-size="16" font-weight="bold" filter="url(#deployNeonCyan)">
-   106|                    🚀 k2-web Deployment Pipeline 🚀
-   107|                </text>
-   108|                <text x="0" y="18" text-anchor="middle" fill="#888" font-size="10">
-   109|                    chaeryeong.design → leader.coordination
-   110|                </text>
-   111|            </g>
-   112|            
-   113|            <!-- ===== 三区域划分 ===== -->
-   114|            
-   115|            <!-- COMPLETED 区域 -->
-   116|            <g class="completed-zone" transform="translate(50, 60)">
-   117|                <rect width="200" height="400" rx="10" fill="url(#completedZoneGrad)" stroke="#06D6A0" stroke-width="2" opacity="0.8"/>
-   118|                
-   119|                <!-- 区域标题 -->
-   120|                <g transform="translate(100, 25)">
-   121|                    <rect x="-50" y="-15" width="100" height="30" rx="15" fill="#06D6A0" opacity="0.2"/>
-   122|                    <text x="0" y="5" text-anchor="middle" fill="#06D6A0" font-size="12" font-weight="bold">✅ COMPLETED</text>
-   123|                </g>
-   124|                
-   125|                <!-- 任务卡片 -->
-   126|                <g class="task-cards" transform="translate(10, 70)">
-   127|                    <!-- Task 1: 目录结构 -->
-   128|                    <g class="task-card card-float" transform="translate(0, 0)">
-   129|                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#06D6A0" stroke-width="1"/>
-   130|                        <circle cx="15" cy="25" r="8" fill="#06D6A0" filter="url(#deployNeonCyan)"/>
-   131|                        <text x="30" y="15" fill="#06D6A0" font-size="10" font-weight="bold">目录结构创建</text>
-   132|                        <text x="30" y="30" fill="#888" font-size="8">leader</text>
-   133|                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#06D6A0" opacity="0.3"/>
-   134|                        <text x="150" y="42" text-anchor="middle" fill="#06D6A0" font-size="7">DONE</text>
-   135|                    </g>
-   136|                    
-   137|                    <!-- Task 2: CSS -->
-   138|                    <g class="task-card card-float" transform="translate(0, 60)">
-   139|                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#06D6A0" stroke-width="1"/>
-   140|                        <circle cx="15" cy="25" r="8" fill="#06D6A0" filter="url(#deployNeonCyan)"/>
-   141|                        <text x="30" y="15" fill="#06D6A0" font-size="10" font-weight="bold">CSS 样式系统</text>
-   142|                        <text x="30" y="30" fill="#888" font-size="8">chaeryeong</text>
-   143|                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#06D6A0" opacity="0.3"/>
-   144|                        <text x="150" y="42" text-anchor="middle" fill="#06D6A0" font-size="7">DONE</text>
-   145|                    </g>
-   146|                    
-   147|                    <!-- Task 3: 导航栏 -->
-   148|                    <g class="task-card card-float" transform="translate(0, 120)">
-   149|                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#06D6A0" stroke-width="1"/>
-   150|                        <circle cx="15" cy="25" r="8" fill="#06D6A0" filter="url(#deployNeonCyan)"/>
-   151|                        <text x="30" y="15" fill="#06D6A0" font-size="10" font-weight="bold">导航栏设计</text>
-   152|                        <text x="30" y="30" fill="#888" font-size="8">chaeryeong</text>
-   153|                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#06D6A0" opacity="0.3"/>
-   154|                        <text x="150" y="42" text-anchor="middle" fill="#06D6A0" font-size="7">DONE</text>
-   155|                    </g>
-   156|                    
-   157|                    <!-- Task 4: 首页 -->
-   158|                    <g class="task-card card-float" transform="translate(0, 180)">
-   159|                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#06D6A0" stroke-width="1"/>
-   160|                        <circle cx="15" cy="25" r="8" fill="#06D6A0" filter="url(#deployNeonCyan)"/>
-   161|                        <text x="30" y="15" fill="#06D6A0" font-size="10" font-weight="bold">首页 index.html</text>
-   162|                        <text x="30" y="30" fill="#888" font-size="8">chaeryeong</text>
-   163|                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#06D6A0" opacity="0.3"/>
-   164|                        <text x="150" y="42" text-anchor="middle" fill="#06D6A0" font-size="7">DONE</text>
-   165|                    </g>
-   166|                    
-   167|                    <!-- Task 5: agents.html -->
-   168|                    <g class="task-card card-float" transform="translate(0, 240)">
-   169|                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#06D6A0" stroke-width="1"/>
-   170|                        <circle cx="15" cy="25" r="8" fill="#06D6A0" filter="url(#deployNeonCyan)"/>
-   171|                        <text x="30" y="15" fill="#06D6A0" font-size="10" font-weight="bold">agents.html</text>
-   172|                        <text x="30" y="30" fill="#888" font-size="8">chaeryeong</text>
-   173|                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#06D6A0" opacity="0.3"/>
-   174|                        <text x="150" y="42" text-anchor="middle" fill="#06D6A0" font-size="7">DONE</text>
-   175|                    </g>
-   176|                </g>
-   177|                
-   178|                <!-- 区域统计 -->
-   179|                <g transform="translate(100, 360)">
-   180|                    <text x="0" y="0" text-anchor="middle" fill="#06D6A0" font-size="14" font-weight="bold">5</text>
-   181|                    <text x="0" y="15" text-anchor="middle" fill="#888" font-size="8">tasks</text>
-   182|                </g>
-   183|            </g>
-   184|            
-   185|            <!-- IN PROGRESS 区域 -->
-   186|            <g class="in-progress-zone" transform="translate(350, 60)">
-   187|                <rect width="200" height="400" rx="10" fill="url(#progressZoneGrad)" stroke="#FF6B9D" stroke-width="2" opacity="0.8"/>
-   188|                
-   189|                <!-- 区域标题 -->
-   190|                <g transform="translate(100, 25)">
-   191|                    <rect x="-55" y="-15" width="110" height="30" rx="15" fill="#FF6B9D" opacity="0.2"/>
-   192|                    <text x="0" y="5" text-anchor="middle" fill="#FF6B9D" font-size="12" font-weight="bold">🔄 IN PROGRESS</text>
-   193|                </g>
-   194|                
-   195|                <!-- 任务卡片 -->
-   196|                <g class="task-cards" transform="translate(10, 70)">
-   197|                    <!-- Task: progressreport.html -->
-   198|                    <g class="task-card card-float" transform="translate(0, 0)">
-   199|                        <rect width="180" height="70" rx="8" fill="#1a1a2e" stroke="#FF6B9D" stroke-width="1.5"/>
-   200|                        <circle cx="15" cy="25" r="8" fill="#FF6B9D" filter="url(#deployNeonPink)" class="status-pulse"/>
-   201|                        <text x="30" y="15" fill="#FF6B9D" font-size="10" font-weight="bold">progressreport.html</text>
-   202|                        <text x="30" y="30" fill="#888" font-size="8">leader</text>
-   203|                        
-   204|                        <!-- 进度条 -->
-   205|                        <rect x="15" y="45" width="150" height="8" rx="4" fill="#1a1a2e" stroke="#FF6B9D" stroke-width="0.5"/>
-   206|                        <rect x="15" y="45" width="90" height="8" rx="4" fill="#FF6B9D" opacity="0.7"/>
-   207|                        <text x="100" y="55" fill="#FF6B9D" font-size="7">60%</text>
-   208|                        
-   209|                        <!-- 状态徽章 -->
-   210|                        <rect x="130" y="55" width="40" height="10" rx="5" fill="#FF6B9D" opacity="0.3"/>
-   211|                        <text x="150" y="62" text-anchor="middle" fill="#FF6B9D" font-size="7">WIP</text>
-   212|                    </g>
-   213|                    
-   214|                    <!-- 当前活动指示 -->
-   215|                    <g transform="translate(90, 100)">
-   216|                        <ellipse rx="45" ry="20" fill="#FF6B9D" opacity="0.1" stroke="#FF6B9D" stroke-width="1"/>
-   217|                        <text x="0" y="5" text-anchor="middle" fill="#FF6B9D" font-size="9">⚡ ACTIVE</text>
-   218|                    </g>
-   219|                </g>
-   220|                
-   221|                <!-- 区域统计 -->
-   222|                <g transform="translate(100, 360)">
-   223|                    <text x="0" y="0" text-anchor="middle" fill="#FF6B9D" font-size="14" font-weight="bold">1</text>
-   224|                    <text x="0" y="15" text-anchor="middle" fill="#888" font-size="8">task</text>
-   225|                </g>
-   226|            </g>
-   227|            
-   228|            <!-- PENDING 区域 -->
-   229|            <g class="pending-zone" transform="translate(650, 60)">
-   230|                <rect width="200" height="400" rx="10" fill="url(#pendingZoneGrad)" stroke="#9D65FF" stroke-width="2" opacity="0.8"/>
-   231|                
-   232|                <!-- 区域标题 -->
-   233|                <g transform="translate(100, 25)">
-   234|                    <rect x="-50" y="-15" width="100" height="30" rx="15" fill="#9D65FF" opacity="0.2"/>
-   235|                    <text x="0" y="5" text-anchor="middle" fill="#9D65FF" font-size="12" font-weight="bold">⏳ PENDING</text>
-   236|                </g>
-   237|                
-   238|                <!-- 任务卡片 -->
-   239|                <g class="task-cards" transform="translate(10, 70)">
-   240|                    <!-- Task 1: 进度数据API -->
-   241|                    <g class="task-card" transform="translate(0, 0)">
-   242|                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#9D65FF" stroke-width="0.5" opacity="0.7"/>
-   243|                        <circle cx="15" cy="25" r="8" fill="#9D65FF" opacity="0.5"/>
-   244|                        <text x="30" y="15" fill="#9D65FF" font-size="10">进度数据 API</text>
-   245|                        <text x="30" y="30" fill="#888" font-size="8">lia</text>
-   246|                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#9D65FF" opacity="0.2"/>
-   247|                        <text x="150" y="42" text-anchor="middle" fill="#9D65FF" font-size="7">WAIT</text>
-   248|                    </g>
-   249|                    
-   250|                    <!-- Task 2: coordination_engine -->
-   251|                    <g class="task-card" transform="translate(0, 60)">
-   252|                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#9D65FF" stroke-width="0.5" opacity="0.7"/>
-   253|                        <circle cx="15" cy="25" r="8" fill="#9D65FF" opacity="0.5"/>
-   254|                        <text x="30" y="15" fill="#9D65FF" font-size="10">coordination_engine.py</text>
-   255|                        <text x="30" y="30" fill="#888" font-size="8">leader</text>
-   256|                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#9D65FF" opacity="0.2"/>
-   257|                        <text x="150" y="42" text-anchor="middle" fill="#9D65FF" font-size="7">WAIT</text>
-   258|                    </g>
-   259|                    
-   260|                    <!-- Task 3: qa_engine -->
-   261|                    <g class="task-card" transform="translate(0, 120)">
-   262|                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#9D65FF" stroke-width="0.5" opacity="0.7"/>
-   263|                        <circle cx="15" cy="25" r="8" fill="#9D65FF" opacity="0.5"/>
-   264|                        <text x="30" y="15" fill="#9D65FF" font-size="10">qa_engine.py</text>
-   265|                        <text x="30" y="30" fill="#888" font-size="8">ryujin</text>
-   266|                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#9D65FF" opacity="0.2"/>
-   267|                        <text x="150" y="42" text-anchor="middle" fill="#9D65FF" font-size="7">WAIT</text>
-   268|                    </g>
-   269|                    
-   270|                    <!-- Task 4: SUBAGENTS -->
-   271|                    <g class="task-card" transform="translate(0, 180)">
-   272|                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#9D65FF" stroke-width="0.5" opacity="0.7"/>
-   273|                        <circle cx="15" cy="25" r="8" fill="#9D65FF" opacity="0.5"/>
-   274|                        <text x="30" y="15" fill="#9D65FF" font-size="10">SUBAGENTS.md</text>
-   275|                        <text x="30" y="30" fill="#888" font-size="8">leader</text>
-   276|                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#9D65FF" opacity="0.2"/>
-   277|                        <text x="150" y="42" text-anchor="middle" fill="#9D65FF" font-size="7">WAIT</text>
-   278|                    </g>
-   279|                </g>
-   280|                
-   281|                <!-- 区域统计 -->
-   282|                <g transform="translate(100, 360)">
-   283|                    <text x="0" y="0" text-anchor="middle" fill="#9D65FF" font-size="14" font-weight="bold">4</text>
-   284|                    <text x="0" y="15" text-anchor="middle" fill="#888" font-size="8">tasks</text>
-   285|                </g>
-   286|            </g>
-   287|            
-   288|            <!-- ===== 流动连接线 ===== -->
-   289|            <g class="flow-connections">
-   290|                <!-- Completed → In Progress -->
-   291|                <g transform="translate(250, 160)">
-   292|                    <path d="M 0 0 Q 50 -20 100 0" stroke="url(#flowGradient)" stroke-width="3" fill="none" stroke-dasharray="10,5" class="flow-line"/>
-   293|                    <polygon points="95,-5 105,0 95,5" fill="#FF6B9D"/>
-   294|                </g>
-   295|                
-   296|                <!-- In Progress → Pending -->
-   297|                <g transform="translate(550, 160)">
-   298|                    <path d="M 0 0 Q 50 -20 100 0" stroke="url(#flowGradient)" stroke-width="3" fill="none" stroke-dasharray="10,5" class="flow-line"/>
-   299|                    <polygon points="95,-5 105,0 95,5" fill="#9D65FF"/>
-   300|                </g>
-   301|                
-   302|                <!-- 虚线反馈回路 -->
-   303|                <g transform="translate(750, 400)" opacity="0.4">
-   304|                    <path d="M 0 0 Q -350 50 -700 0" stroke="#00fff2" stroke-width="1" fill="none" stroke-dasharray="5,5"/>
-   305|                    <text x="-350" y="35" fill="#00fff2" font-size="8" text-anchor="middle">QA Feedback Loop</text>
-   306|                </g>
-   307|            </g>
-   308|            
-   309|            <!-- 进度指示器 -->
-   310|            <g class="progress-indicator" transform="translate(450, 480)">
-   311|                <rect x="-200" y="-10" width="400" height="20" rx="10" fill="#1a1a2e" stroke="#00fff2" stroke-width="1"/>
-   312|                <rect x="-200" y="-10" width="200" height="20" rx="10" fill="url(#flowGradient)" opacity="0.7"/>
-   313|                <text x="0" y="2" text-anchor="middle" fill="#00fff2" font-size="10" font-weight="bold">50% Complete</text>
-   314|            </g>
-   315|            
-   316|            <!-- Yuna 签名 -->
-   317|            <g class="yuna-signature" transform="translate(850, 480)">
-   318|                <text fill="#FF6B8B" font-size="10" font-style="italic" opacity="0.6">✨ Designed by YUNA</text>
-   319|            </g>
-   320|            
-   321|            <!-- Agent 分配指示 -->
-   322|            <g class="agent-indicators" transform="translate(20, 480)">
-   323|                <g transform="translate(0, 0)">
-   324|                    <circle r="5" fill="#FF6B9D"/>
-   325|                    <text x="10" y="3" fill="#888" font-size="7">leader</text>
-   326|                </g>
-   327|                <g transform="translate(60, 0)">
-   328|                    <circle r="5" fill="#FFD166"/>
-   329|                    <text x="10" y="3" fill="#888" font-size="7">chaeryeong</text>
-   330|                </g>
-   331|                <g transform="translate(140, 0)">
-   332|                    <circle r="5" fill="#9D65FF"/>
-   333|                    <text x="10" y="3" fill="#888" font-size="7">lia</text>
-   334|                </g>
-   335|                <g transform="translate(200, 0)">
-   336|                    <circle r="5" fill="#06D6A0"/>
-   337|                    <text x="10" y="3" fill="#888" font-size="7">ryujin</text>
-   338|                </g>
-   339|            </g>
-   340|        </svg>
-   341|    </div>
-   342|    
-   343|    <!-- 图例 -->
-   344|    <div class="yuna-legend deployment-legend">
-   345|        <div class="legend-item future-item">
-   346|            <span class="legend-zone" style="background: linear-gradient(135deg, #06D6A0, #00fff2); opacity: 0.8;"></span>
-   347|            <span>✅ Completed Zone (5 tasks)</span>
-   348|        </div>
-   349|        <div class="legend-item future-item">
-   350|            <span class="legend-zone" style="background: linear-gradient(135deg, #FF6B9D, #FF9EC4);"></span>
-   351|            <span>🔄 In Progress Zone (1 task)</span>
-   352|        </div>
-   353|        <div class="legend-item future-item">
-   354|            <span class="legend-zone" style="background: linear-gradient(135deg, #9D65FF, #C9A0FF); opacity: 0.5;"></span>
-   355|            <span>⏳ Pending Zone (4 tasks)</span>
-   356|        </div>
-   357|        <div class="legend-item future-item">
-   358|            <span class="legend-flow" style="background: linear-gradient(90deg, #06D6A0, #FF6B9D, #9D65FF);"></span>
-   359|            <span>🌊 Data Flow</span>
-   360|        </div>
-   361|    </div>
-   362|</section>
+<!-- 🎨 YUNA FUTURE STYLE: k2-web 部署流程图 -->
+<section class="yuna-deployment-section">
+    <div class="chart-label future-label" style="background: linear-gradient(135deg, rgba(255,107,157,0.15), rgba(255,209,102,0.1)); border-color: #FFD166; color: #FFD166;">
+        <i class="fas fa-sitemap"></i>
+        <span>YUNA DEPLOYMENT FLOW</span>
+    </div>
+    <h3><i class="fas fa-project-diagram"></i> k2-web 部署流程图 - 未来科技风格</h3>
+    
+    <div class="yuna-deployment-container">
+        <svg class="yuna-deployment-svg" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+            <!-- 霓虹渐变定义 -->
+            <defs>
+                <!-- 霓虹发光滤镜 -->
+                <filter id="deployNeonCyan" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2" result="blur"/>
+                    <feFlood flood-color="#00fff2" flood-opacity="0.5"/>
+                    <feComposite in2="blur" operator="in"/>
+                    <feMerge>
+                        <feMergeNode/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+                
+                <filter id="deployNeonYellow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2" result="blur"/>
+                    <feFlood flood-color="#FFD166" flood-opacity="0.5"/>
+                    <feComposite in2="blur" operator="in"/>
+                    <feMerge>
+                        <feMergeNode/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+                
+                <filter id="deployNeonPink" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="3" result="blur"/>
+                    <feFlood flood-color="#FF6B9D" flood-opacity="0.6"/>
+                    <feComposite in2="blur" operator="in"/>
+                    <feMerge>
+                        <feMergeNode/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+                
+                <filter id="deployNeonPurple" x="-50%" y="-50%" width="200%" height="200%">
+                    <feGaussianBlur stdDeviation="2" result="blur"/>
+                    <feFlood flood-color="#9D65FF" flood-opacity="0.5"/>
+                    <feComposite in2="blur" operator="in"/>
+                    <feMerge>
+                        <feMergeNode/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+                
+                <!-- 区域渐变 -->
+                <linearGradient id="completedZoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#06D6A0" stop-opacity="0.1"/>
+                    <stop offset="100%" style="stop-color:#06D6A0" stop-opacity="0.05"/>
+                </linearGradient>
+                
+                <linearGradient id="progressZoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#FF6B9D" stop-opacity="0.1"/>
+                    <stop offset="100%" style="stop-color:#FF6B9D" stop-opacity="0.05"/>
+                </linearGradient>
+                
+                <linearGradient id="pendingZoneGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#9D65FF" stop-opacity="0.1"/>
+                    <stop offset="100%" style="stop-color:#9D65FF" stop-opacity="0.05"/>
+                </linearGradient>
+                
+                <!-- 连接线渐变 -->
+                <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#06D6A0"/>
+                    <stop offset="50%" style="stop-color:#FF6B9D"/>
+                    <stop offset="100%" style="stop-color:#9D65FF"/>
+                </linearGradient>
+                
+                <!-- 背景渐变 -->
+                <linearGradient id="deployBgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <stop offset="0%" style="stop-color:#0a0a1a"/>
+                    <stop offset="100%" style="stop-color:#1a1a2e"/>
+                </linearGradient>
+                
+                <!-- 网格图案 -->
+                <pattern id="deployGridPattern" width="30" height="30" patternUnits="userSpaceOnUse">
+                    <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#00fff2" stroke-width="0.2" opacity="0.15"/>
+                </pattern>
+                
+                <!-- 动画 -->
+                <style>
+                    @keyframes flowPulse { 0% { stroke-dashoffset: 20; } 100% { stroke-dashoffset: 0; } }
+                    @keyframes cardFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+                    @keyframes statusPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+                    .flow-line { animation: flowPulse 1s linear infinite; }
+                    .card-float { animation: cardFloat 2s ease-in-out infinite; }
+                    .status-pulse { animation: statusPulse 1.5s ease-in-out infinite; }
+                </style>
+            </defs>
+            
+            <!-- 深色背景 -->
+            <rect width="900" height="500" fill="url(#deployBgGrad)"/>
+            <rect width="900" height="500" fill="url(#deployGridPattern)"/>
+            
+            <!-- 标题 -->
+            <g class="deployment-header" transform="translate(450, 30)">
+                <text x="0" y="0" text-anchor="middle" fill="#00fff2" font-size="16" font-weight="bold" filter="url(#deployNeonCyan)">
+                    🚀 k2-web Deployment Pipeline 🚀
+                </text>
+                <text x="0" y="18" text-anchor="middle" fill="#888" font-size="10">
+                    chaeryeong.design → leader.coordination
+                </text>
+            </g>
+            
+            <!-- ===== 三区域划分 ===== -->
+            
+            <!-- COMPLETED 区域 -->
+            <g class="completed-zone" transform="translate(50, 60)">
+                <rect width="200" height="400" rx="10" fill="url(#completedZoneGrad)" stroke="#06D6A0" stroke-width="2" opacity="0.8"/>
+                
+                <!-- 区域标题 -->
+                <g transform="translate(100, 25)">
+                    <rect x="-50" y="-15" width="100" height="30" rx="15" fill="#06D6A0" opacity="0.2"/>
+                    <text x="0" y="5" text-anchor="middle" fill="#06D6A0" font-size="12" font-weight="bold">✅ COMPLETED</text>
+                </g>
+                
+                <!-- 任务卡片 -->
+                <g class="task-cards" transform="translate(10, 70)">
+                    <!-- Task 1: 目录结构 -->
+                    <g class="task-card card-float" transform="translate(0, 0)">
+                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#06D6A0" stroke-width="1"/>
+                        <circle cx="15" cy="25" r="8" fill="#06D6A0" filter="url(#deployNeonCyan)"/>
+                        <text x="30" y="15" fill="#06D6A0" font-size="10" font-weight="bold">目录结构创建</text>
+                        <text x="30" y="30" fill="#888" font-size="8">leader</text>
+                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#06D6A0" opacity="0.3"/>
+                        <text x="150" y="42" text-anchor="middle" fill="#06D6A0" font-size="7">DONE</text>
+                    </g>
+                    
+                    <!-- Task 2: CSS -->
+                    <g class="task-card card-float" transform="translate(0, 60)">
+                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#06D6A0" stroke-width="1"/>
+                        <circle cx="15" cy="25" r="8" fill="#06D6A0" filter="url(#deployNeonCyan)"/>
+                        <text x="30" y="15" fill="#06D6A0" font-size="10" font-weight="bold">CSS 样式系统</text>
+                        <text x="30" y="30" fill="#888" font-size="8">chaeryeong</text>
+                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#06D6A0" opacity="0.3"/>
+                        <text x="150" y="42" text-anchor="middle" fill="#06D6A0" font-size="7">DONE</text>
+                    </g>
+                    
+                    <!-- Task 3: 导航栏 -->
+                    <g class="task-card card-float" transform="translate(0, 120)">
+                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#06D6A0" stroke-width="1"/>
+                        <circle cx="15" cy="25" r="8" fill="#06D6A0" filter="url(#deployNeonCyan)"/>
+                        <text x="30" y="15" fill="#06D6A0" font-size="10" font-weight="bold">导航栏设计</text>
+                        <text x="30" y="30" fill="#888" font-size="8">chaeryeong</text>
+                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#06D6A0" opacity="0.3"/>
+                        <text x="150" y="42" text-anchor="middle" fill="#06D6A0" font-size="7">DONE</text>
+                    </g>
+                    
+                    <!-- Task 4: 首页 -->
+                    <g class="task-card card-float" transform="translate(0, 180)">
+                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#06D6A0" stroke-width="1"/>
+                        <circle cx="15" cy="25" r="8" fill="#06D6A0" filter="url(#deployNeonCyan)"/>
+                        <text x="30" y="15" fill="#06D6A0" font-size="10" font-weight="bold">首页 index.html</text>
+                        <text x="30" y="30" fill="#888" font-size="8">chaeryeong</text>
+                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#06D6A0" opacity="0.3"/>
+                        <text x="150" y="42" text-anchor="middle" fill="#06D6A0" font-size="7">DONE</text>
+                    </g>
+                    
+                    <!-- Task 5: agents.html -->
+                    <g class="task-card card-float" transform="translate(0, 240)">
+                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#06D6A0" stroke-width="1"/>
+                        <circle cx="15" cy="25" r="8" fill="#06D6A0" filter="url(#deployNeonCyan)"/>
+                        <text x="30" y="15" fill="#06D6A0" font-size="10" font-weight="bold">agents.html</text>
+                        <text x="30" y="30" fill="#888" font-size="8">chaeryeong</text>
+                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#06D6A0" opacity="0.3"/>
+                        <text x="150" y="42" text-anchor="middle" fill="#06D6A0" font-size="7">DONE</text>
+                    </g>
+                </g>
+                
+                <!-- 区域统计 -->
+                <g transform="translate(100, 360)">
+                    <text x="0" y="0" text-anchor="middle" fill="#06D6A0" font-size="14" font-weight="bold">5</text>
+                    <text x="0" y="15" text-anchor="middle" fill="#888" font-size="8">tasks</text>
+                </g>
+            </g>
+            
+            <!-- IN PROGRESS 区域 -->
+            <g class="in-progress-zone" transform="translate(350, 60)">
+                <rect width="200" height="400" rx="10" fill="url(#progressZoneGrad)" stroke="#FF6B9D" stroke-width="2" opacity="0.8"/>
+                
+                <!-- 区域标题 -->
+                <g transform="translate(100, 25)">
+                    <rect x="-55" y="-15" width="110" height="30" rx="15" fill="#FF6B9D" opacity="0.2"/>
+                    <text x="0" y="5" text-anchor="middle" fill="#FF6B9D" font-size="12" font-weight="bold">🔄 IN PROGRESS</text>
+                </g>
+                
+                <!-- 任务卡片 -->
+                <g class="task-cards" transform="translate(10, 70)">
+                    <!-- Task: progressreport.html -->
+                    <g class="task-card card-float" transform="translate(0, 0)">
+                        <rect width="180" height="70" rx="8" fill="#1a1a2e" stroke="#FF6B9D" stroke-width="1.5"/>
+                        <circle cx="15" cy="25" r="8" fill="#FF6B9D" filter="url(#deployNeonPink)" class="status-pulse"/>
+                        <text x="30" y="15" fill="#FF6B9D" font-size="10" font-weight="bold">progressreport.html</text>
+                        <text x="30" y="30" fill="#888" font-size="8">leader</text>
+                        
+                        <!-- 进度条 -->
+                        <rect x="15" y="45" width="150" height="8" rx="4" fill="#1a1a2e" stroke="#FF6B9D" stroke-width="0.5"/>
+                        <rect x="15" y="45" width="90" height="8" rx="4" fill="#FF6B9D" opacity="0.7"/>
+                        <text x="100" y="55" fill="#FF6B9D" font-size="7">60%</text>
+                        
+                        <!-- 状态徽章 -->
+                        <rect x="130" y="55" width="40" height="10" rx="5" fill="#FF6B9D" opacity="0.3"/>
+                        <text x="150" y="62" text-anchor="middle" fill="#FF6B9D" font-size="7">WIP</text>
+                    </g>
+                    
+                    <!-- 当前活动指示 -->
+                    <g transform="translate(90, 100)">
+                        <ellipse rx="45" ry="20" fill="#FF6B9D" opacity="0.1" stroke="#FF6B9D" stroke-width="1"/>
+                        <text x="0" y="5" text-anchor="middle" fill="#FF6B9D" font-size="9">⚡ ACTIVE</text>
+                    </g>
+                </g>
+                
+                <!-- 区域统计 -->
+                <g transform="translate(100, 360)">
+                    <text x="0" y="0" text-anchor="middle" fill="#FF6B9D" font-size="14" font-weight="bold">1</text>
+                    <text x="0" y="15" text-anchor="middle" fill="#888" font-size="8">task</text>
+                </g>
+            </g>
+            
+            <!-- PENDING 区域 -->
+            <g class="pending-zone" transform="translate(650, 60)">
+                <rect width="200" height="400" rx="10" fill="url(#pendingZoneGrad)" stroke="#9D65FF" stroke-width="2" opacity="0.8"/>
+                
+                <!-- 区域标题 -->
+                <g transform="translate(100, 25)">
+                    <rect x="-50" y="-15" width="100" height="30" rx="15" fill="#9D65FF" opacity="0.2"/>
+                    <text x="0" y="5" text-anchor="middle" fill="#9D65FF" font-size="12" font-weight="bold">⏳ PENDING</text>
+                </g>
+                
+                <!-- 任务卡片 -->
+                <g class="task-cards" transform="translate(10, 70)">
+                    <!-- Task 1: 进度数据API -->
+                    <g class="task-card" transform="translate(0, 0)">
+                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#9D65FF" stroke-width="0.5" opacity="0.7"/>
+                        <circle cx="15" cy="25" r="8" fill="#9D65FF" opacity="0.5"/>
+                        <text x="30" y="15" fill="#9D65FF" font-size="10">进度数据 API</text>
+                        <text x="30" y="30" fill="#888" font-size="8">lia</text>
+                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#9D65FF" opacity="0.2"/>
+                        <text x="150" y="42" text-anchor="middle" fill="#9D65FF" font-size="7">WAIT</text>
+                    </g>
+                    
+                    <!-- Task 2: coordination_engine -->
+                    <g class="task-card" transform="translate(0, 60)">
+                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#9D65FF" stroke-width="0.5" opacity="0.7"/>
+                        <circle cx="15" cy="25" r="8" fill="#9D65FF" opacity="0.5"/>
+                        <text x="30" y="15" fill="#9D65FF" font-size="10">coordination_engine.py</text>
+                        <text x="30" y="30" fill="#888" font-size="8">leader</text>
+                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#9D65FF" opacity="0.2"/>
+                        <text x="150" y="42" text-anchor="middle" fill="#9D65FF" font-size="7">WAIT</text>
+                    </g>
+                    
+                    <!-- Task 3: qa_engine -->
+                    <g class="task-card" transform="translate(0, 120)">
+                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#9D65FF" stroke-width="0.5" opacity="0.7"/>
+                        <circle cx="15" cy="25" r="8" fill="#9D65FF" opacity="0.5"/>
+                        <text x="30" y="15" fill="#9D65FF" font-size="10">qa_engine.py</text>
+                        <text x="30" y="30" fill="#888" font-size="8">ryujin</text>
+                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#9D65FF" opacity="0.2"/>
+                        <text x="150" y="42" text-anchor="middle" fill="#9D65FF" font-size="7">WAIT</text>
+                    </g>
+                    
+                    <!-- Task 4: SUBAGENTS -->
+                    <g class="task-card" transform="translate(0, 180)">
+                        <rect width="180" height="50" rx="8" fill="#1a1a2e" stroke="#9D65FF" stroke-width="0.5" opacity="0.7"/>
+                        <circle cx="15" cy="25" r="8" fill="#9D65FF" opacity="0.5"/>
+                        <text x="30" y="15" fill="#9D65FF" font-size="10">SUBAGENTS.md</text>
+                        <text x="30" y="30" fill="#888" font-size="8">leader</text>
+                        <rect x="130" y="35" width="40" height="10" rx="5" fill="#9D65FF" opacity="0.2"/>
+                        <text x="150" y="42" text-anchor="middle" fill="#9D65FF" font-size="7">WAIT</text>
+                    </g>
+                </g>
+                
+                <!-- 区域统计 -->
+                <g transform="translate(100, 360)">
+                    <text x="0" y="0" text-anchor="middle" fill="#9D65FF" font-size="14" font-weight="bold">4</text>
+                    <text x="0" y="15" text-anchor="middle" fill="#888" font-size="8">tasks</text>
+                </g>
+            </g>
+            
+            <!-- ===== 流动连接线 ===== -->
+            <g class="flow-connections">
+                <!-- Completed → In Progress -->
+                <g transform="translate(250, 160)">
+                    <path d="M 0 0 Q 50 -20 100 0" stroke="url(#flowGradient)" stroke-width="3" fill="none" stroke-dasharray="10,5" class="flow-line"/>
+                    <polygon points="95,-5 105,0 95,5" fill="#FF6B9D"/>
+                </g>
+                
+                <!-- In Progress → Pending -->
+                <g transform="translate(550, 160)">
+                    <path d="M 0 0 Q 50 -20 100 0" stroke="url(#flowGradient)" stroke-width="3" fill="none" stroke-dasharray="10,5" class="flow-line"/>
+                    <polygon points="95,-5 105,0 95,5" fill="#9D65FF"/>
+                </g>
+                
+                <!-- 虚线反馈回路 -->
+                <g transform="translate(750, 400)" opacity="0.4">
+                    <path d="M 0 0 Q -350 50 -700 0" stroke="#00fff2" stroke-width="1" fill="none" stroke-dasharray="5,5"/>
+                    <text x="-350" y="35" fill="#00fff2" font-size="8" text-anchor="middle">QA Feedback Loop</text>
+                </g>
+            </g>
+            
+            <!-- 进度指示器 -->
+            <g class="progress-indicator" transform="translate(450, 480)">
+                <rect x="-200" y="-10" width="400" height="20" rx="10" fill="#1a1a2e" stroke="#00fff2" stroke-width="1"/>
+                <rect x="-200" y="-10" width="200" height="20" rx="10" fill="url(#flowGradient)" opacity="0.7"/>
+                <text x="0" y="2" text-anchor="middle" fill="#00fff2" font-size="10" font-weight="bold">50% Complete</text>
+            </g>
+            
+            <!-- Yuna 签名 -->
+            <g class="yuna-signature" transform="translate(850, 480)">
+                <text fill="#FF6B8B" font-size="10" font-style="italic" opacity="0.6">✨ Designed by YUNA</text>
+            </g>
+            
+            <!-- Agent 分配指示 -->
+            <g class="agent-indicators" transform="translate(20, 480)">
+                <g transform="translate(0, 0)">
+                    <circle r="5" fill="#FF6B9D"/>
+                    <text x="10" y="3" fill="#888" font-size="7">leader</text>
+                </g>
+                <g transform="translate(60, 0)">
+                    <circle r="5" fill="#FFD166"/>
+                    <text x="10" y="3" fill="#888" font-size="7">chaeryeong</text>
+                </g>
+                <g transform="translate(140, 0)">
+                    <circle r="5" fill="#9D65FF"/>
+                    <text x="10" y="3" fill="#888" font-size="7">lia</text>
+                </g>
+                <g transform="translate(200, 0)">
+                    <circle r="5" fill="#06D6A0"/>
+                    <text x="10" y="3" fill="#888" font-size="7">ryujin</text>
+                </g>
+            </g>
+        </svg>
+    </div>
+    
+    <!-- 图例 -->
+    <div class="yuna-legend deployment-legend">
+        <div class="legend-item future-item">
+            <span class="legend-zone" style="background: linear-gradient(135deg, #06D6A0, #00fff2); opacity: 0.8;"></span>
+            <span>✅ Completed Zone (5 tasks)</span>
+        </div>
+        <div class="legend-item future-item">
+            <span class="legend-zone" style="background: linear-gradient(135deg, #FF6B9D, #FF9EC4);"></span>
+            <span>🔄 In Progress Zone (1 task)</span>
+        </div>
+        <div class="legend-item future-item">
+            <span class="legend-zone" style="background: linear-gradient(135deg, #9D65FF, #C9A0FF); opacity: 0.5;"></span>
+            <span>⏳ Pending Zone (4 tasks)</span>
+        </div>
+        <div class="legend-item future-item">
+            <span class="legend-flow" style="background: linear-gradient(90deg, #06D6A0, #FF6B9D, #9D65FF);"></span>
+            <span>🌊 Data Flow</span>
+        </div>
+    </div>
+</section>
 
         </main>
 
-        <!-- 页脚 -->
         <footer class="footer">
             <p>ITZY CEO Agents Project Progress Report | 由 Leader 协调生成</p>
             <p>Everything you want, IT'Z all in us.</p>
@@ -1137,15 +1129,12 @@
     </div>
 
     <script>
-        // 更新日期显示
         function updateDate() {
             const now = new Date();
             const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long' };
             document.getElementById('currentDate').textContent = now.toLocaleDateString('zh-TW', options);
         }
-        document.addEventListener('DOMContentLoaded', () => {
-            updateDate();
-        });
+        document.addEventListener('DOMContentLoaded', updateDate);
     </script>
 </body>
 </html>
