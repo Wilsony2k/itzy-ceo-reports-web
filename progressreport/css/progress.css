@@ -1427,6 +1427,67 @@
     transform-origin: center;
 }
 
+/* ========================================
+   🎨 YUNA MANGA STYLE - 真正漫画风格
+   ======================================== */
+
+.yuna-chart-section.manga-style {
+    background: linear-gradient(135deg, #FFF5EE 0%, #FCE4EC 100%);
+    border: 3px dashed #FF6B8B;
+    position: relative;
+}
+
+.yuna-chart-section.manga-style::before {
+    content: "✨ MANGA ✨";
+    position: absolute;
+    top: -15px;
+    right: 20px;
+    background: #FF6B8B;
+    color: #FFF;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.chart-label.manga-label {
+    border-radius: 25px;
+    padding: 10px 20px;
+}
+
+.manga-container {
+    background: #FFF5EE;
+    border-radius: 20px;
+    border: 4px solid #333;
+    padding: 10px;
+    box-shadow: 
+        8px 8px 0 rgba(0,0,0,0.1),
+        inset 0 0 30px rgba(255,107,139,0.05);
+}
+
+.manga-container svg {
+    width: 100%;
+    height: auto;
+    min-height: 450px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* 漫画网点纸效果 */
+.yuna-chart-section.manga-style::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle, transparent 50%, rgba(0,0,0,0.03) 50%);
+    background-size: 8px 8px;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 .yuna-comic-svg .comic-bounce {
     animation: bounce 2s ease-in-out infinite;
 }
