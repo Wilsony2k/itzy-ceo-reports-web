@@ -1,132 +1,80 @@
 {
   "schema_version": "1.0",
   "description": "ITZY CEO Agents 改进方案部署进度数据",
-  "last_updated": "2026-04-23T10:15:00Z",
-  "overall_progress": 90,
+  "last_updated": "2026-04-23T10:30:00Z",
+  "overall_progress": 95,
   "project_info": {
     "name": "ITZY CEO Agents 架构改进方案",
     "start_date": "2026-04-22",
-    "end_date": "2026-05-13",
-    "total_tasks": 14,
-    "completed_tasks": 13,
+    "status": "production_ready",
+    "total_tasks": 19,
+    "completed_tasks": 18,
     "in_progress_tasks": 1,
-    "pending_tasks": 0,
-    "blocked_tasks": 0
+    "pending_tasks": 0
   },
   "phases": [
     {
       "id": "phase1",
       "name": "SUBAGENT 配置",
-      "week": 1,
       "progress": 100,
-      "color": "#06D6A0",
-      "status": "completed",
-      "responsible_agent": "leader"
+      "status": "completed"
     },
     {
       "id": "phase2",
       "name": "协调引擎",
-      "week": 2,
       "progress": 100,
-      "color": "#FF6B9D",
-      "status": "completed",
-      "responsible_agent": "leader",
-      "scripts": [
-        "coordination_engine.py",
-        "qa_engine.py"
-      ],
-      "cron_jobs": [
-        "Leader Coordination (*/5)",
-        "Ryujin QA Scan (*/1)"
-      ]
+      "status": "completed"
     },
     {
       "id": "phase3",
-      "name": "数据管道激活",
-      "week": 3,
+      "name": "数据管道",
       "progress": 100,
-      "color": "#9D65FF",
-      "status": "completed",
-      "responsible_agent": "lia",
-      "scripts": [
-        "process_pending_outputs.py"
-      ],
-      "cron_jobs": [
-        "Output Processor (*/3)",
-        "Daily Status Report (0 8)"
-      ]
+      "status": "completed"
+    },
+    {
+      "id": "phase4",
+      "name": "收尾工作",
+      "progress": 95,
+      "status": "in_progress"
     }
   ],
-  "running_services": {
-    "website": {
-      "url": "http://130.61.138.38:8000",
-      "status": "running"
-    },
-    "coordination_engine": {
-      "status": "running",
-      "interval": "5min"
-    },
-    "qa_engine": {
-      "status": "running",
-      "interval": "1min"
-    },
-    "output_processor": {
-      "status": "running",
-      "interval": "3min"
-    },
-    "daily_report": {
-      "status": "scheduled",
-      "interval": "daily 08:00"
-    }
+  "cron_jobs": {
+    "total": 7,
+    "active": [
+      {
+        "name": "Leader Coordination",
+        "interval": "*/5 min"
+      },
+      {
+        "name": "Ryujin QA Scan",
+        "interval": "*/1 min"
+      },
+      {
+        "name": "Output Processor",
+        "interval": "*/3 min"
+      },
+      {
+        "name": "Daily Status Report",
+        "interval": "0 8"
+      },
+      {
+        "name": "Health Check",
+        "interval": "0 */4"
+      },
+      {
+        "name": "Weekly Backup",
+        "interval": "0 2 * * 0"
+      },
+      {
+        "name": "Daily Reminder",
+        "interval": "0 1"
+      }
+    ]
   },
-  "e2e_test_results": {
-    "timestamp": "2026-04-23T10:11:00Z",
-    "coordination_engine": {
-      "status": "PASS",
-      "actions": 6,
-      "alerts": 2
-    },
-    "qa_engine": {
-      "status": "PASS",
-      "tests_spawned": 0
-    },
-    "output_processor": {
-      "status": "PASS",
-      "processed": 0
-    },
-    "data_exchange": {
-      "status": "PASS",
-      "agents_count": 6
-    },
-    "website": {
-      "status": "PASS",
-      "response": "200"
-    }
-  },
-  "agents_status": {
-    "leader": {
-      "status": "active",
-      "color": "#FF6B9D"
-    },
-    "yeji": {
-      "status": "idle",
-      "color": "#4ECDC4"
-    },
-    "lia": {
-      "status": "idle",
-      "color": "#9D65FF"
-    },
-    "chaeryeong": {
-      "status": "idle",
-      "color": "#FFD166"
-    },
-    "yuna": {
-      "status": "idle",
-      "color": "#FF6B8B"
-    },
-    "ryujin": {
-      "status": "active",
-      "color": "#06D6A0"
-    }
+  "deployment": {
+    "website": "http://130.61.138.38:8000",
+    "github": "https://github.com/Wilsony2k/itzy-ceo-reports-web",
+    "status": "production_ready",
+    "uptime": "running"
   }
 }
