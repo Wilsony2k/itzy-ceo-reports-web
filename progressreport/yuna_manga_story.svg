@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2400 1600" width="2400" height="1600">
+  <defs>
+    <!-- 网点纸图案 -->
+    <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="8" cy="8" r="1" fill="#DDD"/>
+    </pattern>
+    
+    <!-- 渐变 -->
+    <linearGradient id="pinkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B9D;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#FF6B8B;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#06D6A0"/>
+      <stop offset="100%" style="stop-color:#4ECDC4"/>
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9D65FF"/>
+      <stop offset="100%" style="stop-color:#E1BEE7"/>
+    </linearGradient>
+    
+    <!-- 发光效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="2400" height="1600" fill="#FFF5EE"/>
+  <rect width="2400" height="1600" fill="url(#dots)" opacity="0.5"/>
+  
+  <!-- ===== 标题框 ===== -->
+  <rect x="50" y="30" width="600" height="60" rx="10" fill="url(#pinkGrad)" stroke="#333" stroke-width="3"/>
+  <text x="80" y="70" font-family="DejaVu Sans, Arial" font-size="28" font-weight="bold" fill="#FFF">
+    "咦？這架構比我畫的流程圖還複雜！✨"
+  </text>
+  
+  <!-- Yuna 头像 -->
+  <circle cx="570" cy="60" r="20" fill="#FCE4EC" stroke="#FF6B8B" stroke-width="2"/>
+  <text x="563" y="68" font-size="20">💗</text>
+  
+  <!-- ===== 分镜框函数定义 ===== -->
+  <!-- 分镜 1: LEADER -->
+  <g transform="translate(50, 120)">
+    <rect x="-5" y="-5" width="210" height="170" rx="8" fill="#FFF" stroke="#333" stroke-width="4"/>
+    <rect x="0" y="0" width="200" height="130" fill="#FCE4EC" stroke="#333" stroke-width="2"/>
+    <text x="10" y="150" font-size="14" fill="#333">👑 LEADER</text>
+    <!-- Q版头像 -->
+    <circle cx="100" cy="60" r="35" fill="#FFB6C1" stroke="#333" stroke-width="3"/>
+    <ellipse cx="88" cy="52" rx="6" ry="8" fill="#FFF" stroke="#333" stroke-width="1"/>
+    <ellipse cx="112" cy="52" rx="6" ry="8" fill="#FFF" stroke="#333" stroke-width="1"/>
+    <circle cx="90" cy="54" r="3" fill="#333"/>
+    <circle cx="114" cy="54" r="3" fill="#333"/>
+    <path d="M90,75 Q100,85 110,75" stroke="#333" stroke-width="2" fill="none"/>
+    <!-- 对白框 -->
+    <ellipse cx="230" cy="40" rx="60" ry="30" fill="#FFF" stroke="#333" stroke-width="2"/>
+    <text x="200" y="35" font-size="12" fill="#333">大家聽好了！</text>
+    <text x="200" y="50" font-size="12" fill="#333">資源我來分配！</text>
+    <text x="210" y="70" font-size="10" fill="#FF6B9D">⚡ 协调!</text>
+  </g>
+  
+  <!-- 分镜 2: YEJI -->
+  <g transform="translate(350, 120)">
+    <rect x="-5" y="-5" width="210" height="170" rx="8" fill="#FFF" stroke="#333" stroke-width="4"/>
+    <rect x="0" y="0" width="200" height="130" fill="#E8F5E9" stroke="#333" stroke-width="2"/>
+    <text x="10" y="150" font-size="14" fill="#333">🧢 YEJI</text>
+    <circle cx="100" cy="60" r="35" fill="#B2DFDB" stroke="#333" stroke-width="3"/>
+    <ellipse cx="88" cy="52" rx="6" ry="8" fill="#FFF" stroke="#333"/>
+    <ellipse cx="112" cy="52" rx="6" ry="8" fill="#FFF" stroke="#333"/>
+    <circle cx="90" cy="54" r="3" fill="#333"/>
+    <circle cx="114" cy="54" r="3" fill="#333"/>
+    <path d="M90,75 Q100,85 110,75" stroke="#333" stroke-width="2" fill="none"/>
+    <ellipse cx="230" cy="40" rx="60" ry="30" fill="#FFF" stroke="#333" stroke-width="2"/>
+    <text x="200" y="35" font-size="12" fill="#333">橋樑設計</text>
+    <text x="200" y="50" font-size="12" fill="#333">這次我能搞定!</text>
+    <text x="220" y="70" font-size="14">🏗️</text>
+  </g>
+  
+  <!-- 分镜 3: LIA -->
+  <g transform="translate(650, 120)">
+    <rect x="-5" y="-5" width="210" height="170" rx="8" fill="#FFF" stroke="#333" stroke-width="4"/>
+    <rect x="0" y="0" width="200" height="130" fill="#F3E5F5" stroke="#333" stroke-width="2"/>
+    <text x="10" y="150" font-size="14" fill="#333">💜 LIA</text>
+    <circle cx="100" cy="60" r="35" fill="#E1BEE7" stroke="#333" stroke-width="3"/>
+    <ellipse cx="88" cy="52" rx="6" ry="8" fill="#FFF" stroke="#333"/>
+    <ellipse cx="112" cy="52" rx="6" ry="8" fill="#FFF" stroke="#333"/>
+    <circle cx="90" cy="54" r="3" fill="#333"/>
+    <circle cx="114" cy="54" r="3" fill="#333"/>
+    <path d="M90,75 Q100,85 110,75" stroke="#333" stroke-width="2" fill="none"/>
+    <ellipse cx="230" cy="40" rx="60" ry="30" fill="#FFF" stroke="#333" stroke-width="2"/>
+    <text x="200" y="35" font-size="12" fill="#333">數據架構</text>
+    <text x="200" y="50" font-size="12" fill="#333">交給我沒問題~</text>
+    <text x="220" y="70" font-size="14">📊</text>
+  </g>
+  
+  <!-- 分镜 4: CHAERYEONG -->
+  <g transform="translate(950, 120)">
+    <rect x="-5" y="-5" width="210" height="170" rx="8" fill="#FFF" stroke="#333" stroke-width="4"/>
+    <rect x="0" y="0" width="200" height="130" fill="#FFF9C4" stroke="#333" stroke-width="2"/>
+    <text x="10" y="150" font-size="14" fill="#333">💛 CHAERYEONG</text>
+    <circle cx="100" cy="60" r="35" fill="#FFF9C4" stroke="#333" stroke-width="3"/>
+    <ellipse cx="88" cy="52" rx="6" ry="8" fill="#FFF" stroke="#333"/>
+    <ellipse cx="112" cy="52" rx="6" ry="8" fill="#FFF" stroke="#333"/>
+    <circle cx="90" cy="54" r="3" fill="#333"/>
+    <circle cx="114" cy="54" r="3" fill="#333"/>
+    <path d="M90,75 Q100,85 110,75" stroke="#333" stroke-width="2" fill="none"/>
+    <ellipse cx="230" cy="40" rx="60" ry="30" fill="#FFF" stroke="#333" stroke-width="2"/>
+    <text x="200" y="35" font-size="12" fill="#333">UI配色</text>
+    <text x="200" y="50" font-size="12" fill="#333">用霓虹風格!</text>
+    <text x="220" y="70" font-size="14">🎨</text>
+  </g>
+  
+  <!-- ===== YUNA 主角框 ===== -->
+  <g transform="translate(1200, 100)">
+    <rect x="-5" y="-5" width="290" height="210" rx="10" fill="#FFF" stroke="#FF6B8B" stroke-width="5" filter="url(#glow)"/>
+    <rect x="0" y="0" width="280" height="160" fill="#FCE4EC" stroke="#333" stroke-width="2"/>
+    <text x="10" y="185" font-size="16" font-weight="bold" fill="#FF6B8B">💗 YUNA 可視化引擎</text>
+    
+    <!-- Yuna 大头像 -->
+    <circle cx="140" cy="80" r="50" fill="#FCE4EC" stroke="#FF6B8B" stroke-width="3"/>
+    <ellipse cx="125" cy="65" rx="8" ry="10" fill="#FFF" stroke="#333" stroke-width="1"/>
+    <ellipse cx="155" cy="65" rx="8" ry="10" fill="#FFF" stroke="#333" stroke-width="1"/>
+    <text x="120" y="72" font-size="16" fill="#FF6B8B">✦</text>
+    <text x="150" y="72" font-size="16" fill="#FF6B8B">✦</text>
+    <path d="M125,95 Q140,110 155,95" stroke="#333" stroke-width="2" fill="none"/>
+    
+    <!-- 对白框 -->
+    <polygon points="100,-80 180,-80 180,-30 100,-30" fill="#FFF" stroke="#FF6B8B" stroke-width="3"/>
+    <text x="110" y="-60" font-size="14" fill="#FF6B8B">等等！這架構圖</text>
+    <text x="110" y="-42" font-size="14" fill="#FF6B8B">我來改成漫畫風格！</text>
+  </g>
+  
+  <!-- ===== 分镜 6: RYUJIN ===== -->
+  <g transform="translate(1550, 120)">
+    <rect x="-5" y="-5" width="230" height="190" rx="8" fill="#FFF" stroke="#333" stroke-width="4"/>
+    <rect x="0" y="0" width="220" height="150" fill="#E8F5E9" stroke="#333" stroke-width="2"/>
+    <text x="10" y="175" font-size="14" fill="#333">💚 RYUJIN QA</text>
+    <circle cx="110" cy="70" r="35" fill="#C8E6C9" stroke="#333" stroke-width="3"/>
+    <ellipse cx="98" cy="62" rx="6" ry="8" fill="#FFF" stroke="#333"/>
+    <ellipse cx="122" cy="62" rx="6" ry="8" fill="#FFF" stroke="#333"/>
+    <circle cx="100" cy="64" r="3" fill="#333"/>
+    <circle cx="124" cy="64" r="3" fill="#333"/>
+    <line x1="100" y1="85" x2="120" y2="85" stroke="#333" stroke-width="2"/>
+    <ellipse cx="260" cy="40" rx="60" ry="30" fill="#FFF" stroke="#333" stroke-width="2"/>
+    <text x="230" y="35" font-size="12" fill="#333">測試全通過！</text>
+    <text x="230" y="50" font-size="12" fill="#333">PASS ✓</text>
+    <text x="250" y="70" font-size="14" fill="#06D6A0">PASS ✓</text>
+  </g>
+  
+  <!-- ===== 连接箭头 ===== -->
+  <line x1="250" y1="200" x2="350" y2="200" stroke="#FF6B9D" stroke-width="3"/>
+  <polygon points="345,195 355,200 345,205" fill="#FF6B9D"/>
+  <text x="280" y="185" font-size="12" fill="#333">數據</text>
+  
+  <line x1="550" y1="200" x2="650" y2="200" stroke="#4ECDC4" stroke-width="3"/>
+  <polygon points="645,195 655,200 645,205" fill="#4ECDC4"/>
+  <text x="580" y="185" font-size="12" fill="#333">API</text>
+  
+  <line x1="850" y1="200" x2="950" y2="200" stroke="#9D65FF" stroke-width="3"/>
+  <polygon points="945,195 955,200 945,205" fill="#9D65FF"/>
+  <text x="880" y="185" font-size="12" fill="#333">UI</text>
+  
+  <!-- ===== Yuna 结尾对白 ===== -->
+  <rect x="50" y="320" width="1750" height="80" rx="10" fill="#FCE4EC" stroke="#FF6B8B" stroke-width="2"/>
+  <text x="100" y="355" font-size="18" fill="#FF6B8B">"嘿嘿～這就是ITZY團隊的協作方式！每個人都很專業，但用漫畫表達就更有趣了～ ✨"</text>
+  <text x="100" y="385" font-size="14" fill="#888">— YUNA 可視化引擎創意對白 — "流程圖太嚴肅？那就畫成漫畫吧！"</text>
+  
+  <!-- ===== Phase 故事流程 ===== -->
+  <!-- Phase 1 -->
+  <rect x="50" y="450" width="450" height="80" rx="8" fill="#FFF" stroke="#06D6A0" stroke-width="3"/>
+  <text x="60" y="480" font-size="16" font-weight="bold" fill="#06D6A0">✅ Phase 1: SUBAGENT 配置</text>
+  <rect x="70" y="500" width="230" height="20" rx="5" fill="#1a1a2e" stroke="#06D6A0"/>
+  <rect x="70" y="500" width="230" height="20" rx="5" fill="#06D6A0"/>
+  <text x="310" y="515" font-size="14" fill="#06D6A0">100% ✓</text>
+  
+  <!-- Phase 2 -->
+  <rect x="50" y="550" width="450" height="80" rx="8" fill="#FFF" stroke="#FF6B9D" stroke-width="3"/>
+  <text x="60" y="580" font-size="16" font-weight="bold" fill="#FF6B9D">🔄 Phase 2: 協調引擎</text>
+  <rect x="70" y="600" width="230" height="20" rx="5" fill="#1a1a2e" stroke="#FF6B9D"/>
+  <rect x="70" y="600" width="115" height="20" rx="5" fill="#FF6B9D"/>
+  <text x="310" y="615" font-size="14" fill="#FF6B9D">50% 進行中</text>
+  
+  <!-- Phase 3 -->
+  <rect x="50" y="650" width="450" height="80" rx="8" fill="#FFF" stroke="#9D65FF" stroke-width="3"/>
+  <text x="60" y="680" font-size="16" font-weight="bold" fill="#9D65FF">⏳ Phase 3: 數據管道</text>
+  <rect x="70" y="700" width="230" height="20" rx="5" fill="#1a1a2e" stroke="#9D65FF"/>
+  <text x="310" y="715" font-size="14" fill="#9D65FF">0% 待執行</text>
+  
+  <!-- ===== 右侧：团队协作漫画 ===== -->
+  <rect x="550" y="450" width="1300" height="600" rx="10" fill="#FFF" stroke="#333" stroke-width="4"/>
+  <text x="570" y="490" font-size="28" font-weight="bold" fill="#FF6B8B">🎬 ITZY CEO Agents 協作流程故事</text>
+  
+  <!-- 故事时间线 -->
+  <line x1="600" y1="530" x2="1800" y2="530" stroke="#FF6B9D" stroke-width="3" stroke-dasharray="10,5"/>
+  
+  <!-- 团队合影 -->
+  <g transform="translate(600, 550)">
+    <text x="0" y="30" font-size="16" fill="#333">團隊成員：</text>
+    <!-- Leader -->
+    <circle cx="100" cy="80" r="30" fill="#FCE4EC" stroke="#FF6B9D" stroke-width="2"/>
+    <text x="85" y="85" font-size="12" fill="#FF6B9D">Leader</text>
+    <!-- Yeji -->
+    <circle cx="200" cy="80" r="30" fill="#E8F5E9" stroke="#4ECDC4" stroke-width="2"/>
+    <text x="185" y="85" font-size="12" fill="#4ECDC4">Yeji</text>
+    <!-- Lia -->
+    <circle cx="300" cy="80" r="30" fill="#F3E5F5" stroke="#9D65FF" stroke-width="2"/>
+    <text x="288" y="85" font-size="12" fill="#9D65FF">Lia</text>
+    <!-- Chaeryeong -->
+    <circle cx="400" cy="80" r="30" fill="#FFF9C4" stroke="#FFD166" stroke-width="2"/>
+    <text x="378" y="85" font-size="10" fill="#FFD166">Chaeryeong</text>
+    <!-- Yuna -->
+    <circle cx="500" cy="80" r="35" fill="#FCE4EC" stroke="#FF6B8B" stroke-width="3"/>
+    <text x="480" y="85" font-size="12" fill="#FF6B8B">Yuna</text>
+    <!-- Ryujin -->
+    <circle cx="600" cy="80" r="30" fill="#E8F5E9" stroke="#06D6A0" stroke-width="2"/>
+    <text x="580" y="85" font-size="12" fill="#06D6A0">Ryujin</text>
+  </g>
+  
+  <!-- Yuna 创意签名框 -->
+  <rect x="600" y="750" width="600" height="150" rx="10" fill="#FCE4EC" stroke="#FF6B8B" stroke-width="2"/>
+  <text x="620" y="790" font-size="20" font-weight="bold" fill="#FF6B8B">✨ Yuna 創意對白 ✨</text>
+  <text x="620" y="830" font-size="16" fill="#333">"流程圖太嚴肅？那就畫成漫畫吧！"</text>
+  <text x="620" y="870" font-size="14" fill="#888">這樣大家看著更有趣也更易懂！✨</text>
+  
+  <!-- 成就徽章 -->
+  <rect x="1250" y="750" width="580" height="150" rx="10" fill="#E8F5E9" stroke="#06D6A0" stroke-width="2"/>
+  <text x="1270" y="790" font-size="20" font-weight="bold" fill="#06D6A0">🏆 團隊成就解鎖</text>
+  <text x="1270" y="830" font-size="14" fill="#333">✓ SUBAGENT 配置完成</text>
+  <text x="1270" y="855" font-size="14" fill="#333">✓ 協調引擎部署中</text>
+  <text x="1270" y="880" font-size="14" fill="#333">✓ Yuna 可視化引擎上線</text>
+  
+  <!-- ===== 页脚 ===== -->
+  <rect x="50" y="1520" width="1750" height="70" rx="5" fill="#FCE4EC" stroke="#FF6B8B" stroke-width="1"/>
+  <text x="925" y="1555" font-size="20" font-weight="bold" fill="#FF6B8B">✨ Designed by YUNA Visualization Engine ✨</text>
+  <text x="925" y="1580" font-size="14" fill="#888">Everything you want, IT'Z all in us. — ITZY CEO Agents</text>
+</svg>

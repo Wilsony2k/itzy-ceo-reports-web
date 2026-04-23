@@ -1,7 +1,7 @@
 {
   "schema_version": "1.0",
   "description": "ITZY CEO Agents 数据交换中心 - 统一的 agent 间数据流转接口",
-  "last_updated": "2026-04-22T16:17:46.883282",
+  "last_updated": "2026-04-23T06:41:10.512099",
   "exchange_rules": {
     "routing": {
       "yeji": {
@@ -366,5 +366,5 @@
     ]
   },
   "last_loaded": "2026-04-22T10:47:21.220398",
-  "qa_last_scan": "2026-04-22T16:17:46.883282"
+  "qa_last_scan": "2026-04-23T06:41:10.512099"
 }
