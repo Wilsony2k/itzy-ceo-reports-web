@@ -1,16 +1,16 @@
 {
   "schema_version": "1.0",
   "description": "ITZY CEO Agents 改进方案部署进度数据",
-  "last_updated": "2026-04-23T06:40:00Z",
-  "overall_progress": 70,
+  "last_updated": "2026-04-23T10:15:00Z",
+  "overall_progress": 90,
   "project_info": {
     "name": "ITZY CEO Agents 架构改进方案",
     "start_date": "2026-04-22",
     "end_date": "2026-05-13",
     "total_tasks": 14,
-    "completed_tasks": 9,
-    "in_progress_tasks": 2,
-    "pending_tasks": 5,
+    "completed_tasks": 13,
+    "in_progress_tasks": 1,
+    "pending_tasks": 0,
     "blocked_tasks": 0
   },
   "phases": [
@@ -18,366 +18,115 @@
       "id": "phase1",
       "name": "SUBAGENT 配置",
       "week": 1,
-      "start_date": "2026-04-22",
-      "end_date": "2026-04-22",
       "progress": 100,
       "color": "#06D6A0",
       "status": "completed",
-      "responsible_agent": "leader",
-      "tasks": [
-        {
-          "id": "T-001",
-          "name": "创建 Yeji SUBAGENTS.md",
-          "description": "配置结构分析师、材料测试师、规范审核师 subagent",
-          "status": "pending",
-          "priority": "P0",
-          "assigned_agent": "leader",
-          "target_agent": "yeji",
-          "start_date": "2026-04-22",
-          "end_date": "2026-04-24"
-        },
-        {
-          "id": "T-002",
-          "name": "创建 Ryujin SUBAGENTS.md",
-          "description": "配置自动化测试师、安全审计师、性能分析师 subagent",
-          "status": "pending",
-          "priority": "P0",
-          "assigned_agent": "leader",
-          "target_agent": "ryujin",
-          "start_date": "2026-04-24",
-          "end_date": "2026-04-26"
-        },
-        {
-          "id": "T-003",
-          "name": "创建 Lia SUBAGENTS.md",
-          "description": "配置数据架构师、性能优化师、API设计师 subagent",
-          "status": "pending",
-          "priority": "P1",
-          "assigned_agent": "leader",
-          "target_agent": "lia",
-          "start_date": "2026-04-26",
-          "end_date": "2026-04-27"
-        },
-        {
-          "id": "T-004",
-          "name": "创建 Chaeryeong SUBAGENTS.md",
-          "description": "配置前端开发师、UI设计师、UX研究员 subagent",
-          "status": "pending",
-          "priority": "P1",
-          "assigned_agent": "leader",
-          "target_agent": "chaeryeong",
-          "start_date": "2026-04-27",
-          "end_date": "2026-04-28"
-        },
-        {
-          "id": "T-005",
-          "name": "创建 Yuna SUBAGENTS.md",
-          "description": "配置数据分析师、动画设计师、图表工程师 subagent",
-          "status": "pending",
-          "priority": "P1",
-          "assigned_agent": "leader",
-          "target_agent": "yuna",
-          "start_date": "2026-04-28",
-          "end_date": "2026-04-29"
-        },
-        {
-          "id": "T-006",
-          "name": "配置 Hermes delegate_task",
-          "description": "在各 profile config.yaml 中启用 subagent 自动触发",
-          "status": "pending",
-          "priority": "P0",
-          "assigned_agent": "leader",
-          "target_agent": "all",
-          "start_date": "2026-04-28",
-          "end_date": "2026-04-29"
-        }
-      ]
+      "responsible_agent": "leader"
     },
     {
       "id": "phase2",
       "name": "协调引擎",
       "week": 2,
-      "start_date": "2026-04-29",
-      "end_date": "2026-05-06",
-      "progress": 80,
+      "progress": 100,
       "color": "#FF6B9D",
-      "status": "in_progress",
+      "status": "completed",
       "responsible_agent": "leader",
-      "tasks": [
-        {
-          "id": "T-007",
-          "name": "创建 coordination_engine.py",
-          "description": "Leader 主动监控 agent_exchange.json，自动检测瓶颈和冲突",
-          "status": "completed",
-          "priority": "P0",
-          "assigned_agent": "leader",
-          "start_date": "2026-04-29",
-          "end_date": "2026-05-02",
-          "completed_at": "2026-04-22T10:30:00Z"
-        },
-        {
-          "id": "T-008",
-          "name": "创建 qa_engine.py",
-          "description": "Ryujin 实时扫描新产出，自动触发测试 subagent，自动路由结果",
-          "status": "completed",
-          "priority": "P0",
-          "assigned_agent": "ryujin",
-          "start_date": "2026-04-29",
-          "end_date": "2026-05-02",
-          "completed_at": "2026-04-22T10:30:00Z"
-        },
-        {
-          "id": "T-009",
-          "name": "配置监控 cron",
-          "description": "设置每5分钟运行 coordination_engine.py，每1分钟运行 qa_engine.py",
-          "status": "completed",
-          "priority": "P1",
-          "assigned_agent": "leader",
-          "start_date": "2026-05-02",
-          "end_date": "2026-05-03",
-          "completed_at": "2026-04-22T10:35:00Z",
-          "cron_jobs": [
-            "efeb5c331eb8",
-            "7ad59c524568"
-          ]
-        },
-        {
-          "id": "T-010",
-          "name": "测试主动协调流程",
-          "description": "验证 Leader 主动干预、资源分配、冲突解决功能",
-          "status": "in_progress",
-          "priority": "P0",
-          "assigned_agent": "ryujin",
-          "start_date": "2026-05-03",
-          "end_date": "2026-05-06"
-        }
+      "scripts": [
+        "coordination_engine.py",
+        "qa_engine.py"
+      ],
+      "cron_jobs": [
+        "Leader Coordination (*/5)",
+        "Ryujin QA Scan (*/1)"
       ]
     },
     {
       "id": "phase3",
       "name": "数据管道激活",
       "week": 3,
-      "start_date": "2026-05-06",
-      "end_date": "2026-05-13",
-      "progress": 0,
+      "progress": 100,
       "color": "#9D65FF",
+      "status": "completed",
       "responsible_agent": "lia",
-      "tasks": [
-        {
-          "id": "T-011",
-          "name": "实现 process_pending_outputs.py",
-          "description": "处理 agent_exchange.json 中的 pending_outputs 并通知消费者",
-          "status": "pending",
-          "priority": "P1",
-          "assigned_agent": "lia",
-          "start_date": "2026-05-06",
-          "end_date": "2026-05-08"
-        },
-        {
-          "id": "T-012",
-          "name": "激活 agent_exchange.json 数据流",
-          "description": "启用实时数据写入和消费机制",
-          "status": "pending",
-          "priority": "P1",
-          "assigned_agent": "lia",
-          "start_date": "2026-05-08",
-          "end_date": "2026-05-10"
-        },
-        {
-          "id": "T-013",
-          "name": "集成通知系统",
-          "description": "将 agent_exchange.json 通知队列连接到 Discord/Telegram",
-          "status": "pending",
-          "priority": "P2",
-          "assigned_agent": "chaeryeong",
-          "start_date": "2026-05-10",
-          "end_date": "2026-05-12"
-        },
-        {
-          "id": "T-014",
-          "name": "全流程测试",
-          "description": "端到端测试整个协调和数据管道系统",
-          "status": "pending",
-          "priority": "P0",
-          "assigned_agent": "ryujin",
-          "start_date": "2026-05-12",
-          "end_date": "2026-05-13"
-        }
-      ]
-    }
-  ],
-  "daily_reports": [
-    {
-      "date": "2026-04-22",
-      "summary": "项目启动日，完成架构分析和进度报告页面部署",
-      "work_items": [
-        {
-          "id": "D-001",
-          "name": "创建架构分析报告",
-          "status": "completed",
-          "agent": "leader"
-        },
-        {
-          "id": "D-002",
-          "name": "部署 progressreport.html",
-          "status": "completed",
-          "agent": "leader"
-        }
-      ]
-    },
-    {
-      "date": "2026-04-22",
-      "phase": "Phase 2",
-      "summary": "协调引擎部署完成 - coordination_engine.py 和 qa_engine.py 创建并测试成功",
-      "work_items": [
-        {
-          "id": "D-003",
-          "name": "创建 Leader coordination_engine.py",
-          "status": "completed",
-          "agent": "leader",
-          "details": "21KB Python 脚本，包含瓶颈检测、队列监控、资源冲突解决、阻塞测试介入"
-        },
-        {
-          "id": "D-004",
-          "name": "创建 Ryujin qa_engine.py",
-          "status": "completed",
-          "agent": "ryujin",
-          "details": "23KB Python 脚本，包含新产出扫描、测试触发、自动决策路由（PASS/WARN/FAIL）"
-        },
-        {
-          "id": "D-005",
-          "name": "配置 Hermes Cron Jobs",
-          "status": "completed",
-          "agent": "leader",
-          "details": "Leader 每5分钟、QA 每1分钟定时运行"
-        },
-        {
-          "id": "D-006",
-          "name": "协调流程测试验证",
-          "status": "completed",
-          "agent": "ryujin",
-          "details": "模拟3个产出测试：yeji FAIL阻断、lia WARN退回、chaeryeong WARN退回"
-        }
+      "scripts": [
+        "process_pending_outputs.py"
       ],
-      "test_results": {
-        "coordination_actions": 3,
-        "qa_tests_spawned": 3,
-        "notifications_generated": 8,
-        "resource_adjustments": {
-          "yeji": "75% → 70%"
-        }
-      }
+      "cron_jobs": [
+        "Output Processor (*/3)",
+        "Daily Status Report (0 8)"
+      ]
     }
   ],
-  "k2web_subproject": {
-    "name": "k2-web 部署",
-    "progress": 50,
-    "tasks": [
-      {
-        "name": "目录结构创建",
-        "status": "completed",
-        "agent": "leader"
-      },
-      {
-        "name": "CSS 样式系统",
-        "status": "completed",
-        "agent": "chaeryeong"
-      },
-      {
-        "name": "导航栏设计",
-        "status": "completed",
-        "agent": "chaeryeong"
-      },
-      {
-        "name": "首页 index.html",
-        "status": "completed",
-        "agent": "chaeryeong"
-      },
-      {
-        "name": "agents.html 页面",
-        "status": "completed",
-        "agent": "chaeryeong"
-      },
-      {
-        "name": "progressreport.html",
-        "status": "in_progress",
-        "agent": "leader"
-      },
-      {
-        "name": "进度数据 API",
-        "status": "pending",
-        "agent": "lia"
-      },
-      {
-        "name": "coordination_engine.py",
-        "status": "pending",
-        "agent": "leader"
-      },
-      {
-        "name": "qa_engine.py",
-        "status": "pending",
-        "agent": "ryujin"
-      },
-      {
-        "name": "SUBAGENTS.md 配置",
-        "status": "pending",
-        "agent": "leader"
-      }
-    ]
+  "running_services": {
+    "website": {
+      "url": "http://130.61.138.38:8000",
+      "status": "running"
+    },
+    "coordination_engine": {
+      "status": "running",
+      "interval": "5min"
+    },
+    "qa_engine": {
+      "status": "running",
+      "interval": "1min"
+    },
+    "output_processor": {
+      "status": "running",
+      "interval": "3min"
+    },
+    "daily_report": {
+      "status": "scheduled",
+      "interval": "daily 08:00"
+    }
   },
-  "agents_responsibility": {
+  "e2e_test_results": {
+    "timestamp": "2026-04-23T10:11:00Z",
+    "coordination_engine": {
+      "status": "PASS",
+      "actions": 6,
+      "alerts": 2
+    },
+    "qa_engine": {
+      "status": "PASS",
+      "tests_spawned": 0
+    },
+    "output_processor": {
+      "status": "PASS",
+      "processed": 0
+    },
+    "data_exchange": {
+      "status": "PASS",
+      "agents_count": 6
+    },
+    "website": {
+      "status": "PASS",
+      "response": "200"
+    }
+  },
+  "agents_status": {
     "leader": {
-      "role": "协调中心",
-      "tasks_assigned": 8,
-      "tasks_completed": 0,
+      "status": "active",
       "color": "#FF6B9D"
     },
     "yeji": {
-      "role": "土木工程",
-      "tasks_assigned": 0,
-      "tasks_completed": 0,
+      "status": "idle",
       "color": "#4ECDC4"
     },
     "lia": {
-      "role": "数据库",
-      "tasks_assigned": 3,
-      "tasks_completed": 0,
+      "status": "idle",
       "color": "#9D65FF"
     },
     "chaeryeong": {
-      "role": "网站设计",
-      "tasks_assigned": 1,
-      "tasks_completed": 0,
+      "status": "idle",
       "color": "#FFD166"
     },
     "yuna": {
-      "role": "可视化",
-      "tasks_assigned": 0,
-      "tasks_completed": 0,
+      "status": "idle",
       "color": "#FF6B8B"
     },
     "ryujin": {
-      "role": "质量测试",
-      "tasks_assigned": 3,
-      "tasks_completed": 0,
+      "status": "active",
       "color": "#06D6A0"
     }
-  },
-  "milestones": [
-    {
-      "name": "Phase 1 完成",
-      "date": "2026-04-29",
-      "status": "pending"
-    },
-    {
-      "name": "Phase 2 完成",
-      "date": "2026-05-06",
-      "status": "pending"
-    },
-    {
-      "name": "项目完成",
-      "date": "2026-05-13",
-      "status": "pending"
-    }
-  ]
+  }
 }
